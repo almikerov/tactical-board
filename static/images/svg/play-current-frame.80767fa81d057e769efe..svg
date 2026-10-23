@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" viewBox="0 0 100 90">
+		
+	<rect x="0" y="0" width="16.7" height="16.7" fill="none" stroke="#48413B" stroke-width="2"/>
+	<rect x="16.7" y="0" width="16.7" height="16.7" fill="none" stroke="#48413B" stroke-width="2"/>
+	<rect x="33.33" y="0" width="16.7" height="16.7" fill="none" stroke="#48413B" stroke-width="2"/>
+	<rect x="50" y="0" width="16.7" height="16.7" fill="none" stroke="#48413B" stroke-width="2"/>
+	<rect x="66.66" y="0" width="16.7" height="16.7" fill="none" stroke="#48413B" stroke-width="2"/>
+	<rect x="83.33" y="0" width="16.7" height="16.7" fill="none" stroke="#48413B" stroke-width="2"/>
+	
+	<rect x="0" y="73.33" width="16.7" height="16.7" fill="none" stroke="#48413B" stroke-width="2"/>
+	<rect x="16.7" y="73.33" width="16.7" height="16.7" fill="none" stroke="#48413B" stroke-width="2"/>
+	<rect x="33.33" y="73.33" width="16.7" height="16.7" fill="none" stroke="#48413B" stroke-width="2"/>
+	<rect x="50" y="73.33" width="16.7" height="16.7" fill="none" stroke="#48413B" stroke-width="2"/>
+	<rect x="66.66" y="73.33" width="16.7" height="16.7" fill="none" stroke="#48413B" stroke-width="2"/>
+	<rect x="83.33" y="73.33" width="16.7" height="16.7" fill="none" stroke="#48413B" stroke-width="2"/>
+	
+	<polygon  fill="#48413B" stroke-width="2" stroke="#48413B" points="35 25, 70 45, 35 65" />	
+	
+</svg>

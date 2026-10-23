@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1320 792">
+	<g stroke="#888888" fill="#888888">
+		<path d="M321.55 86.88 H998.44 V707.01 H321.55 V86.88" fill="none" stroke="none"></path>
+		<path d="M558.88 242.98 A 109.69 109.69, 0, 0, 0, 761.11 242.98 M404.18 242.98 A 269.67 269.67, 0, 0, 0, 915.81 242.98" fill="none" stroke-width="6"></path>
+		<line x1="566.80" y1="87.83" x2="566.80" y2="200.21" fill="none" stroke-width="6"></line>
+		<line x1="753.19" y1="87.83" x2="753.19" y2="200.21" fill="none" stroke-width="6"></line>
+		<line x1="322.34" y1="200.61" x2="997.65" y2="200.61" fill="none" stroke-width="6"></line>
+		<line x1="322.34" y1="242.98" x2="997.65" y2="242.98" fill="none" stroke-width="6"></line>
+		<line x1="322.34" y1="486.52" x2="997.65" y2="486.52" fill="none" stroke-width="6"></line>
+		<line x1="322.34" y1="626.86" x2="997.65" y2="626.86" fill="none" stroke-width="6"></line>
+		<line x1="322.34" y1="655.53" x2="660" y2="655.53" stroke-width="6" fill="none" stroke-dasharray="39.07px, 39.07px"></line>
+		<line x1="997.65" y1="655.53" x2="660" y2="655.53" stroke-width="6" fill="none" stroke-dasharray="39.07px, 39.07px"></line>
+		<line x1="322.34" y1="685.39" x2="997.65" y2="685.39" fill="none" stroke-width="6"></line>
+		<line x1="606.01" y1="86.40" x2="606.01" y2="11.16" fill="none" stroke-width="6"></line>
+		<line x1="713.98" y1="86.40" x2="713.98" y2="11.16" fill="none" stroke-width="6"></line>
+		<polyline points="321.55 706.06, 321.55 86.88, 998.44 86.88, 998.44 706.06" fill="none" stroke-width="6"></polyline>
+		<polyline points="588.58 87.83, 588.58 136.77, 731.41 136.77, 731.41 87.83" fill="none" stroke-width="6"></polyline>
+		<polyline points="606.01 86.40, 606.01 62.80, 713.98 62.80, 713.98 86.40" stroke-width="6" fill-opacity="0.35"></polyline>
+	</g>
+</svg>

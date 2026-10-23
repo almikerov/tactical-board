@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1185 810">
+<g stroke="#888888" fill="#888888">
+<path d="M274 229 A 151.68 151.68, 0, 0, 1, 418 91 M910 229 A 151.68 151.68, 0, 0, 0, 766 91" fill="none" stroke-width="6"></path>
+<path d="M494 720 A 98 98, 0, 1, 1, 690 720 M555 174.96 A 1 1, 0, 0, 0, 629 174.96 M274 642 A 62 62, 0, 0, 1, 334 720" fill="none" opacity=".6" stroke-width="6"></path>
+<circle opacity=".6" cx="592.5" cy="703.89" r="4" stroke="none"></circle>
+<circle opacity=".6" cx="456" cy="297" r="9" stroke="none"></circle>
+<circle opacity=".6" cx="728" cy="297" r="9" stroke="none"></circle>
+<circle opacity=".6" cx="456" cy="562.14" r="9" stroke="none"></circle>
+<circle opacity=".6" cx="728" cy="562.14" r="9" stroke="none"></circle>
+<circle opacity=".6" cx="456" cy="297" r="98" fill="none" stroke-width="6"></circle>
+<circle opacity=".6" cx="728" cy="297" r="98" fill="none" stroke-width="6"></circle>
+<rect opacity=".6" x="571" y="162" width="41" height="12.15" fill-opacity=".4" stroke-width="6"></rect>
+<line x1="274" y1="229" x2="274" y2="720" fill="none" stroke-width="6"></line>
+<line x1="418" y1="91" x2="766" y2="91" fill="none" stroke-width="6"></line>
+<line x1="910" y1="229" x2="910" y2="720" fill="none" stroke-width="6"></line>
+<line opacity=".6" x1="290" y1="174.96" x2="894" y2="174.96" fill="none" stroke-width="6"></line>
+<line opacity=".6" x1="274" y1="528" x2="910" y2="528" fill="none" stroke-width="6"></line>
+<line opacity=".6" x1="274" y1="703" x2="910" y2="703" fill="none" stroke-width="6"></line>
+<line opacity=".6" x1="349" y1="272" x2="360" y2="272" fill="none" stroke-width="6"></line>
+<line opacity=".6" x1="349" y1="322" x2="360" y2="322" fill="none" stroke-width="6"></line>
+<line opacity=".6" x1="551" y1="272" x2="565" y2="272" fill="none" stroke-width="6"></line>
+<line opacity=".6" x1="551" y1="322" x2="565" y2="322" fill="none" stroke-width="6"></line>
+<line opacity=".6" x1="835" y1="272" x2="824" y2="272" fill="none" stroke-width="6"></line>
+<line opacity=".6" x1="835" y1="322" x2="824" y2="322" fill="none" stroke-width="6"></line>
+<line opacity=".6" x1="633" y1="272" x2="619" y2="272" fill="none" stroke-width="6"></line>
+<line opacity=".6" x1="633" y1="322" x2="619" y2="322" fill="none" stroke-width="6"></line>
+<line opacity=".6" x1="430" y1="278" x2="448" y2="278" fill="none" stroke-width="6"></line>
+<line opacity=".6" x1="466" y1="278" x2="484" y2="278" fill="none" stroke-width="6"></line>
+<line opacity=".6" x1="430" y1="316" x2="448" y2="316" fill="none" stroke-width="6"></line>
+<line opacity=".6" x1="466" y1="316" x2="484" y2="316" fill="none" stroke-width="6"></line>
+<line opacity=".6" x1="754" y1="278" x2="736" y2="278" fill="none" stroke-width="6"></line>
+<line opacity=".6" x1="718" y1="278" x2="700" y2="278" fill="none" stroke-width="6"></line>
+<line opacity=".6" x1="754" y1="316" x2="736" y2="316" fill="none" stroke-width="6"></line>
+<line opacity=".6" x1="718" y1="316" x2="700" y2="316" fill="none" stroke-width="6"></line>
+<line opacity=".6" x1="448" y1="248" x2="448" y2="278" fill="none" stroke-width="6"></line>
+<line opacity=".6" x1="466" y1="248" x2="466" y2="278" fill="none" stroke-width="6"></line>
+<line opacity=".6" x1="448" y1="316" x2="448" y2="345" fill="none" stroke-width="6"></line>
+<line opacity=".6" x1="466" y1="316" x2="466" y2="345" fill="none" stroke-width="6"></line>
+<line opacity=".6" x1="736" y1="248" x2="736" y2="278" fill="none" stroke-width="6"></line>
+<line opacity=".6" x1="718" y1="248" x2="718" y2="278" fill="none" stroke-width="6"></line>
+<line opacity=".6" x1="736" y1="316" x2="736" y2="345" fill="none" stroke-width="6"></line>
+<line opacity=".6" x1="718" y1="316" x2="718" y2="345" fill="none" stroke-width="6"></line>
+</g>
+</svg>

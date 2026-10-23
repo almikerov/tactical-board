@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1211 810">
+<g stroke="#3f82a3" fill="#3f82a3">
+<line x1="84" y1="83" x2="84" y2="726" fill="none" stroke-width="6"></line>
+<line x1="152" y1="83" x2="152" y2="726" fill="none" stroke-width="6"></line>
+<line x1="219" y1="83" x2="219" y2="726" fill="none" stroke-width="6" stroke-dasharray="12, 12"></line>
+<line x1="473" y1="83" x2="473" y2="726" fill="none" stroke-width="6" stroke-dasharray="12, 12"></line>
+<line x1="605.5" y1="83" x2="605.5" y2="726" fill="none" stroke-width="6"></line>
+<line x1="737" y1="83" x2="737" y2="726" fill="none" stroke-width="6" stroke-dasharray="12, 12"></line>
+<line x1="991" y1="83" x2="991" y2="726" fill="none" stroke-width="6" stroke-dasharray="12, 12"></line>
+<line x1="1058" y1="83" x2="1058" y2="726" fill="none" stroke-width="6"></line>
+<line x1="1126" y1="83" x2="1126" y2="726" fill="none" stroke-width="6"></line>
+<line x1="84" y1="83" x2="1126" y2="83" fill="none" stroke-width="6"></line>
+<line x1="84" y1="726" x2="1126" y2="726" fill="none" stroke-width="6"></line>
+<polygon points="84 83, 84 726, 152 726, 152 83" opacity=".1"></polygon>
+<polygon points="1126 83, 1126 726, 1058 726, 1058 83" opacity=".1"></polygon></g> </svg>

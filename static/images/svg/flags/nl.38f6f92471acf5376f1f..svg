@@ -1,0 +1,13 @@
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 600 600">
+	<g stroke="none">
+		<circle fill="#ffffff" cx="300" cy="300" r="299"/>
+		<path d="
+			M583 200
+			A300 300 0 0 0 17 200
+		" fill="#AF1623" />
+		<path d="
+			M583 400 
+			A300 300 0 0 1 17 400
+		" fill="#1B448C" />		
+	</g>
+</svg>

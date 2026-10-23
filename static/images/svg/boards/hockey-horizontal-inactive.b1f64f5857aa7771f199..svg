@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1406 810">
+<g stroke="#888888" fill="#888888">
+<path d="M232 98 H1173 M232 711 H1173 M99 237 V572 M1306 237 V572 M99 237 A 148 148 0 0 1 232 98 M99 572 A 148 148 0 0 0 232 711 M1306 237 A 148 148 0 0 0 1173 98 M1306 572 A 148 148 0 0 1 1173 711 M703 405Z" fill="none" stroke-width="6"></path>
+<path d="M182 113 V696 M530 98 V711 M182 370 A 1 1 0 0 1 182 439 M277 172 V183 M327 172 V183 M277 367.74 V378 M327 367.74 V378 M277 637 V626 M327 637 V626 M277 442.26 V431 M327 442.26 V431 M255 267 H283 V250 M349 267 H321 V250 M255 283 H283 V300 M349 283 H321 V300 M255 542 H283 V559 M349 542 H321 V559 M255 526 H283 V509 M349 526 H321 V509 M703 98 V711 M1150 267 H1122 V250 M1056 267 H1084 V250 M1150 283 H1122 V300 M1056 283 H1084 V300 M1150 542 H1122 V559 M1056 542 H1084 V559 M1150 526 H1122 V509 M1056 526 H1084 V509 M1128 172 V183 M1078 172 V183 M1128 367.74 V378 M1078 367.74 V378 M1128 637 V626 M1078 637 V626 M1128 442.26 V431 M1078 442.26 V431 M1223 370 A 1 1 0 0 0 1223 439 M875 98 V711 M1223 113 V696 M642 711 A 1 1 0 0 1 763 711 M703 405Z" fill="none" opacity="0.6" stroke-width="6"></path>
+<circle opacity="0.6" cx="303" cy="274" r="95" fill="none" stroke-width="6"></circle>
+<circle opacity="0.6" cx="303" cy="535" r="95" fill="none" stroke-width="6"></circle>
+<circle opacity="0.6" cx="303" cy="274" r="8" stroke="none"></circle>
+<circle opacity="0.6" cx="303" cy="535" r="8" stroke="none"></circle>
+<circle opacity="0.6" cx="563" cy="274" r="8" stroke="none"></circle>
+<circle opacity="0.6" cx="563" cy="535" r="8" stroke="none"></circle>
+<circle opacity="0.6" cx="703" cy="405" r="95" fill="none" stroke-width="6"></circle>
+<circle opacity="0.6" cx="703" cy="405" r="4" stroke="none"></circle>
+<circle opacity="0.6" cx="842" cy="274" r="8" stroke="none"></circle>
+<circle opacity="0.6" cx="842" cy="535" r="8" stroke="none"></circle>
+<circle opacity="0.6" cx="1102" cy="274" r="95" fill="none" stroke-width="6"></circle>
+<circle opacity="0.6" cx="1102" cy="535" r="95" fill="none" stroke-width="6"></circle>
+<circle opacity="0.6" cx="1102" cy="274" r="8" stroke="none"></circle>
+<circle opacity="0.6" cx="1102" cy="535" r="8" stroke="none"></circle>
+<rect opacity="0.6" x="172" y="384.75" width="10" height="40.5" fill-opacity=".4" stroke-width="6"></rect>
+<rect opacity="0.6" x="1223" y="384.75" width="10" height="40.5" fill-opacity=".4" stroke-width="6"></rect>
+</g>
+</svg>

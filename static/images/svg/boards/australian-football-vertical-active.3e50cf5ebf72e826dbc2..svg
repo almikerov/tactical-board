@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1183 810">
+<g stroke="#3f82a3" fill="#3f82a3">
+<path d="M535 88 H647 M498 690 H684 M535 88 A 462 310 0 0 0 498 690 M647 88 A 462 310 0 0 1 684 690 M347 144 A 415 266 0 0 0 835 144 M229 552 A 615 498 0 0 1 953 552" fill="none" stroke-width="6"></path>
+<path d="M536 88 V55 M572 88 V40 M646 88 V55 M610 88 V40 M572 88 V111 H610 V88" fill="none" stroke-width="6"></path>
+<path d="M500 690 V617 M560 690 V574 M682 690 V617 M622 690 V574 M560 690 V625 H622 V690" fill="none" stroke-width="6"></path>
+<ellipse cx="591.5" cy="403" rx="478" ry="332" fill="none" stroke-width="6"></ellipse>
+<ellipse cx="591.5" cy="311" rx="36" ry="20" fill="none" stroke-width="6"></ellipse>
+<ellipse cx="591.5" cy="310" rx="11" ry="6" fill="none" stroke-width="6"></ellipse>
+<line x1="554" y1="311" x2="628" y2="311" fill="none" stroke-width="6"></line>
+<polygon points="428 217, 754 217, 787 422, 395 422" fill="none" stroke-width="6"></polygon>
+<polygon points="535 88, 535 81, 536 81, 536 88" stroke-width="6"></polygon>
+<polygon points="572 88, 572 81, 573 81, 573 88" stroke-width="6"></polygon>
+<polygon points="647 88, 647 81, 646 81, 646 88" stroke-width="6"></polygon>
+<polygon points="610 88, 610 81, 609 81, 609 88" stroke-width="6"></polygon>
+<polygon points="499 690, 499 670, 501 670, 501 690" stroke-width="6"></polygon>
+<polygon points="559 690, 559 670, 561 670, 561 690" stroke-width="6"></polygon>
+<polygon points="683 690, 683 670, 681 670, 681 690" stroke-width="6"></polygon>
+<polygon points="623 690, 623 670, 621 670, 621 690" stroke-width="6"></polygon></g></svg>

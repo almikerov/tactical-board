@@ -1,0 +1,24 @@
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 600 600">
+
+
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 400 400" width="400" height="400" x="110" y="90">
+<path 
+		d="
+			M268 48
+			L309 7
+			A34 34 0 0 1 352 9
+			L394 50
+			A34 34 0 0 1 395 84
+			L114 366
+			L32 284			
+			M20 300
+			L0 400
+			L100 380			
+		"
+	fill="#48413B" stroke="none" />
+</svg>
+
+	
+	<circle r="276" cx="300" cy="300" fill="none" stroke="#D80027" stroke-width="48" />
+	<line x1="100" y1="100" x2="500" y2="500" fill="none" stroke="#D80027" stroke-width="38" />
+</svg>

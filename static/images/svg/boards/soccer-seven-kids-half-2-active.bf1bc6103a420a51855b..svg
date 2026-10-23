@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1548 920">
+	<g stroke="#3f82a3" fill="none" stroke-width="6">
+		<path d="M334.98 101.89 V826.10 H1213.01 V101.89"></path>
+		<path d="M524.46 826.10 V655.72 H1023.53 V826.10" fill="none" ></path>
+		<path d="M334.98 338.90 H1213.01" fill="none" stroke-dasharray="14.86px, 14.86px" stroke-opacity=".4" ></path>
+		<path d="M709.13 826.10 V846.8 H838.86 V826.10" fill="#3f82a3" fill-opacity=".35"  ></path>
+		<circle cx="774" cy="655.72" r="3.71" fill="#3f82a3" stroke="none"></circle>
+		<line x1="334.98" x2="1213.01" y1="168.61" y2="168.61" stroke="#3f82a3" ></line>
+	</g>
+ </svg>

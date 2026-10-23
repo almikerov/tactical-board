@@ -1,0 +1,9 @@
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 400 400">
+	<g fill="none" stroke="#48413B" stroke-width="20" stroke-linejoin="" font-size="120" font-family="sans-serif">	
+		<path
+			d="
+				M100 200 L50 100 L150 150 L200 50 L250 150 L350 100 L300 200Z
+			" stroke-width="30" />
+		<text x="10" y="350" stroke-width="12" textLength="380" lengthAdjust="spacingAndGlyphs">PRO</text>
+	</g>
+</svg>

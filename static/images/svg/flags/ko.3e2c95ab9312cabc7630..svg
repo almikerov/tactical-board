@@ -1,0 +1,20 @@
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 600 600" >
+	<circle cx="300" cy="300" r="300" stroke="none" fill="#ffffff" />	
+	<path d="M160 250 A120 120 0 0 1 440 350" fill="#CE2A37" stroke="none" />	
+	<path d="M160 250 A120 120 0 0 0 440 350" fill="#0045A1" stroke="none" />	
+	<circle cx="247" cy="264" r="64" stroke="none" fill="#CE2A37" />
+	<circle cx="353" cy="336" r="64" stroke="none" fill="#0045A1" />
+	<circle cx="300" cy="300" r="170" stroke="#ffffff" fill="none" stroke-width="100" />
+	<line transform="rotate(130, 110, 160)" x1="50" y1="160" x2="170" y2="160" stroke="#000" stroke-width="20" stroke-linecap="none" />
+	<line transform="rotate(130, 135, 178)" x1="75" y1="178" x2="195" y2="178" stroke="#000" stroke-width="20" stroke-linecap="none" />
+	<line transform="rotate(130, 160, 196)" x1="100" y1="196" x2="220" y2="196" stroke="#000" stroke-width="20" stroke-linecap="none" />
+	<line transform="rotate(230, 490, 160)" x1="550" y1="160" x2="430" y2="160" stroke="#000" stroke-width="20" stroke-dasharray="54 12" />
+	<line transform="rotate(230, 465, 178)" x1="525" y1="178" x2="405" y2="178" stroke="#000" stroke-width="20" stroke-linecap="none" />
+	<line transform="rotate(230, 440, 196)" x1="500" y1="196" x2="380" y2="196" stroke="#000" stroke-width="20" stroke-dasharray="54 12" />	
+	<line transform="rotate(130, 490, 440)" x1="550" y1="440" x2="430" y2="440" stroke="#000" stroke-width="20" stroke-linecap="none" stroke-dasharray="54 12" />
+	<line transform="rotate(130, 465, 422)" x1="525" y1="422" x2="405" y2="422" stroke="#000" stroke-width="20" stroke-linecap="none" stroke-dasharray="54 12" />
+	<line transform="rotate(130, 440, 404)" x1="500" y1="404" x2="380" y2="404" stroke="#000" stroke-width="20" stroke-linecap="none" stroke-dasharray="54 12" />	
+	<line transform="rotate(230, 110, 440)" x1="50" y1="440" x2="170" y2="440" stroke="#000" stroke-width="20" stroke-linecap="none" />
+	<line transform="rotate(230, 135, 422)" x1="75" y1="422" x2="195" y2="422" stroke="#000" stroke-width="20" stroke-linecap="none" stroke-dasharray="54 12" />
+	<line transform="rotate(230, 160, 404)" x1="100" y1="404" x2="220" y2="404" stroke="#000" stroke-width="20" stroke-linecap="none" />
+</svg>

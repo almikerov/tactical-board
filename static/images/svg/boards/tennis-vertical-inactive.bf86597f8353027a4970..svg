@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1548 920">
+	<g stroke="#888888" fill="none">
+		<polygon points="539.32 100.74, 1008.67 100.74, 1385.92 819.26, 162.07 819.26" stroke-width="8"></polygon>
+		<line x1="596.28" y1="100.74" x2="310.99" y2="819.26" stroke-width="6"></line>
+		<line x1="951.71" y1="100.74" x2="1237.00" y2="819.26" stroke-width="6"></line>
+		<line x1="774" y1="174.34" x2="774" y2="504.89" stroke-width="6"></line>
+		<line x1="774" y1="100.74" x2="774" y2="107.18" stroke-width="6"></line>
+		<line x1="774" y1="819.26" x2="774" y2="803.62" stroke-width="6"></line>
+		<line x1="566.87" y1="174.34" x2="981.12" y2="174.34" stroke-width="6"></line>
+		<line x1="435.76" y1="504.89" x2="1112.23" y2="504.89" stroke-width="6"></line>
+		<line x1="435.45" y1="299.36" x2="435.45" y2="236.80" stroke-width="10"></line>
+		<line x1="1112.54" y1="299.36" x2="1112.54" y2="236.80" stroke-width="10"></line>
+		<line x1="435.45" y1="239.66" x2="1112.54" y2="239.66" stroke-width="8"></line>
+		<polygon points="435.45 299.36, 1112.54 299.36, 1112.54 236.80, 435.45 236.80" fill="#888888" fill-opacity=".35" stroke-width="2"></polygon>
+	</g></svg>

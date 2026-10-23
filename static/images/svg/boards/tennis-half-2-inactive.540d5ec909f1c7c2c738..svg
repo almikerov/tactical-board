@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1548 920">
+	<g stroke="#888888" fill="none">
+		<path d="M466.10 101.56 V818.43 H1081.89 V101.56" stroke-width="8"></path>
+		<line x1="541.33" y1="101.56" x2="541.33" y2="818.43" stroke-width="6"></line>
+		<line x1="1006.66" y1="101.56" x2="1006.66" y2="818.43" stroke-width="6"></line>
+		<line x1="774" y1="512.16" x2="774" y2="101.56" stroke-width="6"></line>
+		<line x1="541.33" y1="512.16" x2="1006.66" y2="512.16" stroke-width="6"></line>
+		<line stroke-dasharray="16, 16" x1="466.10" y1="150.14" x2="1081.89" y2="150.14" stroke-width="8"></line>
+		<line x1="774" y1="818.43" x2="774" y2="806.47" stroke-width="8"></line>
+	</g>
+</svg>
+

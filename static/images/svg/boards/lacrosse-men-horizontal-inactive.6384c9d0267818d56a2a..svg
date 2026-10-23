@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1346 810">
+<g stroke="#888888" fill="#888888">
+<circle cx="252" cy="405" r="33" fill="none" stroke-width="6"></circle>
+<circle cx="1093" cy="405" r="33" fill="none" stroke-width="6"></circle>
+<line x1="94" y1="197" x2="461" y2="197" fill="none" stroke-width="6"></line>
+<line x1="94" y1="612" x2="461" y2="612" fill="none" stroke-width="6"></line>
+<line x1="461" y1="92" x2="461" y2="717" fill="none" stroke-width="6"></line>
+<line x1="252" y1="394" x2="252" y2="415" fill="none" stroke-width="6"></line>
+<line x1="566" y1="197" x2="779" y2="197" fill="none" stroke-width="6"></line>
+<line x1="666" y1="397" x2="679" y2="412" fill="none" stroke-width="6"></line>
+<line x1="673" y1="92" x2="673" y2="717" fill="none" stroke-width="6"></line>
+<line x1="666" y1="412" x2="679" y2="397" fill="none" stroke-width="6"></line>
+<line x1="566" y1="612" x2="779" y2="612" fill="none" stroke-width="6"></line>
+<line x1="1251" y1="197" x2="884" y2="197" fill="none" stroke-width="6"></line>
+<line x1="1251" y1="612" x2="884" y2="612" fill="none" stroke-width="6"></line>
+<line x1="884" y1="92" x2="884" y2="717" fill="none" stroke-width="6"></line>
+<line x1="1093" y1="394" x2="1093" y2="415" fill="none" stroke-width="6"></line>
+<polygon points="94 92 1251 92 1251 717 94 717" fill="none" stroke-width="6"></polygon>
+<polyline points="252 394, 228 405, 252 415" fill-opacity=".35" stroke-width="4"></polyline>
+<polyline points="1093 394, 1117 405, 1093 415" fill-opacity=".35" stroke-width="4"></polyline>
+</g> </svg>

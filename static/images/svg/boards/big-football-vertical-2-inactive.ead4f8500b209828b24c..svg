@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1548 928">
+	<g stroke="#888888" fill="#888888">				
+		<path d="M699.85 99.76 V142.07 H848.14 V99.76 M618.27 99.76 V217.52 H929.72 V99.76 M715.02 217.52 A 76.62 76.62 0 0 0 832.97 217.52 M699.85 828.24 V785.92 H848.14 V828.24 M618.27 828.24 V710.47 H929.72 V828.24 M715.02 710.47 A 76.62 76.62 0 0 1 832.97 710.47" fill="none" stroke-linecap="round" stroke-width="6"></path>
+		<circle cx="774" cy="176.69" r="3.40" stroke="none"></circle>
+		<circle cx="774" cy="751.30" r="3.40" stroke="none"></circle>
+		<circle cx="774" cy="464" r="76.47" fill="none" stroke-width="6"></circle>
+		<circle cx="774" cy="464" r="3.71" stroke="none"></circle>
+		<line x1="532.66" y1="464" x2="1015.33" y2="464" fill="none" stroke-width="6"></line>
+		<polygon points="532.66 828.24, 532.66 99.76, 1015.33 99.76, 1015.33 828.24" fill="none" stroke-width="6"></polygon>
+		<polyline points="738.86 99.76, 738.86 87.78, 809.13 87.78, 809.13 99.76" fill-opacity=".35" stroke-width="6"></polyline>
+		<polyline points="738.86 828.24, 738.86 840.21, 809.13 840.21, 809.13 828.24" fill-opacity=".35" stroke-width="6"></polyline> 
+	</g> 
+</svg>
+ 

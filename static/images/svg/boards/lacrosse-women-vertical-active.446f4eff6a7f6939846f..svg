@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1355 810">
+<g stroke="#3f82a3" fill="#3f82a3">
+<path d="M610 147 A 140 140 0 0 0 744 147 M573 130 A 104 44 0 1 0 781 130 M570 543 A 165 165 0 0 1 784 543 M501 588 A 177 125 0 0 1 853 588" fill="none" stroke-width="6"></path>
+<ellipse cx="677.5" cy="130" rx="18" ry="8" fill="none" stroke-width="6"></ellipse>
+<ellipse cx="677.5" cy="302" rx="81" ry="42" fill="none" stroke-width="6"></ellipse>
+<ellipse cx="677.5" cy="588" rx="30" ry="21" fill="none" stroke-width="6"></ellipse>
+<line x1="422" y1="223" x2="932" y2="223" fill="none" stroke-width="6"></line>
+<line x1="363" y1="395" x2="991" y2="395" fill="none" stroke-width="6"></line>
+<line x1="573" y1="130" x2="657" y2="130" fill="none" stroke-width="6"></line>
+<line x1="781" y1="130" x2="697" y2="130" fill="none" stroke-width="6"></line>
+<line x1="669" y1="130" x2="685" y2="130" fill="none" stroke-width="6"></line>
+<line x1="657" y1="130" x2="610" y2="147" fill="none" stroke-width="6"></line>
+<line x1="697" y1="130" x2="744" y2="147" fill="none" stroke-width="6"></line>
+<line x1="601" y1="130" x2="601" y2="134" fill="none" stroke-width="6"></line>
+<line x1="598" y1="140" x2="609" y2="138" fill="none" stroke-width="6"></line>
+<line x1="612" y1="154" x2="622" y2="150" fill="none" stroke-width="6"></line>
+<line x1="641" y1="163" x2="646" y2="158" fill="none" stroke-width="6"></line>
+<line x1="677.5" y1="167" x2="677.5" y2="160" fill="none" stroke-width="6"></line>
+<line x1="753" y1="130" x2="753" y2="134" fill="none" stroke-width="6"></line>
+<line x1="756" y1="140" x2="745" y2="138" fill="none" stroke-width="6"></line>
+<line x1="742" y1="154" x2="732" y2="150" fill="none" stroke-width="6"></line>
+<line x1="713" y1="163" x2="708" y2="158" fill="none" stroke-width="6"></line>
+<line x1="658" y1="300" x2="696" y2="300" fill="none" stroke-width="6"></line>
+<line x1="501" y1="588" x2="646" y2="588" fill="none" stroke-width="6"></line>
+<line x1="853" y1="588" x2="708" y2="588" fill="none" stroke-width="6"></line>
+<line x1="646" y1="588" x2="570" y2="543" fill="none" stroke-width="6"></line>
+<line x1="708" y1="588" x2="784" y2="543" fill="none" stroke-width="6"></line>
+<line x1="549" y1="588" x2="551" y2="581" fill="none" stroke-width="6"></line>
+<line x1="549" y1="561" x2="565" y2="565" fill="none" stroke-width="6"></line>
+<line x1="578" y1="526" x2="592" y2="535" fill="none" stroke-width="6"></line>
+<line x1="623" y1="505" x2="630" y2="516" fill="none" stroke-width="6"></line>
+<line x1="677.5" y1="497" x2="677.5" y2="511" fill="none" stroke-width="6"></line>
+<line x1="805" y1="588" x2="803" y2="581" fill="none" stroke-width="6"></line>
+<line x1="805" y1="561" x2="789" y2="565" fill="none" stroke-width="6"></line>
+<line x1="776" y1="526" x2="762" y2="535" fill="none" stroke-width="6"></line>
+<line x1="731" y1="505" x2="724" y2="516" fill="none" stroke-width="6"></line>
+<polygon points="465 93, 889 93, 1100 716, 254 716" fill="none" stroke-width="6"></polygon>
+<polygon points="669 130, 669 114, 685 114, 685 130" stroke-width="6" fill-opacity=".35"></polygon>
+<polygon points="664 588, 664 562, 690 562, 690 588" fill="none" stroke-width="6"></polygon>
+<polygon points="664 588, 664 562, 677.5 604" stroke="none" fill-opacity=".35"></polygon>
+<polygon points="690 588, 690 562, 677.5 604" stroke="none" fill-opacity=".35"></polygon>
+<polyline points="664 588, 677.5 604, 690 588" fill="none" stroke-width="4"></polyline>
+<polyline points="664 562, 677.5 604, 690 562" stroke-width="4" fill-opacity=".35"></polyline></g> </svg>

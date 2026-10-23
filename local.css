@@ -1,0 +1,43 @@
+.local-panel{padding:1rem;min-width:min(32rem,75vw);max-width:80vw;color:#ededb4;font:inherit;line-height:1.5}
+.local-panel h2{font-size:1.25rem;margin:0 0 1rem}
+.local-panel p{margin:.6rem 0}
+.local-panel label{display:block;margin:1rem 0 .4rem}
+.local-panel input,.local-panel textarea{box-sizing:border-box;width:100%;padding:.65rem;background:#171c13;border:1px solid #88915c;color:#ffffd0;font:inherit;user-select:text}
+.local-panel button,.local-panel .local-link{display:inline-block;cursor:pointer;background:#596e3c;color:#ffffd0;padding:.6rem 1rem;border:1px solid #aaa85e;border-radius:.2rem;font:inherit;margin:.4rem .4rem .4rem 0;text-decoration:none}
+.local-panel small{opacity:.8}.local-items{max-height:55vh;overflow:auto}.local-item{padding:.8rem 0;border-bottom:1px solid #697149}.local-item strong{display:block}.local-item p{white-space:pre-wrap;overflow-wrap:anywhere}
+.collection-toolbar-button{display:inline-flex;align-items:center;padding:.2rem .5rem;border:1px solid #b39b38;border-radius:0;background:#c6a644;color:#536b3a;font:inherit;cursor:pointer;height:1.7rem;white-space:nowrap}
+.local-panel button:disabled{opacity:.5;cursor:wait}
+/* The wide, transparent top toolbar can overlap the left-hand controls. */
+#side_buttons_panel{z-index:102}
+.local-panel .local-delete{background:#713d32;border-color:#b98365}
+#menu_panel>.local-credit{text-align:center;margin:1.6rem .5rem;color:khaki;font-size:1rem}
+#collection_list .collection-json-export{flex:none;align-self:center;margin:0 .5rem 0 .2rem;padding:.25rem;color:#7f91a4;background:transparent;border:0;cursor:pointer;font:inherit;font-size:.7rem}
+#collection_list .collection-json-export:hover{color:white}
+#collection_list>.collection-local-footer{display:flex;justify-content:space-between;align-items:center;gap:1rem;margin-top:.7rem;color:#999;font-size:.7rem}
+#collection_list>.collection-local-footer button{background:transparent;border:1px solid #3f82a3;color:#3f82a3;padding:.4rem .6rem;border-radius:.3rem;cursor:pointer;font:inherit}
+#collection_list .collection-no-data-label:not([hidden]){display:flex!important}
+
+
+
+
+/* local-board-views */
+div.select-board-view>div:last-child>a{flex-direction:column}
+div.select-board-view>div:last-child>a.board-view-big-football-horizontal::after{content:'Всё поле';font-size:.75rem;text-align:center;margin-top:.3rem}
+div.select-board-view>div:last-child>a.board-view-big-football-half::after{content:'Половина поля — ворота сверху';font-size:.75rem;text-align:center;margin-top:.3rem}
+div.select-board-view>div:last-child>a.board-view-big-football-half-2::after{content:'Половина поля — ворота снизу';font-size:.75rem;text-align:center;margin-top:.3rem}
+div.select-board-view>div:last-child>a.board-view-big-football-vertical::after{content:'Поле в перспективе';font-size:.75rem;text-align:center;margin-top:.3rem}
+div.select-board-view>div:last-child>a.board-view-big-football-vertical-2::after{content:'Всё поле вертикально';font-size:.75rem;text-align:center;margin-top:.3rem}
+div.select-board-view>div:last-child>a.board-view-big-football-penalty::after{content:'Крупный план штрафной';font-size:.75rem;text-align:center;margin-top:.3rem}
+div.select-board-view>div:last-child>a.board-view-big-football-free::after{content:'Свободное поле';font-size:.75rem;text-align:center;margin-top:.3rem}
+div.select-board-view>div:last-child>a.board-view-big-football-penalty>div:last-child{background-image:url('/tactical-board/static/images/svg/boards/big-football-penalty.svg')}
+div.select-board-view>div:last-child>a.board-view-big-football-free>div:last-child{background-image:url('/tactical-board/static/images/svg/boards/big-football-free.svg')}
+.free-field-controls{display:grid;grid-template-columns:repeat(2,auto);gap:.2rem;margin-top:.6rem;width:max-content}
+.free-field-controls>button{width:1.35rem;height:1.35rem;padding:.15rem;border:0;border-radius:0;background:rgb(219,164,35);cursor:pointer;display:flex}
+.free-field-controls>button:hover{background:#f0c040}
+.free-field-controls svg{width:100%;height:100%;fill:none;stroke:#536b3a;stroke-width:2.4;stroke-linecap:round;stroke-linejoin:round}
+.free-field-presets{max-height:45vh;overflow:auto}
+.free-field-preset{display:flex;gap:.4rem;align-items:stretch;border-bottom:1px solid #697149}
+.local-panel .free-field-preset>button:first-child{flex:1;text-align:left;display:flex;justify-content:space-between;gap:1rem}
+/* /local-board-views */
+
+#collection_list>.collection-local-footer{flex-wrap:wrap}

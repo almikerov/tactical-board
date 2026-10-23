@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1548 920">
+	<g stroke="#888888" fill="none">
+		<path d="M413.16 818.89 V101.10 H1134.83 V818.89" stroke-width="6"></path>
+		<path d="M684.37 818.89 A 100.15 100.15, 0, 1, 1, 863.62 818.89" stroke-width="6"></path>
+		<rect x="582.20" y="101.10" width="383.59" height="82.24" stroke-width="6"></rect>
+		<line x1="413.16" y1="774.73" x2="1134.83" y2="774.73" stroke-width="6"></line>
+	</g>
+</svg>

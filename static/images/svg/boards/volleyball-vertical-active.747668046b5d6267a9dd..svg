@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1185 810">
+<g stroke="#3f82a3" fill="#3f82a3">
+<line x1="353" y1="212" x2="831" y2="212" fill="none" stroke-width="6"></line>
+<line x1="324" y1="296" x2="860" y2="296" fill="none" stroke-width="6"></line>
+<line x1="290" y1="402" x2="894" y2="402" fill="none" stroke-width="6"></line>
+<line x1="301" y1="296" x2="301" y2="161" fill="none" stroke-width="4.8"></line>
+<line x1="883" y1="296" x2="883" y2="161" fill="none" stroke-width="4.8"></line>
+<line x1="301" y1="160" x2="309" y2="166" fill="none" stroke-width="6"></line>
+<line x1="301" y1="239" x2="309" y2="234" fill="none" stroke-width="6"></line>
+<line x1="883" y1="239" x2="875" y2="234" fill="none" stroke-width="6"></line>
+<line x1="883" y1="160" x2="875" y2="166" fill="none" stroke-width="6"></line>
+<polygon points="392 89, 792 89, 999 720, 185 720" fill="none" stroke-width="6"></polygon>
+<polygon points="309 234, 875 234, 875 166, 309 166" fill-opacity=".35" stroke-width="6"></polygon></g> </svg>

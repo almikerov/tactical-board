@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" viewBox="0 0 400 400">
+		<path 
+			d="
+				M150 0 V150 H0z
+				M250 0 V150 H400z
+				M150 400 V250 H0z
+				M250 400 V250 H400z				
+				M36 0 L0 36 L57 93 L93 57z
+				M36 400 L0 364 L57 307 L93 343z
+				M364 0 L400 36 L343 93 L307 57z
+				M364 400 L400 364 L343 307 L307 343z
+			"
+			fill="#48413B" stroke="none" />
+</svg>

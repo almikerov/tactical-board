@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg"	xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1388 810">
+	<g stroke="#3f82a3" fill="#3f82a3">
+		<path d="M624 145 A 170 170, 0, 0, 0, 763 145 M586 543 A 187 187, 0, 0, 1, 801 543" fill="none" stroke-width="6"></path>
+		<ellipse cx="694" cy="125" rx="3" ry="1" stroke-width="6"></ellipse>
+		<ellipse cx="694" cy="303" rx="109" ry="54" fill="none" stroke-width="6"></ellipse>
+		<ellipse cx="694" cy="300" rx="6" ry="4" stroke-width="6"></ellipse>
+		<ellipse cx="694" cy="598" rx="6" ry="4" stroke-width="6"></ellipse>
+		<line x1="360" y1="299" x2="1027" y2="299" fill="none" stroke-width="6"></line>
+		<polygon points="442 91, 191 718, 1196 718, 945 91" fill="none" stroke-width="6"></polygon>
+		<polygon points="526 91, 861 91, 875 145, 512 145" fill="none" stroke-width="6"></polygon>
+		<polygon points="613 91, 774 91, 776 109, 611 109" fill="none" stroke-width="6"></polygon>
+		<polygon points="616 733, 616 690, 771 690, 771 733" fill-opacity=".35" stroke-width="6"></polygon>
+		<polygon points="616 690, 620 670,767 670, 771 690" fill-opacity=".35" stroke-width="6"></polygon>
+		<polygon points="616 733, 616 690, 620 670, 620 717" fill-opacity=".35" stroke-width="6"></polygon>
+		<polygon points="771 733, 771 690, 767 670, 767 717" fill-opacity=".35" stroke-width="6"></polygon>
+		<polyline points="656 91, 656 66, 731 66, 731 91" fill-opacity=".35" stroke-width="6"></polyline>
+		<polyline points="360 718, 406 543, 981 543, 1027 718" fill="none" stroke-width="6"></polyline>
+		<polyline points="534 718, 543 649, 844 649, 853 718" fill="none" stroke-width="6"></polyline>
+		<polyline points="620 717, 620 670, 767 670, 767 717" fill="none" stroke-width="6"></polyline>
+	</g>		
+</svg>

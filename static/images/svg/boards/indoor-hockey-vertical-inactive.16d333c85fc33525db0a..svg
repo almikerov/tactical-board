@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1548 920">
+	<g stroke="#888888" fill="none">
+		<path d="M555.88 101.29 H992.11 L1297.68 818.70 H250.31Z" stroke-width="6"></path>
+		<path d="M555.88 101.29 H562.07 L267.33 818.70 H250.31Z M992.11 101.29 H985.92 L1280.66 818.70 H1297.68Z" fill-opacity=".5" stroke-width="6"></path>
+		<path d="M552.48 125.94 A192.88 65.94 0 0 0 720.12 178.57 H827.87 A192.88 65.94 0 0 0 995.51 125.94 M475.08 312.34 H1072.91 M318.42 696.34 A497.83 418.88 0 0 1 720.12 524.30 H827.87 A497.83 418.88 0 0 1 1229.57 696.34" fill="none" stroke-width="6"></path>
+		<path d="M741.18 101.29 V65.78 H806.81 V101.29" fill="#888888" fill-opacity=".5" stroke-width="6"></path>
+		<path d="M537.93 159.06 A704.49 704.49 0 0 0 1010.07 159.06" fill="none" stroke-dasharray="20px, 40px" stroke-width="6"></path>
+		<path d="M367.03 577.3 A882.20 882.20 0 0 1 1180.96 577.3" fill="none" stroke-dasharray="28px, 100px" stroke-width="6"></path>
+		<ellipse cx="774" cy="573.62" rx="5.41" ry="4.02" stroke="none"></ellipse>
+		<ellipse cx="774" cy="159.61" rx="3.25" ry="2.47" stroke="none"></ellipse>
+		<line x1="613.31" y1="101.29" x2="612.38" y2="105.89" stroke-width="6" fill="none"></line>
+		<line x1="934.68" y1="101.29" x2="935.61" y2="105.89" stroke-width="6" fill="none"></line>
+		<line x1="390.40" y1="818.70" x2="394.12" y2="805.82" stroke-width="6" fill="none"></line>
+		<line x1="1157.59" y1="818.70" x2="1153.87" y2="805.82" stroke-width="6" fill="none"></line>
+		<polygon points="689.32 841.61, 689.32 752.1, 858.67 752.1, 858.67 841.61" fill="#888888" fill-opacity=".5" stroke-width="6"></polygon>
+		<polygon points="689.32 752.1, 694.43 722.66, 694.43 818.70, 689.32 841.61" fill="#888888" fill-opacity=".5" stroke-width="6"></polygon>
+		<polygon points="858.67 752.1, 853.56 722.66, 853.56 814.66, 858.67 841.61" fill="#888888" fill-opacity=".5" stroke-width="6"></polygon>
+		<polygon points="689.32 752.1, 694.43 722.66, 853.56 722.66, 858.67 752.1" fill="#888888" fill-opacity=".5" stroke-width="6"></polygon>
+	</g>
+</svg>

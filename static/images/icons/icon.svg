@@ -1,0 +1,22 @@
+<svg viewBox="0 0 1000 1000" width="1024" height="1024" xmlns="http://www.w3.org/2000/svg">
+	<rect x="40" y="100" width="920" height="800" fill="rgb(115, 133, 84)" stroke="#ffffff" stroke-width="40" stroke-linecap="round" stroke-linejoin="round" rx="25" />
+	<line x1="500" y1="100" x2="500" y2="900" stroke-width="30" stroke="#ffffff" />
+	<circle cx="500" cy="500" r="150" stroke-width="30" fill="none" stroke="#ffffff" />
+	<rect x="40" y="350" width="50" height="300" fill="none" stroke="#ffffff" stroke-width="30" stroke-linecap="round" stroke-linejoin="round" />
+	<rect x="910" y="350" width="50" height="300" fill="none" stroke="#ffffff" stroke-width="30" stroke-linecap="round" stroke-linejoin="round" />
+
+	<circle cx="130" cy="500" r="35"  stroke="#194088" stroke-width="7" fill="#1d4ba0" />
+	<circle cx="260" cy="500" r="35" stroke="#194088" stroke-width="7" fill="#1d4ba0" />
+	<circle cx="300" cy="200" r="35" stroke="#194088" stroke-width="7" fill="#1d4ba0" />
+	<circle cx="300" cy="800" r="35" stroke="#194088" stroke-width="7" fill="#1d4ba0" />
+	<circle cx="450" cy="420" r="35" stroke="#194088" stroke-width="7" fill="#1d4ba0" />
+	<circle cx="450" cy="580" r="35" stroke="#194088" stroke-width="7" fill="#1d4ba0" />
+
+	<circle cx="580" cy="500" r="35"  stroke="#ca2525" stroke-width="7" fill="#ee2c2c" />
+	<circle cx="610" cy="280" r="35"  stroke="#ca2525" stroke-width="7" fill="#ee2c2c" />
+	<circle cx="610" cy="720" r="35"  stroke="#ca2525" stroke-width="7" fill="#ee2c2c" />
+	<circle cx="750" cy="380" r="35"  stroke="#ca2525" stroke-width="7" fill="#ee2c2c" />
+	<circle cx="750" cy="620" r="35"  stroke="#ca2525" stroke-width="7" fill="#ee2c2c" />
+	<circle cx="870" cy="500" r="35"  stroke="#ca2525" stroke-width="7" fill="#ee2c2c" />
+	
+</svg>

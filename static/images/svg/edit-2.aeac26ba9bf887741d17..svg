@@ -1,0 +1,16 @@
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 400 400">
+	<path 
+		d="
+			M268 48
+			L309 7
+			A34 34 0 0 1 352 9
+			L394 50
+			A34 34 0 0 1 395 84
+			L114 366
+			L32 284			
+			M20 300
+			L0 400
+			L100 380			
+		"
+	fill="#eeeeee" stroke="none" />
+</svg>

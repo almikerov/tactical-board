@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1548 920">
+	<g stroke="#888888" fill="none">
+		<path d="M463.47 100.74 V819.26 H1084.52 V100.74" stroke-width="6"></path>
+		<line x1="463.47" y1="747.5" x2="1084.52" y2="747.5" stroke-width="6"></line>
+		<line x1="463.47" y1="352.81" x2="1084.52" y2="352.81" stroke-width="6"></line>
+		<line stroke-dasharray="16, 16" x1="463.47" y1="135.05" x2="1084.52" y2="135.05" stroke-width="6"></line>
+		<line x1="504.80" y1="100.74" x2="504.80" y2="819.26" stroke-width="6"></line>
+		<line x1="774" y1="819.26" x2="774" y2="352.81" stroke-width="6"></line>
+		<line x1="1043.19" y1="100.74" x2="1043.19" y2="819.26" stroke-width="6"></line>
+	</g>
+</svg>
