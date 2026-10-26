@@ -1,0 +1,14 @@
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 400 400">
+	<rect x="0" y="0" width="400" height="400" fill="#0866FF" />
+	<path 
+		d="
+			M245 400
+			V138
+			A52 52 0 0 1 300 88
+			H340
+			M160 214
+			H340
+		" fill="none" stroke="#ffffff" stroke-linejoin="round" stroke-width="63"
+	/>	
+</svg>
+

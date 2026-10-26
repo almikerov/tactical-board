@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1183 818">
+<g stroke="#3f82a3" fill="#3f82a3"> <path d="M229 360 A 367 319 0 0 1 953 360 M229 457 A 367 319 0 0 0 953 457 M337 182 A 308 308 0 0 1 337 635 M845 182 A 308 308 0 0 0 845 635" fill="none" stroke-width="6"></path>
+<path d="M229 357 H182 M229 460 H182 M155 391 H277 V426 H155 M953 357 H1000 M953 460 H1000 M1027 391 H905 V426 H1027" fill="none" stroke-width="6"></path>
+<circle cx="591.5" cy="409" r="26" fill="none" stroke-width="6"></circle>
+<circle cx="591.5" cy="409" r="7" fill="none" stroke-width="6"></circle>
+<ellipse cx="591.5" cy="409" rx="392" ry="340" fill="none" stroke-width="6"></ellipse>
+<line x1="229" y1="360" x2="229" y2="457" fill="none" stroke-width="6"></line>
+<line x1="953" y1="360" x2="953" y2="457" fill="none" stroke-width="6"></line>
+<line x1="591.5" y1="383" x2="591.5" y2="434" fill="none" stroke-width="6"></line>
+<polygon points="460 277, 722 277, 722 540, 460 540" fill="none" stroke-width="6"></polygon>
+<polygon points="217 358, 229 358, 229 356, 217 356" stroke-width="6"></polygon>
+<polygon points="217 392, 229 392, 229 391, 217 391" stroke-width="6"></polygon>
+<polygon points="217 459, 229 459, 229 461, 217 461" stroke-width="6"></polygon>
+<polygon points="217 425, 229 425, 229 426, 217 426" stroke-width="6"></polygon>
+<polygon points="965 358, 953 358, 953 356, 965 356" stroke-width="6"></polygon>
+<polygon points="965 392, 953 392, 953 391, 965 391" stroke-width="6"></polygon>
+<polygon points="965 459, 953 459, 953 461, 965 461" stroke-width="6"></polygon>
+<polygon points="965 425, 953 425, 953 426, 965 426" stroke-width="6"></polygon></g> </svg>

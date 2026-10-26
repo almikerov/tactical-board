@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1548 920">
+	<g stroke="#3f82a3" fill="#3f82a3">
+		<path d="M101.54 164.31 H1446.45 V755.68 H101.54 V 164.31" fill="none" stroke-width="6"></path>
+		<path d="M80.03 386.12 H101.54 V533.87 H80.03 V 386.12 M1467.96 386.12 H1446.45 V533.87 H1467.96 V 386.12" stroke-width="6" fill-opacity=".35"></path>
+		<line x1="399.22" y1="164.31" x2="399.22" y2="755.68" stroke-width="6"></line>
+		<line x1="1148.77" y1="164.31" x2="1148.77" y2="755.68" stroke-width="6"></line>
+	</g>
+</svg>
+

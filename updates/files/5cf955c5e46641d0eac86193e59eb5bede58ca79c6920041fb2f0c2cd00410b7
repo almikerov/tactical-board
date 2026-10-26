@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1430 810">
+	<g stroke="#3f82a3" fill="#3f82a3">
+		<path d="M99 101 H1330 V708 H99 V 101 M99 179 A 184 184 0 0 1 285 353 M285 353 V456 M99 630 A 184 184 0 0 0 285 456 M715 101 V708 M1330 179 A 184 184 0 0 0 1144 353 M1144 353 V456 M1330 630 A 184 184 0 0 1 1144 456 M715 405Z" fill="none" stroke-width="6"></path>
+		<path d="M81 354 H99 V455 H81 V 354 M1348 354 H1330 V455 H1348 V 354" fill-opacity=".35" stroke-width="6"></path>
+		<circle cx="286" cy="405" r="6" stroke="none"></circle>
+		<circle cx="407" cy="405" r="6" stroke="none"></circle>
+		<circle cx="715" cy="405" r="94" fill="none" stroke-width="6"></circle>
+		<circle cx="715" cy="405" r="7" stroke="none"></circle>
+		<circle cx="1144" cy="405" r="6" stroke="none"></circle>
+		<circle cx="1023" cy="405" r="6" stroke="none"></circle>
+	</g>
+</svg>

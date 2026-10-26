@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1298 810">
+<g stroke="#888888" fill="#888888">
+<path d="M457 113 A 71, 26 0 0 0 840, 113" fill="none" stroke-linecap="round" stroke-width="6"></path>
+<path d="M302 628 A 372, 281 0 0 1 995, 628" fill="none" stroke-linecap="round" stroke-width="6"></path>
+<ellipse cx="649" cy="158" rx="61" ry="25" fill="none" stroke-width="6"></ellipse>
+<ellipse cx="649" cy="107" rx="6" ry="2" fill="none" stroke-width="4"></ellipse>
+<ellipse cx="649" cy="298" rx="74" ry="36" fill="none" stroke-width="6"></ellipse>
+<ellipse cx="649" cy="512" rx="93" ry="58" fill="none" stroke-width="6"></ellipse>
+<ellipse cx="649" cy="653" rx="11" ry="7" fill="none" stroke-width="4"></ellipse>
+<line x1="464" y1="89" x2="457" y2="113" fill="none" stroke-width="6"></line>
+<line x1="833" y1="89" x2="840" y2="113" fill="none" stroke-width="6"></line>
+<line x1="559" y1="89" x2="586" y2="158" fill="none" stroke-width="6"></line>
+<line x1="564" y1="109" x2="567" y2="109" fill="none" stroke-width="6"></line>
+<line x1="572" y1="130" x2="576" y2="130" fill="none" stroke-width="6"></line>
+<line x1="577" y1="144" x2="581" y2="144" fill="none" stroke-width="6"></line>
+<line x1="586" y1="158" x2="711" y2="158" fill="none" stroke-width="6"></line>
+<line x1="738" y1="89" x2="711" y2="158" fill="none" stroke-width="6"></line>
+<line x1="733" y1="109" x2="730" y2="109" fill="none" stroke-width="6"></line>
+<line x1="725" y1="130" x2="721" y2="130" fill="none" stroke-width="6"></line>
+<line x1="720" y1="144" x2="716" y2="144" fill="none" stroke-width="6"></line>
+<line x1="621" y1="102" x2="676" y2="102" fill="none" stroke-width="4"></line>
+<line x1="649" y1="102" x2="649" y2="105" fill="none" stroke-width="4"></line>
+<line x1="349" y1="297" x2="948" y2="297" fill="none" stroke-width="6"></line>
+<line x1="468" y1="720" x2="555" y2="508" fill="none" stroke-width="6"></line>
+<line x1="555" y1="508" x2="742" y2="508" fill="none" stroke-width="6"></line>
+<line x1="829" y1="720" x2="742" y2="508" fill="none" stroke-width="6"></line>
+<line x1="274" y1="720" x2="302" y2="628" fill="none" stroke-width="6"></line>
+<line x1="1023" y1="720" x2="995" y2="628" fill="none" stroke-width="6"></line>
+<line x1="537" y1="539" x2="542" y2="539" fill="none" stroke-width="6"></line>
+<line x1="520" y1="578" x2="526" y2="578" fill="none" stroke-width="6"></line>
+<line x1="493" y1="645" x2="498" y2="645" fill="none" stroke-width="6"></line>
+<line x1="760" y1="539" x2="755" y2="539" fill="none" stroke-width="6"></line>
+<line x1="777" y1="578" x2="771" y2="578" fill="none" stroke-width="6"></line>
+<line x1="804" y1="645" x2="799" y2="645" fill="none" stroke-width="6"></line>
+<line x1="596" y1="668" x2="701" y2="668" fill="none" stroke-width="4"></line>
+<line x1="649" y1="668" x2="649" y2="662" fill="none" stroke-width="4"></line>
+<polygon points="424 89, 873 89, 1103 720, 194 720" fill="none" stroke-width="6"></polygon>
+</g>
+</svg>

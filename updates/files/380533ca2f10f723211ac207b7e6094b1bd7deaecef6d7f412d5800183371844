@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1275 810">
+<g stroke="#3f82a3" fill="#3f82a3">
+<path d="M495 91 A 142, 59 0 1 0 779, 91 M361 718 A 278, 224 0 0 1 913, 718" fill="none" stroke-width="6"></path>
+<path d="M518 147 A 44, 20 -1 1 0 610.98, 147 M518 147 A 44, 20 -1 1 1 610.98, 147 M756 147 A 44, 20 1 1 0 664.02, 147 M756 147 A 44, 20 1 1 1 664.02, 147 M453 557 A 46, 32 -5 1 0 596, 541 M453 557 A 46, 32 -5 1 1 596, 541 M821 557 A 46, 32 5 1 0 678, 541 M821 557 A 46, 32 5 1 1 678, 541" fill="none" stroke-width="6"></path>
+<ellipse cx="637.5" cy="305" rx="58" ry="31" fill="none" stroke-width="6"></ellipse>
+<ellipse cx="637.5" cy="304" rx="5" ry="3" stroke="none"></ellipse>
+<ellipse cx="564" cy="146" rx="3" ry="2" stroke="none"></ellipse>
+<ellipse cx="710" cy="146" rx="3" ry="2" stroke="none"></ellipse>
+<ellipse cx="525" cy="548" rx="5" ry="3" stroke="none"></ellipse>
+<ellipse cx="749" cy="548" rx="5" ry="3" stroke="none"></ellipse>
+<ellipse cx="637.5" cy="580" rx="6" ry="4" stroke="none"></ellipse>
+<ellipse cx="637.5" cy="134" rx="3" ry="2" stroke="none"></ellipse>
+<line stroke-dasharray="4, 4" x1="392" y1="110" x2="499" y2="110" fill="none" stroke-width="6"></line>
+<line stroke-dasharray="4, 4" x1="882" y1="110" x2="775" y2="110" fill="none" stroke-width="6"></line>
+<line x1="323" y1="304" x2="951" y2="304" fill="none" stroke-width="6"></line>
+<line stroke-dasharray="10, 8" x1="199" y1="652" x2="391" y2="652" fill="none" stroke-width="6"></line>
+<line stroke-dasharray="10, 8" x1="1075" y1="652" x2="883" y2="652" fill="none" stroke-width="6"></line>
+<polygon points="399 91, 875 91, 1100 718, 174 718" fill="none" stroke-width="6"></polygon>
+<polygon points="604 700, 604 729, 670 729, 670 700" fill-opacity=".35" stroke-width="6"></polygon>
+<polygon points="604 700, 606 686,668 686, 670 700" fill-opacity=".35" stroke-width="6"></polygon>
+<polygon points="604 729, 604 700, 606 686, 606 718" fill-opacity=".35" stroke-width="6"></polygon>
+<polygon points="670 729, 670 700, 668 686, 668 718" fill-opacity=".35" stroke-width="6"></polygon>
+<polyline points="621 91, 621 74, 653 74, 653 91" fill-opacity=".35" stroke-width="6"></polyline>
+<polyline points="606 718, 606 686, 668 686, 668 718" fill="none" stroke-width="4"></polyline>
+</g></svg>

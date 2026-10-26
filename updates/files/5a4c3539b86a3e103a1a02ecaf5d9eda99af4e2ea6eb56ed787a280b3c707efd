@@ -1,0 +1,160 @@
+import http from 'node:http';
+import {readFile, writeFile, mkdir, rename} from 'node:fs/promises';
+import {fileURLToPath} from 'node:url';
+import path from 'node:path';
+import {randomUUID, createHash} from 'node:crypto';
+import {spawn} from 'node:child_process';
+import {attachConferences} from './conference.mjs';
+import {createUpdater} from './updater.mjs';
+
+const root=path.dirname(fileURLToPath(import.meta.url));
+const dataDir=process.env.TB_DATA_DIR || path.join(root,'data');
+const version=JSON.parse(await readFile(path.join(root,'package.json'),'utf8')).version;
+// Updates are published with the website by npm run deploy; an empty TB_UPDATE_URL turns checking off.
+const updater=createUpdater({root,version,url:process.env.TB_UPDATE_URL??'https://almikerov.github.io/tactical-board/updates/latest.json'});
+await mkdir(dataDir,{recursive:true});
+const libraryPath=path.join(dataDir,'library.json');
+let library={links:{},items:[]};
+try {library=JSON.parse(await readFile(libraryPath,'utf8'));} catch(e) {if(e.code!=='ENOENT')throw e;}
+let writes=Promise.resolve();
+function persist(){
+  const snapshot=JSON.stringify(library,null,2);
+  writes=writes.then(async()=>{await writeFile(libraryPath+'.tmp',snapshot);await rename(libraryPath+'.tmp',libraryPath);});
+  return writes;
+}
+const views=['big-football','big-football-half','big-football-half-2','big-football-vertical','big-football-vertical-2','big-football-penalty','big-football-free'];
+const shortViews={bf:views[0],sh:views[1],sj:views[2],sv:views[3],sb:views[4],sp:views[5],sf:views[6]};
+const templates=Object.fromEntries(await Promise.all(views.map(async key=>[key,await readFile(path.join(root,'templates',key+'.html'),'utf8')])));
+const texts=JSON.parse(await readFile(path.join(root,'data/texts-ru.json'),'utf8'));
+texts.link_relevance_message='Ссылка хранится на этом компьютере. Открывается, пока запущена локальная доска. Для переноса на другой компьютер экспортируйте проект через меню.';
+const mime={'.js':'text/javascript; charset=utf-8','.css':'text/css; charset=utf-8','.svg':'image/svg+xml','.png':'image/png','.ttf':'font/ttf','.json':'application/json; charset=utf-8','.html':'text/html; charset=utf-8'};
+const limit=12*1024*1024;
+// The original XHR client compares Content-Type literally, without parameters.
+function json(res,body,status=200){res.writeHead(status,{'content-type':'application/json'});res.end(JSON.stringify(body));}
+function categories(value){
+  const parts=Array.isArray(value)?value:String(value||'').split(',');
+  return [...new Set(parts.map(v=>String(v).trim()).filter(Boolean))];
+}
+async function body(req){let size=0,parts=[];for await(const c of req){size+=c.length;if(size>limit)throw Error('Request is too large');parts.push(c);}const value=Buffer.concat(parts).toString();return (req.headers['content-type']||'').includes('application/json')?JSON.parse(value||'{}'):Object.fromEntries(new URLSearchParams(value));}
+function replaceParam(html,key,value){return html.replace(new RegExp("(id=['\"]input_param__"+key+"['\"][^>]*>)[^<]*"),'$1'+String(value).replaceAll('&','&amp;').replaceAll('<','&lt;'));}
+function render(req,url){
+  const parts=url.pathname.split('/').filter(Boolean);
+  const entry=library.links[parts.at(-1)];
+  let board=entry?.board || (parts[0]==='conference'?shortViews[parts[1]?.match(/_(\w{2})ru$/)?.[1]]:null) || (views.includes(parts[1])?parts[1]:'big-football');
+  let page=parts.includes('animation')?'animation':entry?.page||'main';
+  const host=req.headers.host;
+  const params={site_url:'//'+host,static_url:'/static',ajax_url:'/ajax',page_key:page,board_key:board,link_token:entry?parts.at(-1):'',conference_link_token:parts[0]==='conference'?parts[1]:'',conference_websocket_address:'ws://'+host+'/conference-ws',add_to_browser_history:0,no_tips:1,login_google_url:'',login_facebook_url:'',movie_maker_url:'/local/video',movie2_maker_url:'/local/video',animation_to_html_url:'/local/animation/'};
+  let html=templates[board];
+  for(const [key,value] of Object.entries(params))html=replaceParam(html,key,value);
+  html=html.replaceAll('https://tactical-board.com/ru/big-football','/ru/big-football');
+  return html;
+}
+const server=http.createServer(async(req,res)=>{
+  const host=req.headers.host||'';
+  if(!/^(localhost|127\.0\.0\.1)(:\d+)?$/.test(host)){res.writeHead(403);res.end('Local access only');return;}
+  res.setHeader('Content-Security-Policy',"default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' blob:; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; font-src 'self' data:; connect-src 'self' ws://127.0.0.1:* ws://localhost:*; worker-src 'self' blob:; frame-src 'none'; object-src 'none'");
+  res.setHeader('X-Content-Type-Options','nosniff');
+  res.setHeader('Cache-Control','no-cache');
+  try{
+    const url=new URL(req.url,'http://'+host), route=decodeURIComponent(url.pathname);
+    if(req.method!=='GET' && req.headers.origin && req.headers.origin!=='http://'+host){json(res,{error:'Foreign origin'},403);return;}
+    if(route==='/health'){json(res,{ok:true,mode:'local',views:views.length,version});return;}
+    if(route==='/local/update' && req.method==='GET')return json(res,await updater.info({fresh:url.searchParams.has('fresh')}));
+    if(route==='/local/update/later' && req.method==='POST'){updater.dismiss();return json(res,{ok:true});}
+    if(route==='/local/update/apply' && req.method==='POST'){
+      const result=await updater.apply();
+      json(res,result);setTimeout(restart,300);return;
+    }
+    if(route.startsWith('/ajax/')){
+      const action=route.split('/').at(-1), data=req.method==='POST'?await body(req):{};
+      if(action==='texts')return json(res,texts);
+      if(action==='accountDetails')return json(res,'unauthorized');
+      if(action==='getTips')return json(res,[]);
+      if(action==='storeLinkData'){
+        const token=data.linkToken;
+        if(!/^[\w-]{1,100}$/.test(token||''))return json(res,{error:'Invalid token'},400);
+        const entry=library.links[token] ||= {parts:[],page:data.store==='animation'?'animation':'main',board:shortViews[route.split('/').at(-2)]||'big-football',created:new Date().toISOString()};
+        const index=Number(data.dataPartIndex);
+        if(!Number.isInteger(index)||index<0||index>100)return json(res,{error:'Invalid part'},400);
+        entry.parts[index]=data.dataPart;
+        try{entry.data=JSON.parse(entry.parts.join(''));}catch{}
+        await persist();return json(res,{token});
+      }
+      if(action==='getStoredInfo')return json(res,library.links[data.linkToken]?.data||'not_found');
+      if(['abs','logError','logMovie'].includes(action))return json(res,'success');
+      return json(res,{error_code:'local_only'},400);
+    }
+    if(route==='/local/items' && req.method==='GET')return json(res,library.items);
+    if(route.startsWith('/local/items/') && req.method==='PATCH'){
+      const item=library.items.find(item=>item.id===route.slice('/local/items/'.length));
+      if(!item)return json(res,{error:'Схема не найдена'},404);
+      const input=await body(req);
+      if(typeof input.name!=='string'||!input.name.trim())return json(res,{error:'Введите название'},400);
+      Object.assign(item,{name:input.name.trim().slice(0,200),description:String(input.description||'').slice(0,2000),categories:categories(input.categories),updated:new Date().toISOString()});
+      await persist();return json(res,item);
+    }
+    if(route.startsWith('/local/items/') && req.method==='DELETE'){
+      const id=route.slice('/local/items/'.length);
+      const index=library.items.findIndex(item=>item.id===id);
+      if(index===-1)return json(res,{error:'Схема уже удалена или не найдена'},404);
+      library.items.splice(index,1);delete library.links[id];
+      await persist();return json(res,{deleted:id});
+    }
+    if(route==='/local/items' && req.method==='POST'){
+      const input=await body(req);
+      if(!input.name?.trim()||!input.data||!views.includes(input.board)||!['main','animation'].includes(input.page))return json(res,{error:'Invalid project'},400);
+      const id=randomUUID();
+      const item={id,name:input.name.trim().slice(0,200),description:String(input.description||'').slice(0,2000),categories:categories(input.categories),board:input.board,page:input.page,data:input.data,created:new Date().toISOString()};
+      library.items.unshift(item);library.links[id]={data:item.data,board:item.board,page:item.page,created:item.created};await persist();return json(res,item,201);
+    }
+    if(route.startsWith('/static/')||['/local.js','/background.js','/local.css','/free-field.js','/defaults.js','/updates.js'].includes(route)){
+      const file=path.resolve(root,'public','.'+route);
+      if(!file.startsWith(path.join(root,'public')+path.sep))return json(res,{error:'Invalid path'},400);
+      const bytes=await readFile(file);res.writeHead(200,{'content-type':mime[path.extname(file)]||'application/octet-stream'});res.end(bytes);return;
+    }
+    if(route==='/'||/^\/ru\/big-football(?:-half(?:-2)?|-vertical(?:-2)?|-penalty|-free)?(?:\/animation)?$/.test(route)||library.links[route.split('/').at(-1)]||/^\/conference\/[\w-]+$/.test(route)){
+      res.writeHead(200,{'content-type':'text/html; charset=utf-8'});res.end(render(req,url));return;
+    }
+    json(res,{error:'Not found'},404);
+  }catch(error){json(res,{error:error.code==='ENOENT'?'Not found':error.message},error.code==='ENOENT'?404:400);}
+});
+attachConferences(server);
+const sockets=new Set();
+server.on('connection',socket=>{sockets.add(socket);socket.on('close',()=>sockets.delete(socket));});
+// After an update this process hands the port to a fresh server and stays as its supervisor.
+// If the new version exits before it is ready, the previous files come back and start again.
+function restart(){
+  const port=server.address().port;
+  server.close();for(const socket of sockets)socket.destroy();
+  console.log('Обновление установлено, перезапуск…');
+  supervise(port,{});
+}
+function supervise(port,env){
+  const child=spawn(process.execPath,[path.join(root,'server.mjs')],{cwd:root,stdio:['inherit','inherit','inherit','ipc'],env:{...process.env,...env,PORT:String(port),TB_RESTART:'1'}});
+  let ready=false;
+  child.on('message',message=>{if(message?.type==='ready')ready=true;});
+  const stop=()=>child.kill('SIGTERM');
+  for(const signal of ['SIGINT','SIGTERM','SIGHUP'])process.on(signal,stop);
+  child.on('exit',async code=>{
+    for(const signal of ['SIGINT','SIGTERM','SIGHUP'])process.off(signal,stop);
+    if(!ready&&!env.TB_UPDATE_FAILED){
+      const failed=await updater.rollback().catch(error=>{console.error('Не удалось вернуть прежнюю версию: '+error.message);return null;});
+      if(failed){console.error('Новая версия '+failed+' не запустилась — возвращена версия '+version+'.');return supervise(port,{TB_UPDATE_FAILED:failed});}
+    }
+    process.exit(code??1);
+  });
+}
+// A supervised server stops together with its supervisor, even if that one is killed outright.
+if(process.send)process.on('disconnect',()=>process.exit(0));
+const port=Number(process.env.PORT||8877);
+let retries=0;
+server.on('error',error=>{
+  // The previous server may still be releasing the port right after a restart.
+  if(error.code==='EADDRINUSE'&&process.env.TB_RESTART&&retries++<40){setTimeout(()=>server.listen(port,'127.0.0.1'),250);return;}
+  throw error;
+});
+server.listen(port,'127.0.0.1',()=>{
+  console.log(`Tactical Board: http://127.0.0.1:${server.address().port}/ru/big-football`);
+  process.send?.({type:'ready'});
+  updater.check();
+});

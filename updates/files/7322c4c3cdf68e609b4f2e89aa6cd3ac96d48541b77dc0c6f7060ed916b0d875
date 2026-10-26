@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1234 810">
+<g stroke="#888888" fill="#888888">
+<path d="M463 89 A 113, 45 0 0 0 575, 139 M575 139 H658 M770 89 A 113, 45 0 0 1 658, 139 M302 720 A 270 208, 0, 0, 1, 575, 549 M575 549 H658 M931 720 A 270 208, 0, 0, 0, 658, 549 M607 121 H626 M606 147 H627 M601 528 H632 M599 602 H634" fill="none" stroke-width="6"></path>
+<path d="M406 106 A 172, 70 0 0 0 575, 168 M575 168 H658 M827 106 A 172, 70 0 0 1 658, 168 M216 656 A 388.71 302.33, 0, 0, 1, 575, 480 M575 480 H658 M1017 656 A 388.71 302.33, 0, 0, 0, 658, 480" fill="none" stroke-width="6" stroke-dasharray="12 12"></path>
+<line x1="340" y1="295" x2="893" y2="295" fill="none" stroke-width="6"></line>
+<polygon points="411 89, 822 89, 1040 720, 193 720" fill="none" stroke-width="6"></polygon>
+<polygon points="582 51, 651 51, 651 89, 582 89" fill-opacity=".35" stroke-width="6"></polygon>
+<polygon points="543 736, 543 662, 690 662, 690 736" fill-opacity=".35" stroke-width="6"></polygon>
+<polygon points="543 662, 547 641, 547 717, 543 736" fill-opacity=".35" stroke-width="6"></polygon>
+<polygon points="690 662, 686 641, 686 717, 690 736" fill-opacity=".35" stroke-width="6"></polygon>
+<polygon points="543 662, 547 641, 686 641, 690 662" fill-opacity=".35" stroke-width="6"></polygon>
+<polyline points="547 717, 547 641, 686 641, 686 717" fill="none" stroke-width="4"></polyline></g>
+</svg>

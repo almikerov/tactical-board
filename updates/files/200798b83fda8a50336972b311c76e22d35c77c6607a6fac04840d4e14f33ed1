@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1220 810">
+<g stroke="#3f82a3" fill="#3f82a3">
+<path d="M327.57 88 V219 M327.57 219 A 288 288, 0, 0, 0, 892 219 M892 88 V219 M530 338 A 1 1, 0, 1, 0, 689 338 M556 140 V162 M556 162 A53.68 53.68, 0, 0, 0, 663 162 M663 140 V162 M539.85 721 A 78.69 78.69, 0, 1, 1, 680.15 721" fill="none" stroke-width="6"></path>
+<circle cx="610" cy="157" r="8" fill="none" stroke-width="4"></circle>
+<rect x="500" y="201" width="4.88" height="17.82"></rect>
+<rect x="715" y="201" width="4.88" height="17.82"></rect>
+<line x1="284" y1="88" x2="284" y2="721" fill="none" stroke-width="6"></line>
+<line x1="284" y1="88" x2="935" y2="88" fill="none" stroke-width="6"></line>
+<line x1="935" y1="88" x2="935" y2="721" fill="none" stroke-width="6"></line>
+<line x1="284" y1="686" x2="935" y2="686" fill="none" stroke-width="6"></line>
+<line x1="505" y1="88" x2="505" y2="338" fill="none" stroke-width="6"></line>
+<line x1="505" y1="338" x2="714" y2="338" fill="none" stroke-width="6"></line>
+<line x1="714" y1="88" x2="714" y2="338" fill="none" stroke-width="6"></line>
+<line x1="500" y1="165" x2="505" y2="165" fill="none" stroke-width="6"></line>
+<line x1="500" y1="257" x2="505" y2="257" fill="none" stroke-width="6"></line>
+<line x1="500" y1="295" x2="505" y2="295" fill="none" stroke-width="6"></line>
+<line x1="719" y1="165" x2="714" y2="165" fill="none" stroke-width="6"></line>
+<line x1="719" y1="257" x2="714" y2="257" fill="none" stroke-width="6"></line>
+<line x1="719" y1="295" x2="714" y2="295" fill="none" stroke-width="6"></line>
+<line x1="571" y1="141" x2="648" y2="141" fill="none" stroke-width="4"></line>
+<line x1="610" y1="141" x2="610" y2="148.23" fill="none" stroke-width="4"></line>
+</g>
+</svg>

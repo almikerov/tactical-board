@@ -1,0 +1,135 @@
+import {test, before, after} from 'node:test';
+import assert from 'node:assert/strict';
+import {spawn} from 'node:child_process';
+import {mkdtemp,readFile,writeFile} from 'node:fs/promises';
+import {tmpdir} from 'node:os';
+import path from 'node:path';
+import {fileURLToPath} from 'node:url';
+const root=path.dirname(path.dirname(fileURLToPath(import.meta.url)));
+let child,base,dataDir;
+before(async()=>{
+  dataDir=await mkdtemp(path.join(tmpdir(),'tactical-board-test-'));
+  child=spawn(process.execPath,['server.mjs'],{cwd:root,env:{...process.env,PORT:'0',TB_DATA_DIR:dataDir,TB_UPDATE_URL:''},stdio:['ignore','pipe','pipe']});
+  base=await new Promise((resolve,reject)=>{child.stdout.on('data',b=>{const m=b.toString().match(/http:\/\/127\.0\.0\.1:\d+/);if(m)resolve(m[0]);});child.on('error',reject);child.on('exit',code=>reject(Error('Server exited: '+code)));});
+});
+after(()=>child?.kill());
+const post=async(route,value)=>fetch(base+route,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(value)});
+test('public text endpoint preserves the exact original XHR content-type contract',async()=>{
+  const response=await fetch(base+'/ajax/ru/texts');assert.equal(response.headers.get('content-type'),'application/json');
+  const data=await response.json();assert.equal(typeof data.main_scheme_link,'string');assert.ok(data.main_scheme_link.includes('схем'));
+});
+test('all seven pitch layouts render localized parameters and scripts',async()=>{
+  for(const key of ['big-football','big-football-half','big-football-half-2','big-football-vertical','big-football-vertical-2','big-football-penalty','big-football-free']){
+    const r=await fetch(base+'/ru/'+key);assert.equal(r.status,200);const html=await r.text();
+    assert.ok(html.includes("id='input_param__board_key'>"+key));assert.ok(html.includes("id='input_param__ajax_url'>/ajax"));
+    assert.ok(!html.includes('src="https://www.googletagmanager'));assert.ok(!html.includes('src="//pagead2'));
+    for(const removed of ['data-action="login"','data-action="user-account-details"','data-action="page-get-link"','data-action="get-scheme-conference-link"','data-action="show-boards-list"','id="first_visit_user_message"','user-guide/ru.html','Добро пожаловать'])assert.ok(!html.includes(removed),key+': '+removed);
+    assert.ok(html.includes('data-action="choose-board-background-color"'));
+    assert.ok(html.includes('src="/background.js"'));
+    assert.ok(html.includes('vertical-2|penalty|free"'));
+  }
+});
+test('penalty view survives collection save, JSON reimport, animation and native link storage',async()=>{
+  assert.equal((await (await fetch(base+'/health')).json()).views,7);
+  const html=await (await fetch(base+'/ru/big-football-penalty')).text();
+  assert.ok(html.includes('/static/js/board-markup-sp.js'));
+  assert.ok(html.includes("id='input_param__board_short_key'>sp"));
+  assert.ok(html.includes('Крупный план штрафной'));
+  for(const page of ['main','animation']){
+    const input={format:'tactical-board-local',version:1,name:'Штрафная — '+page,board:'big-football-penalty',page,data:{players:{p1:{pos:{x:500000,y:300000}}},shapes:[]}};
+    const response=await post('/local/items',input);assert.equal(response.status,201);
+    const item=await response.json();
+    const restored=await (await fetch(base+'/'+(page==='animation'?'animation/':'')+item.id)).text();
+    assert.ok(restored.includes("id='input_param__board_key'>big-football-penalty"));
+    assert.ok(restored.includes("id='input_param__page_key'>"+page));
+    const imported=await post('/local/items',{...input,...JSON.parse(JSON.stringify(item))});assert.equal(imported.status,201);
+    assert.deepEqual((await imported.json()).data,input.data);
+  }
+  await post('/ajax/ru/sp/storeLinkData',{linkToken:'test_spru',store:'main',dataPartIndex:0,dataPart:'{"players":{}}'});
+  assert.ok((await (await fetch(base+'/test_spru')).text()).includes("id='input_param__board_key'>big-football-penalty"));
+  assert.ok((await (await fetch(base+'/conference/test_spru')).text()).includes("id='input_param__board_key'>big-football-penalty"));
+});
+test('free view keeps its field camera through collection, JSON reimport and links',async()=>{
+  const html=await (await fetch(base+'/ru/big-football-free')).text();
+  assert.ok(html.includes('/static/js/board-markup-sf.js'));assert.ok(html.includes('src="/free-field.js"'));
+  assert.ok(html.includes("id='input_param__board_short_key'>sf"));assert.ok(html.includes('Свободное поле'));
+  assert.equal((await fetch(base+'/free-field.js')).status,200);
+  const fieldView={rotation:30,scale:1.4,x:.1,y:-.05};
+  for(const page of ['main','animation']){
+    const input={format:'tactical-board-local',version:1,name:'Свободное — '+page,board:'big-football-free',page,data:{players:{},shapes:[],fieldView}};
+    const item=await (await post('/local/items',input)).json();
+    assert.deepEqual(item.data.fieldView,fieldView);
+    assert.ok((await (await fetch(base+'/'+(page==='animation'?'animation/':'')+item.id)).text()).includes("id='input_param__board_key'>big-football-free"));
+    const imported=await post('/local/items',{...input,...JSON.parse(JSON.stringify(item))});
+    assert.deepEqual((await imported.json()).data.fieldView,fieldView);
+  }
+  assert.ok((await (await fetch(base+'/conference/test_sfru')).text()).includes("id='input_param__board_key'>big-football-free"));
+});
+test('every CSS resource exists and is served',async()=>{
+  const urls=new Set();for(const name of ['styles.css','ui.css']){
+    const css=await (await fetch(base+'/static/css/'+name)).text();for(const m of css.matchAll(/url\(([^)]+)\)/g))urls.add(new URL(m[1],base+'/static/css/'+name).pathname);
+  }
+  for(const url of urls){const r=await fetch(base+url);assert.equal(r.status,200,url);assert.ok((await r.arrayBuffer()).byteLength>10,url);}
+});
+test('multi-part scheme storage reconstructs Unicode data',async()=>{
+  const data={players:{main_player_1_1:{pos:{x:.3,y:.4},nm:'Игрок №1'}},balls:{},shapes:[]};const raw=JSON.stringify(data);
+  for(const [index,part] of [raw.slice(0,40),raw.slice(40)].entries()){
+    const r=await post('/ajax/ru/bf/storeLinkData',{linkToken:'test_bfru',store:'main',dataPartIndex:index,dataPart:part});assert.deepEqual(await r.json(),{token:'test_bfru'});
+  }
+  assert.deepEqual(await (await post('/ajax/bf/getStoredInfo',{linkToken:'test_bfru'})).json(),data);
+  const html=await (await fetch(base+'/test_bfru')).text();assert.ok(html.includes("id='input_param__link_token'>test_bfru"));
+});
+test('shared links retain the alternate pitch layout',async()=>{
+  await post('/ajax/ru/sv/storeLinkData',{linkToken:'test_svru',store:'animation',dataPartIndex:0,dataPart:'{"frames":[]}'});
+  const html=await (await fetch(base+'/animation/test_svru')).text();assert.ok(html.includes("id='input_param__board_key'>big-football-vertical"));assert.ok(html.includes("id='input_param__page_key'>animation"));
+});
+test('collection data is persisted and opens via its own route',async()=>{
+  const input={name:'Тестовая схема',description:'Сохранение',board:'big-football-half',page:'main',data:{players:{},shapes:[]}};
+  const r=await post('/local/items',input);assert.equal(r.status,201);const item=await r.json();
+  const items=await (await fetch(base+'/local/items')).json();assert.equal(items[0].id,item.id);
+  const disk=JSON.parse(await readFile(path.join(dataDir,'library.json'),'utf8'));assert.equal(disk.items[0].name,input.name);
+  const html=await (await fetch(base+'/'+item.id)).text();assert.ok(html.includes("id='input_param__board_key'>big-football-half"));
+});
+test('rejects invalid import and foreign-origin writes',async()=>{
+  assert.equal((await post('/local/items',{name:'invalid'})).status,400);
+  assert.equal((await fetch(base+'/local/items',{method:'POST',headers:{Origin:'https://unrelated.example','Content-Type':'application/json'},body:'{}'})).status,403);
+});
+test('deleting a collection entry persists, invalidates its link, and preserves other entries',async()=>{
+  const keep=await (await post('/local/items',{name:'Keep',board:'big-football',page:'main',data:{players:{}}})).json();
+  const remove=await (await post('/local/items',{name:'Delete test',board:'big-football',page:'animation',data:{frames:[]}})).json();
+  const url=base+'/local/items/'+remove.id;
+  assert.equal((await fetch(url,{method:'DELETE',headers:{Origin:'https://unrelated.example'}})).status,403);
+  assert.deepEqual(await (await fetch(url,{method:'DELETE'})).json(),{deleted:remove.id});
+  const items=await (await fetch(base+'/local/items')).json();assert.ok(items.some(i=>i.id===keep.id));assert.ok(!items.some(i=>i.id===remove.id));
+  const disk=JSON.parse(await readFile(path.join(dataDir,'library.json'),'utf8'));assert.ok(!disk.items.some(i=>i.id===remove.id));assert.equal(disk.links[remove.id],undefined);assert.ok(disk.links[keep.id]);
+  assert.equal((await fetch(base+'/animation/'+remove.id)).status,404);assert.equal((await fetch(url,{method:'DELETE'})).status,404);
+  assert.equal((await fetch(base+'/'+keep.id)).status,200);
+});
+test('unknown routes and private source files are not served',async()=>{
+  for(const route of ['/server.mjs','/data/library.json','/unknown'])assert.equal((await fetch(base+route)).status,404);
+});
+test('editing collection metadata preserves the drawing, route, creation date and other records',async()=>{
+  const original=await (await post('/local/items',{name:'Атака',description:'Исходное',categories:' Угловые, Прессинг, Угловые, ',board:'big-football-half',page:'main',data:{players:{p1:{x:0.4}}}})).json();
+  assert.deepEqual(original.categories,['Угловые','Прессинг']);
+  const url=base+'/local/items/'+original.id;
+  const patch=value=>fetch(url,{method:'PATCH',headers:{'Content-Type':'application/json'},body:JSON.stringify(value)});
+  assert.equal((await patch({name:' '})).status,400);
+  const edited=await (await patch({name:' Защита <1> ',description:'Описание & детали',categories:[' Стандарты ','Стандарты','']})).json();
+  assert.equal(edited.name,'Защита <1>');assert.deepEqual(edited.categories,['Стандарты']);
+  assert.deepEqual(edited.data,original.data);assert.equal(edited.created,original.created);assert.equal(edited.board,original.board);
+  const disk=JSON.parse(await readFile(path.join(dataDir,'library.json'),'utf8'));
+  assert.deepEqual(disk.items.find(i=>i.id===original.id),edited);assert.deepEqual(disk.links[original.id].data,original.data);
+  assert.equal((await fetch(base+'/'+original.id)).status,200);
+  assert.equal((await fetch(url,{method:'PATCH',headers:{Origin:'https://unrelated.example'}})).status,403);
+});
+test('collection accepts additional schemes beyond both original limits (10 and 1002)',async()=>{
+  const dir=await mkdtemp(path.join(tmpdir(),'tactical-board-large-'));
+  const items=Array.from({length:1003},(_,n)=>({id:'fixture-'+n,name:'Схема '+n,page:'main',board:'big-football',data:{players:{}},created:new Date().toISOString()}));
+  await writeFile(path.join(dir,'library.json'),JSON.stringify({items,links:{}}));
+  const process2=spawn(process.execPath,['server.mjs'],{cwd:root,env:{...process.env,PORT:'0',TB_DATA_DIR:dir},stdio:['ignore','pipe','pipe']});
+  try{
+    const address=await new Promise((resolve,reject)=>{process2.stdout.on('data',b=>{const m=b.toString().match(/http:\/\/127\.0\.0\.1:\d+/);if(m)resolve(m[0]);});process2.on('error',reject);process2.on('exit',code=>reject(Error('Server exited: '+code)));});
+    const r=await fetch(address+'/local/items',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({name:'Схема 1004',page:'main',board:'big-football',data:{players:{}}})});
+    assert.equal(r.status,201);assert.equal((await (await fetch(address+'/local/items')).json()).length,1004);
+  }finally{process2.kill();}
+});

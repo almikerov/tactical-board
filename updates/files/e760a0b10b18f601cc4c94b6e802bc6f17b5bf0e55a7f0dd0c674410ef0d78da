@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1262 810">
+<g stroke="#888888" fill="#888888">
+<path d="M387 116 H874 M374 152 H887" opacity=".5" fill="none" stroke-width="4" stroke-dasharray="12, 12"></path>
+<path d="M396 94 H592 M865 94 H669" fill="none" stroke-width="4" stroke-dasharray="10, 10"></path>
+<path d="M178 704 H557 M1083 704 H704" fill="none" stroke-width="6" stroke-dasharray="8px, 8px"></path>
+<path d="M240 532 H1021 M206 629 H1055" opacity=".5" fill="none" stroke-width="6" stroke-dasharray="8px, 8px"></path>
+<ellipse opacity=".5" cx="631" cy="303" rx="11" ry="7" fill="none" stroke-width="6"></ellipse>
+<line opacity=".5" x1="321" y1="303" x2="618" y2="303" fill="none" stroke-width="6"></line>
+<line opacity=".5" x1="940" y1="303" x2="643" y2="303" fill="none" stroke-width="6"></line>
+<polygon points="396 90, 592 90, 592 76, 669 76, 669 90, 865 90, 1089 719, 172 719" fill="none" stroke-width="6"></polygon>
+<polygon points="553 682, 557 662,704 662, 708 682" fill-opacity=".35" stroke-width="6"></polygon>
+<polygon points="553 719, 553 682, 557 662, 557 704" fill-opacity=".35" stroke-width="6"></polygon>
+<polygon points="708 719, 708 682, 704 662, 704 704" fill-opacity=".35" stroke-width="6"></polygon>
+<polyline points="592 94, 592 76, 669 76, 669 94" fill-opacity=".35" stroke-width="6"></polyline>
+<polyline points="557 704, 557 662, 704 662, 704 704" fill="none" stroke-width="4"></polyline>
+<polyline points="553 719, 553 682, 708 682, 708 719" fill-opacity=".35" stroke-width="6"></polyline></g> </svg>

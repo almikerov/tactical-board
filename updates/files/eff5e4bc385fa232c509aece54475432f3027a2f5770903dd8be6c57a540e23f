@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1548 920">
+	<g stroke="#888888" fill="none">
+		<polygon points="495.97 100.46, 141.95 819.53, 1406.04 819.53, 1052.02 100.46" stroke-width="6"></polygon>
+		<ellipse cx="774" cy="320.25" rx="107.27" ry="46.91" stroke-width="6"></ellipse>
+		<line x1="388.85" y1="320.25" x2="1159.14" y2="320.25" stroke-width="6"></line>
+		<polygon points="625.70 100.46, 922.29 100.46, 928.02 120.88, 619.97 120.88" stroke-width="6"></polygon>
+		<polyline points="437.00 819.53, 461.45 727.62, 1086.54 727.62, 1110.99 819.53" stroke-width="6"></polyline>
+	</g>
+</svg>

@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1548 920">
+	<g stroke="#3f82a3" fill="none">
+		<path d="M101.70 766.72 V153.27 H1446.29 V766.72Z" stroke-width="8"></path>
+		<line x1="101.70" y1="227.88" x2="1446.29" y2="227.88" stroke-width="6"></line>
+		<line x1="101.70" y1="692.11" x2="1446.29" y2="692.11" stroke-width="6"></line>
+		<line x1="409.91" y1="227.88" x2="409.91" y2="692.11" stroke-width="6"></line>
+		<line x1="409.91" y1="460" x2="1138.08" y2="460" stroke-width="6"></line>
+		<line x1="101.70" y1="460" x2="113.15" y2="460" stroke-width="8"></line>
+		<line stroke-dasharray="16, 16" x1="774" y1="153.27" x2="774" y2="766.72" stroke-width="8"></line>
+		<line x1="1446.29" y1="460" x2="1434.84" y2="460" stroke-width="8"></line>
+		<line x1="1138.08" y1="227.88" x2="1138.08" y2="692.11" stroke-width="6"></line>
+	</g></svg>
+

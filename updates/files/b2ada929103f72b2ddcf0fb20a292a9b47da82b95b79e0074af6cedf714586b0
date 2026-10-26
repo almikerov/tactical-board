@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" viewBox="0 0 450 450">
+
+
+	<circle cx="225" cy="48" r="44" fill="#48413b"/>
+	<polygon points="137 198, 137 140, 180 98, 270 98, 313 140, 313 198" fill="#48413b"/>
+	
+	<circle cx="88" cy="296" r="44" fill="#48413b"/>
+	<polygon points="4 446, 4 388, 47 346, 137 346, 180 388, 180 446" fill="#48413b"/>
+	
+	<circle cx="362" cy="296" r="44" fill="#48413b"/>
+	<polygon points="446 446, 446 388, 403 346, 313 346, 270 388, 270 446" fill="#48413b"/>
+	
+	<polyline points="225 295, 225 218, 225 295, 175 355, 225 295, 275, 355, 225 295" stroke-width="18" stroke="#48413b" stroke-linejoin="round" />
+</svg>

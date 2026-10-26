@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1368 810">
+<g stroke="#888888" fill="#888888">
+	<path d="M100 94 H1267 V715 H100 V94 M100 133 H224 M225 134 A 279 279 0 0 1 225 675 M100 676 H224 M175 305 V300 M264 305 V300 M302 305 V300 M175 504 V509 M264 504 V509 M302 504 V509 M100 305 H343 V504 H100 M343 328 A 1 1 0 0 1 343 481 M152 352 H167 M167 352 A 1 1 0 0 1 167 457 M152 457 H167 M684 94 V715 M1215 352 H1200 M1200 352 A 1 1 0 0 0 1200 457 M1215 457 H1200 M1267 305 H1024 V504 H1267 M1024 328 A 1 1 0 0 0 1024 481 M1192 305 V300 M1103 305 V300 M1065 305 V300 M1192 504 V509 M1103 504 V509 M1065 504 V509 M1267 133 H1143 M1142 134 A 279 279 0 0 0 1142 675 M1267 676 H1143 M684 405Z" fill="none" stroke-width="6"></path>
+	<path d="M152 368 V441 M152 405 H158 M1215 368 V441 M1215 405 H1209 M684 405Z" fill="none" stroke-width="4"></path>
+	<circle cx="684" cy="405" r="77" fill="none" stroke-width="6"></circle>
+	<circle cx="167" cy="405" r="8" fill="none" stroke-width="4"></circle>
+	<circle cx="1200" cy="405" r="8" fill="none" stroke-width="4"></circle>
+	<polygon points="212 305, 227 305, 227 300, 212 300" stroke="none"></polygon>
+	<polygon points="212 504, 227 504, 227 509, 212 509" stroke="none"></polygon>
+	<polygon points="1155 305, 1140 305, 1140 300, 1155 300" stroke="none"></polygon>
+	<polygon points="1155 504, 1140 504, 1140 509, 1155 509" stroke="none"></polygon>
+</g>
+</svg>

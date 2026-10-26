@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1356 813">
+ <g stroke="#3f82a3" fill="#3f82a3"> 
+	<path d="M509.31 89.18 H846.68 V723.81 H509.31 Z" fill="none" stroke-width="6"></path>
+	<path d="M559.21 89.18 A 96.41 96.41, 0, 0, 0, 650.74 185.44 M650.74 185.44 H705.25 M796.78 89.18 A 96.41 96.41, 0, 0, 1, 705.25 185.44 M559.21 723.81 A 96.41 96.41, 0, 0, 1, 650.74 627.55 M650.74 627.55 H705.25 M796.78 723.81 A 96.41 96.41, 0, 0, 0, 705.25 627.55" fill="none" stroke-linecap="round" stroke-width="6"></path>
+	<circle cx="678" cy="185.44" r="2.71" stroke="none"></circle>
+	<circle cx="678" cy="248.04" r="2.71" stroke="none"></circle>
+	<circle cx="678" cy="406.5" r="2.71" stroke="none"></circle>
+	<circle cx="678" cy="406.5" r="48.40" fill="none" stroke-width="6"></circle>
+	<circle cx="678" cy="627.55" r="2.71" stroke="none"></circle>
+	<circle cx="678" cy="564.95" r="2.71" stroke="none"></circle>
+	<line x1="509.31" y1="406.5" x2="846.68" y2="406.5" fill="none" stroke-width="6"></line>
+	<polyline points="651.42 89.18, 651.42 78.94, 704.57 78.94, 704.57 89.18" fill-opacity=".35" stroke-width="6"></polyline>
+	<polyline points="651.42 723.81, 651.42 734.05, 704.57 734.05, 704.57 723.81" fill-opacity=".35" stroke-width="6"></polyline>
+ </g> </svg>
+
+ 

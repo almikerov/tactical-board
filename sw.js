@@ -1,13 +1,19 @@
 importScripts('browser-storage.js');
 const store=self.TacticalBrowserStorage;
-const version='browser-f9f4adabe66ebec3';
+const version='browser-de32575084e823aa';
 // The site may live in a subfolder (GitHub Pages); every route below is relative to it.
 const base=new URL(self.registration.scope).pathname;
 const local=pathname=>'/'+(pathname.startsWith(base)?pathname.slice(base.length):pathname.replace(/^\//,''));
 const core=[base+'templates.json',base+'texts-ru.json'];
 const json=(value,status=200)=>new Response(JSON.stringify(value),{status,headers:{'Content-Type':'application/json','Cache-Control':'no-store'}});
 self.addEventListener('install',event=>event.waitUntil((async()=>{await (await caches.open(version)).addAll(core);await self.skipWaiting();})()));
-self.addEventListener('activate',event=>event.waitUntil((async()=>{for(const key of await caches.keys())if(key.startsWith('browser-')&&key!==version)await caches.delete(key);await self.clients.claim();})()));
+self.addEventListener('activate',event=>event.waitUntil((async()=>{
+  let replaced=false;
+  for(const key of await caches.keys())if(key.startsWith('browser-')&&key!==version){await caches.delete(key);replaced=true;}
+  await self.clients.claim();
+  // A new release reloads every open board tab, so nobody keeps working in the old version.
+  if(replaced)for(const client of await self.clients.matchAll({type:'window'}))client.navigate(client.url).catch(()=>{});
+})()));
 async function resource(url){
   const cache=await caches.open(version),cached=await cache.match(url);
   return cached||fetch(url);
@@ -51,4 +57,6 @@ self.addEventListener('fetch',event=>{
   const url=new URL(event.request.url),route=local(url.pathname);
   if(url.origin!==self.location.origin)return;
   if(event.request.mode==='navigate'||route.startsWith('/local/')||route.startsWith('/ajax/'))event.respondWith(handle(event.request,url));
+  // Scripts, styles and images are checked with the server each time instead of a possibly stale browser cache.
+  else if(event.request.method==='GET')event.respondWith(fetch(event.request,{cache:'no-cache'}).catch(()=>fetch(event.request)));
 });

@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1346 810">
+<g stroke="#3f82a3" fill="#3f82a3">
+<ellipse cx="673" cy="138" rx="25" ry="10" fill="none" stroke-width="6"></ellipse>
+<ellipse cx="673" cy="566" rx="40" ry="27" fill="none" stroke-width="6"></ellipse>
+<line x1="530" y1="94" x2="503" y2="210" fill="none" stroke-width="6"></line>
+<line x1="493" y1="252" x2="470" y2="355" fill="none" stroke-width="6"></line>
+<line x1="456" y1="415" x2="388" y2="715" fill="none" stroke-width="6"></line>
+<line x1="815" y1="94" x2="842" y2="210" fill="none" stroke-width="6"></line>
+<line x1="852" y1="252" x2="875" y2="355" fill="none" stroke-width="6"></line>
+<line x1="889" y1="415" x2="957" y2="715" fill="none" stroke-width="6"></line>
+<line x1="664" y1="296" x2="681" y2="304" fill="none" stroke-width="6"></line>
+<line x1="664" y1="304" x2="681" y2="296" fill="none" stroke-width="6"></line>
+<line x1="417" y1="210" x2="928" y2="210" fill="none" stroke-width="6"></line>
+<line x1="386" y1="300" x2="959" y2="300" fill="none" stroke-width="6"></line>
+<line x1="347" y1="415" x2="998" y2="415" fill="none" stroke-width="6"></line>
+<polygon points="458 94, 887 94, 1100 715, 245 715" fill="none" stroke-width="6"></polygon>
+<polygon points="663 138, 663 119, 682 119, 682 138" stroke-width="6" fill-opacity=".35"></polygon>
+<polygon points="659 565, 659 537, 686 537, 686 565" fill="none" stroke-width="6"></polygon>
+<polygon points="659 565, 659 537, 673 586" stroke="none" fill-opacity=".35"></polygon>
+<polygon points="686 565, 686 537, 673 586" stroke="none" fill-opacity=".35"></polygon>
+<polyline points="659 565, 673 586, 686 565" fill="none" stroke-width="4"></polyline>
+<polyline points="659 537, 673 586, 686 537" stroke-width="4" fill-opacity=".35"></polyline></g> </svg>

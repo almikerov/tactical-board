@@ -1,0 +1,15 @@
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 594 594">
+	<g stroke="none">
+		<circle fill="#0E5EAE" cx="297" cy="297" r="295"/>
+		<path d="
+				M51 132 A297 297 0 0 1 111 66 H483 A297 297 0 0 1 543 132			
+				M2 264 A297 297 0 0 1 18 198 H576 A297 297 0 0 1 592 264				
+				M2 330 A297 297 0 0 0 18 396 H576 A297 297 0 0 0 592 330				
+				M51 462 A297 297 0 0 0 111 528 H483 A297 297 0 0 0 543 462			
+			" fill="#fafafa" 
+		/>		
+		<path d="M297 330 H2 A297 297 0 0 1 297 2 Z" fill="#0E5EAE" />		
+		<path d="M297 198 V132 H50 A297 297 0 0 0 17 198 Z" fill="#fafafa" />
+		<path d="M198 331 H132 V50 A297 297 0 0 1 198 17 Z" fill="#fafafa" />		
+	</g>
+</svg>

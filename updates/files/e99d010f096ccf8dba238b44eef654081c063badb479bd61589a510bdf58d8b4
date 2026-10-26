@@ -1,0 +1,29 @@
+<svg viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+
+	<path
+		d="
+			M13.8 3.5
+			A7 6.45 0 0 0 2.33 6.23
+		"		
+		stroke="#EA4335" fill="none" stroke-width="3.5" />	
+	<path
+		d="
+			M2.4 6.05
+			A7 7 0 0 0 2.45 12
+		"		
+		stroke="#FBBC05" fill="none" stroke-width="3.5" />
+	<path
+		d="		
+			M2.4 11.9
+			A7 7 0 0 0 13.8 14.2
+		"		
+		stroke="#34A853" fill="none" stroke-width="3.5" />
+	<path
+		d="
+			M13.7 14.3
+			A7 7 0 0 0 16 9
+			H9
+		"		
+		stroke="#4285F4" fill="none" stroke-width="3.5" />
+
+</svg>

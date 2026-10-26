@@ -1,0 +1,27 @@
+import {test} from 'node:test';
+import assert from 'node:assert/strict';
+import {readFile} from 'node:fs/promises';
+import vm from 'node:vm';
+const events=[],container={setAttribute(name,value){this[name]=value;}};
+const context=vm.createContext({window:{dispatchEvent:e=>events.push(e)},document:{getElementById:id=>id==='board_svg_markup'?container:null},CustomEvent:class{constructor(type,init){this.type=type;this.detail=init.detail;}}});
+vm.runInContext(await readFile(new URL('../public/static/js/board-markup-sf.js',import.meta.url),'utf8'),context);
+const {BoardMarkup,window:{FreeField}}=context;
+test('free field draws the full pitch and turns its container with the camera',()=>{
+  FreeField.set(null);
+  const plain=BoardMarkup.get({width:1000,height:656});
+  assert.ok(plain.startsWith('<line data-allow-custom-colors="true" />'));assert.ok(!/NaN|Infinity|undefined/.test(plain));
+  assert.equal(container.transform,'translate(500 328) rotate(0) scale(1) translate(-500 -328)');
+  FreeField.set({rotation:-30,scale:2,x:.1,y:-.25});
+  BoardMarkup.get({width:1000,height:656});
+  assert.equal(container.transform,'translate(600 164) rotate(330) scale(2) translate(-500 -328)');
+  assert.equal(events.at(-1).type,'free-field-change');
+});
+test('field camera values are kept inside safe limits',()=>{
+  assert.deepEqual({...FreeField.set({rotation:725,scale:99,x:-7,y:'bad'})},{rotation:5,scale:6,x:-2,y:0});
+  assert.deepEqual({...FreeField.set({scale:0})},{rotation:0,scale:.25,x:0,y:0});
+  assert.deepEqual({...FreeField.set(undefined)},{rotation:0,scale:1,x:0,y:0});
+});
+test('custom colors and hidden markings reach the wrapped pitch',()=>{
+  const svg=BoardMarkup.get({width:800,height:525,color:'#123456',bgColor:'#654321'});
+  assert.ok(svg.includes('stroke="#123456"'));assert.ok(svg.includes('fill="#654321"'));
+});

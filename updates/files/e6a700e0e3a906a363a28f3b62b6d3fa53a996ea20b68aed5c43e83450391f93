@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1548 920">
+	<g stroke="#3f82a3" fill="none">
+		<path d="M423.22 818.70 V101.29 H1124.77 V818.70" stroke-width="6"></path>
+		<path d="M423.22 818.70 V101.29 H434.67 V818.70 M1124.77 818.70 V101.29 H1113.32 V818.70" stroke-width="6"></path>
+		<path d="M423.22 818.70 V101.29 H434.67 V818.70 M1124.77 818.70 V101.29 H1113.32 V818.70" fill="#3f82a3" fill-opacity=".35" stroke-width="6"></path>
+		<path d="M434.67 208.74 A309.44 309.44 0 0 0 709.60 406.54 H838.39 A309.44 309.44 0 0 0 1113.32 208.74 M434.67 779.05 H1113.32" stroke-width="6"></path>
+		<path d="M721.98 101.29 V84.17 H826.01 V101.29" fill="#3f82a3" fill-opacity=".35" stroke-width="6"></path>
+		<path d="M434.67 337.54 A 487.77 487.77 0 0 0 1113.32 337.54" stroke-dasharray="20px, 90px" stroke-width="6"></path>
+		<circle cx="774" cy="342.7" r="3.87" fill="#3f82a3" stroke="none"></circle>
+		<line x1="517.34" y1="101.29" x2="517.34" y2="112.33" stroke-width="6"></line>
+		<line x1="1030.65" y1="101.29" x2="1030.65" y2="112.33" stroke-width="6"></line>
+	</g>
+</svg>
+

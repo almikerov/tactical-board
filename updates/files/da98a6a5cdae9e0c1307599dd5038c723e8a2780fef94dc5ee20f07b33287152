@@ -1,0 +1,12 @@
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 600 600">
+	<circle stroke="none" fill="#DC2E2E" cx="300" cy="300" r="299" />
+	<g stroke="none" fill="#FDE608">
+		<path d="
+			M240 6 L360 594 A300 300 0 0 1 240 594 L360 6 A300 300 0 0 0 240 6 Z
+			M3 260 L597 340 A300 300 0 0 0 597 260 L3 340 A300 300 0 0 1 3 260 Z			
+			M77 100 L523 500 A300 300 0 0 0 559 450 L41 150 A300 300 0 0 1 77 100 Z			
+			M77 500 L523 100 A300 300 0 0 1 559 150 L41 450 A300 300 0 0 0 77 500 Z
+		" />
+	</g>
+	<circle fill="#FDE608" stroke="#DC2E2E" cx="300" cy="300" r="100" stroke-width="20" />	
+</svg>

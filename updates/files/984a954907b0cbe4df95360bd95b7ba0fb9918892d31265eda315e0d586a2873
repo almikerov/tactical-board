@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400">		
+
+
+
+	<path d="
+			M160 270
+			H50
+			A60 60 0 0 1 50 130
+			H160 
+			
+			
+			M240 270
+			H350
+			A60 60 0 0 0 350 130
+			H240 
+			
+			M100 200 H300
+		" stroke-width="44" stroke="#48413B" fill="none" stroke-linecap="round" transform="rotate(-45 200 200)" />	
+		
+</svg>

@@ -1,0 +1,45 @@
+import {test} from 'node:test';
+import assert from 'node:assert/strict';
+import fs from 'node:fs';
+import vm from 'node:vm';
+import {fileURLToPath} from 'node:url';
+import {webcrypto} from 'node:crypto';
+const context=vm.createContext({self:{},crypto:webcrypto});
+vm.runInContext(fs.readFileSync(new URL('../web/browser-storage.js',import.meta.url),'utf8'),context);
+const api=context.self.TacticalBrowserStorage,copy=value=>JSON.parse(JSON.stringify(value));
+const input={name:'Штрафная',board:'big-football-penalty',page:'main',categories:'Стандарты, Стандарты, Оборона',data:{players:{p:{pos:{x:120,y:240}}},shapes:[]}};
+test('browser collection saves, edits and deletes the intended entry without changing the drawing',()=>{
+  const library={items:[],links:{}};
+  const item=api.applyMutation(library,'/local/items','POST',input),other=api.applyMutation(library,'/local/items','POST',{...input,name:'Другая'});
+  assert.deepEqual(copy(item.categories),['Стандарты','Оборона']);
+  const original=copy(item);
+  api.applyMutation(library,'/local/items/'+item.id,'PATCH',{name:'Угловой',description:'Описание',categories:['Атака']});
+  assert.equal(item.name,'Угловой');assert.deepEqual(copy(item.data),original.data);assert.equal(item.created,original.created);
+  api.applyMutation(library,'/local/items/'+other.id,'DELETE',{});
+  assert.equal(library.items.length,1);assert.equal(library.links[other.id],undefined);assert.ok(library.links[item.id]);
+});
+test('legacy library imports atomically, preserves identifiers and categories, and skips duplicates',()=>{
+  const library={items:[],links:{}};
+  const legacy={items:[{...input,id:'old-id',created:'2026-10-08T10:00:00.000Z'}],links:{}};
+  assert.deepEqual(copy(api.applyMutation(library,'/local/backup','POST',legacy)),{added:1,skipped:0});
+  assert.equal(library.items[0].id,'old-id');assert.equal(library.links['old-id'].board,'big-football-penalty');
+  assert.deepEqual(copy(api.applyMutation(library,'/local/backup','POST',legacy)),{added:0,skipped:1});
+  const before=copy(library);
+  assert.throws(()=>api.applyMutation(library,'/local/backup','POST',{items:[{...input,id:'new'},{}]}));
+  assert.deepEqual(copy(library),before);
+});
+test('browser collection has no count limit and native multipart data round-trips',()=>{
+  const library={items:Array.from({length:1003},(_,n)=>({...input,id:String(n)})),links:{}};
+  api.applyMutation(library,'/local/items','POST',input);assert.equal(library.items.length,1004);
+  const text=JSON.stringify(input.data);
+  for(const [index,part] of [text.slice(0,15),text.slice(15)].entries())api.applyMutation(library,'/ajax/ru/sp/storeLinkData','POST',{linkToken:'native_spru',store:'main',dataPartIndex:index,dataPart:part});
+  assert.deepEqual(copy(library.links.native_spru.data),input.data);assert.equal(library.links.native_spru.board,input.board);
+});
+test('deployment contains no private collection, local paths or authentication endpoints in live parameters',()=>{
+  const root=fileURLToPath(new URL('../build/web/',import.meta.url));
+  assert.ok(!fs.existsSync(root+'data'));assert.ok(!fs.existsSync(root+'server.mjs'));
+  assert.ok(fs.readFileSync(root+'local.js','utf8').includes("if(event.target.closest('[data-local],[data-browser]'))return;"),'collection must pass browser backup/import buttons to their handler');
+  const templates=JSON.parse(fs.readFileSync(root+'templates.json','utf8'));
+  assert.equal(Object.keys(templates).length,7);
+  for(const html of Object.values(templates))assert.ok(!html.includes('data-action="create-conference"'));
+});

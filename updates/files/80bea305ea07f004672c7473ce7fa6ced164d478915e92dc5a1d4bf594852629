@@ -1,0 +1,40 @@
+import {test} from 'node:test';
+import assert from 'node:assert/strict';
+import {readFile} from 'node:fs/promises';
+import vm from 'node:vm';
+const context=vm.createContext({});
+vm.runInContext(await readFile(new URL('../public/static/js/board-markup-sp.js',import.meta.url),'utf8'),context);
+test('penalty close-up preserves geometry at different board sizes and export resolutions',()=>{
+  for(const width of [360,1000,2400]){
+    const height=Math.floor(width*.75),scale=width*.92/68;
+    const svg=context.BoardMarkup.get({width,height});
+    assert.ok(!/NaN|Infinity|undefined/.test(svg));
+    const point=svg.match(/<circle cx="([\d.]+)" cy="([\d.]+)"/);
+    assert.equal(Number(point[1]),width/2);
+    assert.ok(Math.abs((Number(point[2])-height*.13)/scale-11)<1e-9);
+    const arc=svg.match(/A([\d.]+) ([\d.]+)/);
+    assert.ok(Math.abs(Number(arc[1])/scale-9.15)<1e-9);
+    assert.equal(arc[1],arc[2]);
+    const visibleDepth=(height*.94-height*.13)/scale;
+    assert.ok(visibleDepth>43.35&&visibleDepth<45.35,'camera shows less than two meters of the center circle');
+    const edge=svg.match(/data-penalty-part="center-circle-edge" d="M([\d.]+) ([\d.]+) A([\d.]+) ([\d.]+) 0 0 1 ([\d.]+) ([\d.]+)"/);
+    assert.ok(edge,'the visible edge of the center circle is drawn');
+    assert.ok(Math.abs(Number(edge[2])-height*.94)<1e-9);
+    assert.ok(Math.abs(Number(edge[6])-height*.94)<1e-9);
+    assert.ok(Math.abs((Number(edge[1])+Number(edge[5]))/2-width/2)<1e-9);
+    assert.ok(Math.abs(Number(edge[3])/scale-9.15)<1e-9);
+    assert.ok(svg.includes('data-penalty-part="corner-arcs"'));
+    assert.ok(svg.includes(`M${width*.04+scale} ${height*.13} A${scale} ${scale}`));
+    assert.ok(svg.includes(`M${width*.96-scale} ${height*.13} A${scale} ${scale}`));
+    assert.ok(!svg.includes('corner-flags'),'the close-up has no corner flags');
+    assert.ok(svg.includes('url(#grid_4)'));
+  }
+});
+test('penalty view supports custom field colors and hidden markings without a watermark',()=>{
+  const svg=context.BoardMarkup.get({width:1000,height:640,color:'#123456',bgColor:'#654321'});
+  assert.ok(svg.includes('stroke="#123456"'));assert.ok(svg.includes('fill="#654321"'));
+  assert.ok(!svg.includes('#5E9D44'));assert.ok(!svg.includes('tactical-board.com'));
+  const hidden=context.BoardMarkup.get({width:1000,height:640,hideMarkup:true});
+  assert.ok(!hidden.includes('data-role="board-markup"'));assert.ok(!hidden.includes('<circle'));
+  assert.ok(hidden.includes('<polyline points='));
+});

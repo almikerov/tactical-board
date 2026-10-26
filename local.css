@@ -39,5 +39,31 @@ div.select-board-view>div:last-child>a.board-view-big-football-free>div:last-chi
 .free-field-preset{display:flex;gap:.4rem;align-items:stretch;border-bottom:1px solid #697149}
 .local-panel .free-field-preset>button:first-child{flex:1;text-align:left;display:flex;justify-content:space-between;gap:1rem}
 /* /local-board-views */
+/* colors-window */
+#menu_panel [data-action="choose-board-background-color"]{display:none!important}
+.colors-window{padding:.8rem 1rem;color:#ededb4;max-width:min(58rem,92vw)}
+.colors-window .colors-title{font-size:1.4rem;text-align:center;margin-bottom:.6rem}
+.colors-window .colors-columns{display:flex;flex-wrap:wrap;gap:1rem 2rem}
+.colors-window section{flex:1 1 18rem;min-width:0}
+.colors-window h3{font-size:1.05rem;font-weight:normal;margin:.2rem 0 .5rem;border-bottom:1px solid #697149;padding-bottom:.3rem}
+.colors-window .colors-hint{margin:0 0 .4rem;font-size:.8rem;opacity:.8}
+.colors-window .colors-row{display:flex;align-items:center;gap:.5rem;min-height:2.1rem}
+.colors-window .colors-row>span{width:6.5rem}
+.colors-window .colors-row>em{font-style:normal;text-decoration:underline;min-width:1.5rem}
+.colors-window .colors-swatch{display:inline-block;width:1.4rem;height:1.4rem;border-radius:50%;border:1px solid #fff;box-shadow:0 0 0 1px #0006}
+.colors-window button{color:#3f82a3;background:transparent;cursor:pointer;border:.1rem solid #3f82a3;border-radius:.5rem;padding:.25rem .7rem;font:inherit;font-size:.8rem}
+.colors-window button:hover{background:hsla(0,0%,100%,.1)}
+.colors-window .colors-actions{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:.5rem}
+.colors-window div.select-board-view>div:first-child{display:none}
+.colors-window div.select-board-view>div:last-child{padding:0;max-width:none;gap:.2rem}
+.colors-window div.select-board-view>div:last-child>a{width:auto;flex:0 0 calc(25% - .2rem);padding:.3rem 0;cursor:pointer}
+.colors-window div.select-board-view>div:last-child>a::after{font-size:.6rem!important}
+.colors-window div.select-board-view>div:last-child>a>div:last-child{width:5.5rem;height:3.6rem}
+.colors-window div.select-board-view>div:last-child>a.colors-selected{color:#3f82a3;box-shadow:#3f82a3 0 0 0 2px inset}
+/* /colors-window */
+/* local-updates */
+.update-panel ul{margin:.3rem 0 .8rem;padding-left:1.4rem}
+.update-panel li{margin:.2rem 0}
+/* /local-updates */
 
 #collection_list>.collection-local-footer{flex-wrap:wrap}

@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1327 928">
+ <g stroke="#888888" fill="#888888">
+	<polyline points="306.80 97.90, 306.80 830.09, 1020.19 830.09, 1020.19 97.90" fill="none" stroke-width="6"></polyline>
+	<path d="M557.34 97.90 A 107.72 107.72, 0, 1, 0, 769.66 97.90 M399.82 830.09 A 214.97 214.97, 0, 0, 1, 599.80 614.52 M599.80 614.52 H727.19 M927.17 830.09 A 214.97 214.97, 0, 0, 0, 727.19 614.52" fill="none" stroke-width="6"></path>
+	<circle cx="663.5" cy="614.52" r="5.30" stroke="none"></circle>
+	<circle cx="663.5" cy="472.53" r="5.30" stroke="none"></circle>
+	<circle cx="663.5" cy="116" r="5.30" stroke="none"></circle>
+	<rect x="306.80" y="116.46" width="713.39" height="713.63" fill="none" stroke-width="6"></rect>
+	<line x1="306.80" y1="830.09" x2="306.80" y2="97.90" fill="none" stroke-width="6"></line>
+	<line x1="1020.19" y1="830.09" x2="1020.19" y2="97.90" fill="none" stroke-width="6"></line>
+	<polyline points="605.37 830.09, 605.37 852.27, 721.62 852.27, 721.62 830.09" fill-opacity=".35" stroke-width="6"></polyline>
+ </g>
+</svg>

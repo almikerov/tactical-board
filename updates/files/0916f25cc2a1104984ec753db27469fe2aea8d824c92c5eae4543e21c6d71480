@@ -1,0 +1,17 @@
+{
+  "name": "tactical-board-local",
+  "version": "1.6.0",
+  "private": true,
+  "type": "module",
+  "description": "Local reconstruction of the public tactical-board.com football editor",
+  "scripts": {
+    "start": "node server.mjs",
+    "test": "node --test test/*.test.mjs",
+    "build": "node scripts/build-web.mjs && node scripts/build-pages.mjs && node scripts/build-update.mjs",
+    "serve-web": "node scripts/serve-web.mjs",
+    "deploy": "node scripts/deploy.mjs"
+  },
+  "engines": {
+    "node": ">=22"
+  }
+}

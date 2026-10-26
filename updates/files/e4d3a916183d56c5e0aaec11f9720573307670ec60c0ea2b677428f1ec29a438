@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1183 810">
+<g stroke="#3f82a3" fill="#3f82a3">
+<path d="M114 723 A 482 561 0 1 1 1068 723 M519 125 H663 M147 723 A 449 525 0 0 1 519 125 M1035 723 A 449 525 0 0 0 663 125 M266 279 A 415 377 0 0 0 916 279" fill="none" stroke-width="6"></path>
+<path d="M519 125 V65 M567 28 V192 H615 V28 M663 125 V65" fill="none" stroke-width="6"></path>
+<circle cx="591.5" cy="645" r="10" fill="none" stroke-width="6"></circle>
+<circle cx="591.5" cy="645" r="37" fill="none" stroke-width="6"></circle>
+<line x1="553" y1="645" x2="629" y2="645" fill="none" stroke-width="6"></line>
+<polygon points="518 125, 518 112, 520 112, 520 125" stroke-width="6"></polygon>
+<polygon points="565 125, 565 112, 568 112, 568 125" stroke-width="6"></polygon>
+<polygon points="664 125, 664 112, 662 112, 662 125" stroke-width="6"></polygon>
+<polygon points="617 125, 617 112, 614 112, 614 125" stroke-width="6"></polygon>
+<polyline points="405 723, 405 460, 777 460, 777 723" fill="none" stroke-width="6"></polyline></g></svg>

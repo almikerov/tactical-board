@@ -1,0 +1,22 @@
+import {test} from 'node:test';
+import assert from 'node:assert/strict';
+import {readFile} from 'node:fs/promises';
+import vm from 'node:vm';
+const source=await readFile(new URL('../public/background.js',import.meta.url),'utf8');
+function browser(defaultBoard){
+  const state={resizes:0,shown:0};
+  const context=vm.createContext({TacticalLocal:{layout:{resize(){state.resizes++;}}},TacticalDefaults:defaultBoard===undefined?undefined:{get:()=>({board:defaultBoard}),show(){state.shown++;}}});
+  vm.runInContext(source,context);return {state,background:context.TacticalBackground};
+}
+test('the board background follows the default until this field gets its own color',()=>{
+  const tab=browser('#ffffff');
+  assert.equal(tab.background.get('#738554'),'#ffffff');assert.equal(tab.background.current(),null);
+  tab.background.set('#224466');assert.equal(tab.background.get('#738554'),'#224466');assert.equal(tab.state.resizes,1);
+  tab.background.set(null);assert.equal(tab.background.get('#738554'),'#ffffff');
+  assert.equal(browser(undefined).background.get('#738554'),'#738554');
+});
+test('invalid colors are refused and the old menu entry opens the colors window',()=>{
+  const tab=browser('#fff');
+  assert.throws(()=>tab.background.set('url(https://example.com)'),/RRGGBB/);
+  tab.background.choose();assert.equal(tab.state.shown,1);
+});

@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1000 1000">
+	<path 
+		d="
+			M240 910 V390 H220 V400
+			A250 200 0 0 1 50 390
+			L65 240
+			A250 200 0 0 1 130 140
+			A1000 1000 0 0 0 390 45
+			H610
+			A1000 1000 0 0 0 870 140
+			A250 200 0 0 1 935 240
+			L950 390
+			A250 200 0 0 1 780 400
+			V390
+			H760
+			V910
+			A800 800 0 0 1 240 910Z
+		" stroke="#48413B" fill="none" stroke-width="80" stroke-linejoin="round"
+	/>
+</svg>

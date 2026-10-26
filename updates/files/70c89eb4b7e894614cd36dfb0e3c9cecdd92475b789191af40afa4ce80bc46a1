@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" viewBox="0 0 500 400">
+  <path d="
+		M50 60 
+		L450 60
+		L450 340
+		L50 340
+		Z
+		M50 60 L250 220 L450 60
+		M50 340 L200 180
+		M450 340 L300 180
+	" fill="none" stroke="#48413B" stroke-width="28" stroke-linejoin="round" />
+</svg>

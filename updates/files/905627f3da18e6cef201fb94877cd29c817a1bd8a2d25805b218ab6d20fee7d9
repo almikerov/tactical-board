@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1548 920">
+	 <g stroke="#888888" fill="none">
+		<path d="M169.97 100.64 H1378.02 V819.35 H169.97 V100.64" stroke-width="6"></path>
+		<path d="M169.97 342.42 H228.63 V577.57 H169.97 V342.42Z M169.97 221.26 H349.22 V698.74 H169.97 V221.26Z M411.92 100.64 V819.35Z M349.22 342.42 A116.1 116.1 0 0 1 349.22 577.57Z M774 100.64 V819.35Z M1198.77 342.42 A116.1 116.1 0 0 0 1198.77 577.57Z M1136.07 100.64 V819.35Z M1378.02 221.26 H1198.77 V698.74 H1378.02 V221.26Z M1378.02 342.42 H1319.36 V577.57 H1378.02 V342.42Z" stroke-width="6"></path>
+		<path d="M169.97 401.76 H147.21 V518.23 H169.97 M1378.02 401.76 H1400.78 V518.23 H1378.02" fill="none" stroke-width="6"></path>
+		<circle cx="349.22" cy="460" r="4.79" fill="#888888" stroke="none"></circle>
+		<circle cx="774" cy="460" r="4.79" fill="#888888" stroke="none"></circle>
+		<circle cx="774" cy="460" r="116.25" stroke-width="6"></circle>
+		<circle cx="1198.77" cy="460" r="4.79" fill="#888888" stroke="none"></circle>
+	 </g>
+ </svg>

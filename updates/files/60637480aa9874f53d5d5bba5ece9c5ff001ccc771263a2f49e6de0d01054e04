@@ -1,0 +1,14 @@
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 500 500">
+		<g fill="#48413B" stroke="#48413B" stroke-width="60" stroke-linejoin="round" stroke-linecap="round">
+		<polyline fill="none" points="		
+			100,450
+			350,280
+			150,100
+			450,50	
+		"></polyline>
+		<circle cx="100" cy="450" r="50" stroke="none"></circle>
+		<circle cx="350" cy="280" r="50" stroke="none"></circle>
+		<circle cx="150" cy="100" r="50" stroke="none"></circle>
+		<circle cx="450" cy="50" r="50" stroke="none"></circle>
+	</g>
+</svg>

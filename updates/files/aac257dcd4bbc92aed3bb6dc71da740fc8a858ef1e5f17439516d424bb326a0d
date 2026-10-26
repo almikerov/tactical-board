@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1548 920">
+	<g stroke="#888888" fill="none" stroke-width="6">
+		<path d="M489.63 101.89 L146.59 826.10 H1401.40 L1058.36 101.89z" ></path>
+		<path d="M611.30 101.89 L598.92 147.73 H949.07 L936.69 101.89 M415.94 826.10 L464.24 647.46 H1083.75 L1132.05 826.10" fill="none" ></path>
+		<path d="M417.80 254.64 H1130.19" fill="none" stroke-dasharray="12.53px, 12.53px" stroke-opacity=".4" ></path>
+		<path d="M341.02 417.13 H1206.97" fill="none" stroke-dasharray="15.18px, 15.18px" stroke-opacity=".4" ></path>
+		<path d="M731.89 101.89 V80.27 H816.10 V101.89" fill="#888888" fill-opacity=".35" ></path>
+		<ellipse cx="774" cy="147.73" rx="2.55" ry="1.53" fill="#888888" stroke="none"></ellipse>
+		<ellipse cx="774" cy="647.46" rx="4.95" ry="3.25" fill="#888888" stroke="none"></ellipse>
+		<line x1="383.13" x2="1164.87" y1="327.58" y2="327.58" ></line>
+		<polygon points="676.94 839.93, 676.94 790.74, 871.05 790.74, 871.05 839.93" fill="#888888" fill-opacity=".35"></polygon>
+		<polygon points="676.94 790.74, 682.20 767.92,865.79 767.92, 871.05 790.74" fill="#888888" fill-opacity=".35"></polygon>
+		<polygon points="676.94 839.93, 676.94 790.74, 682.20 767.92, 682.20 826.10" fill="#888888" fill-opacity=".35" ></polygon>
+		<polygon points="871.05 839.93, 871.05 790.74, 865.79 767.92, 865.79 821.74" fill="#888888" fill-opacity=".35"></polygon>
+	</g>
+</svg>

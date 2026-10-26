@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1548 920">
+	<g stroke="#3f82a3" fill="none">
+		<polygon points="485.14 100.46, 199.84 819.53, 1348.15 819.53, 1062.85 100.46" stroke-width="6"></polygon>
+		<path d="M670.59 158.42 A 43.96 19.04, 0, 0, 0, 877.40 158.42 M609.75 633.78 A 165.94 115.79, 0, 0, 1, 938.24 633.78" stroke-width="6"></path>
+		<ellipse cx="774" cy="158.42" rx="3.25" ry="1.19" fill="#3f82a3" stroke-width="6"></ellipse>
+		<ellipse cx="774" cy="344.54" rx="125.23" ry="61.64" stroke-width="6"></ellipse>
+		<ellipse cx="774" cy="340.86" rx="3.73" ry="1.84" fill="#3f82a3" stroke-width="6"></ellipse>
+		<ellipse cx="774" cy="633.78" rx="6.34" ry="3.58" fill="#3f82a3" stroke-width="6"></ellipse>
+		<line x1="452.32" y1="181.05" x2="1095.67" y2="181.05" stroke-width="6"></line>
+		<line x1="390.71" y1="340.21" x2="1157.28" y2="340.21" stroke-width="6"></line>
+		<line x1="295.51" y1="579.69" x2="1252.48" y2="579.69" stroke-width="6"></line>
+		<polygon points="581.73 100.46, 966.26 100.46, 981.58 158.42, 566.41 158.42" stroke-width="6"></polygon>
+		<polygon points="678.79 100.46, 869.20 100.46, 871.67 118.40, 676.32 118.40" stroke-width="6"></polygon>
+		<polygon points="687.77 832.69, 687.77 783.93, 860.22 783.93, 860.22 832.69" fill-opacity=".35" fill="#3f82a3" stroke-width="6"></polygon>
+		<polygon points="687.77 783.93, 691.49 761.30,856.50 761.30, 860.22 783.93" fill-opacity=".35" fill="#3f82a3" stroke-width="6"></polygon>
+		<polygon points="687.77 832.69, 687.77 783.93, 691.49 761.30, 691.49 814.66" fill-opacity=".35" fill="#3f82a3" stroke-width="6"></polygon>
+		<polygon points="860.22 832.69, 860.22 783.93, 856.50 761.30, 856.50 814.66" fill-opacity=".35" fill="#3f82a3" stroke-width="6"></polygon>
+		<polyline points="732.04 100.46, 732.04 75.71, 815.95 75.71, 815.95 100.46" fill-opacity=".35" fill="#3f82a3" stroke-width="6"></polyline>
+		<polyline points="393.03 819.53, 441.33 633.78, 1106.66 633.78, 1154.96 819.53" stroke-width="6"></polyline>
+		<polyline points="585.76 819.53, 594.58 752.37, 953.41 752.37, 962.23 819.53" stroke-width="6"></polyline>
+		<polyline points="691.49 814.66, 691.49 761.30, 856.50 761.30, 856.50 814.66" stroke-width="6"></polyline>
+	</g></svg>

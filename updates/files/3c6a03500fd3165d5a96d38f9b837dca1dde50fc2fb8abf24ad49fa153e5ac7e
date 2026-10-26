@@ -1,0 +1,110 @@
+/* Update notice of the local app: offers a newer published version once per launch. */
+(() => {
+  'use strict';
+  const app = window.TacticalLocal;
+  if (!app) return;
+  const escape = s => String(s ?? '').replace(/[&<>"']/g, c => ({'&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;'}[c]));
+  const api = async (url, init) => {
+    const response = await fetch(url, init), value = await response.json();
+    if (!response.ok) throw Error(value.error || 'Ошибка обновления');
+    return value;
+  };
+  const post = url => api(url, {method: 'POST', headers: {'Content-Type': 'application/json'}, body: '{}'});
+  let installing = false, offered = false;
+
+  function panel(content, onClose) {
+    app.ui.showModalWindow({content: '<div class="local-panel update-panel" data-allow-select>' + content + '</div>', onClose});
+  }
+  function notes(list) {
+    return list && list.length ? '<p>Что нового:</p><ul>' + list.map(line => '<li>' + escape(line) + '</li>').join('') + '</ul>' : '';
+  }
+  function offer(info) {
+    offered = true;
+    panel(`<h2>Доступно обновление</h2>
+      <p>Версия <strong>${escape(info.latest.version)}</strong>, у вас ${escape(info.current)}.</p>
+      ${notes(info.latest.notes)}
+      <p><small>Коллекция, сохранённые схемы и настройки останутся. Окно сервера закрывать не нужно.</small></p>
+      <button type="button" data-update="apply">Обновить</button>
+      <button type="button" data-update="later">Позже</button>`,
+    // Closing the window counts as "later", so the notice does not return on every page until the next launch.
+    () => { if (!installing && offered) { offered = false; post('/local/update/later').catch(() => {}); } });
+  }
+  function status(info) {
+    if (info.available) { offer(info); return; }
+    panel(`<h2>Обновления</h2>
+      <p>Установлена версия ${escape(info.current)}${info.error ? '.' : ' — она последняя.'}</p>
+      ${info.error ? `<p><small>Не удалось проверить обновления: ${escape(info.error)}. Нужен интернет.</small></p>` : ''}
+      <button type="button" data-update="check">Проверить ещё раз</button>`);
+  }
+  function failed(info) {
+    offered = true;
+    panel(`<h2>Обновление не установилось</h2>
+      <p>Версия ${escape(info.failed)} не запустилась, поэтому доска вернулась к версии ${escape(info.current)}. Коллекция не пострадала.</p>
+      <button type="button" data-update="later">Понятно</button>`,
+    () => { if (offered) { offered = false; post('/local/update/later').catch(() => {}); } });
+  }
+
+  async function install() {
+    installing = true;
+    panel('<h2>Обновление</h2><p data-update-step>Скачиваю обновление…</p><p><small>Не закрывайте окно сервера.</small></p>');
+    const step = text => { const node = document.querySelector('[data-update-step]'); if (node) node.textContent = text; };
+    try {
+      const result = await post('/local/update/apply');
+      step('Версия ' + result.version + ' установлена. Перезапуск…');
+      // The server restarts on the same address; the page reloads once the new version answers.
+      // If the new version fails to start, the previous one comes back and the reloaded page explains it.
+      let down = false;
+      for (const started = Date.now(); Date.now() - started < 60000;) {
+        await new Promise(resolve => setTimeout(resolve, 700));
+        const health = await fetch('/health', {cache: 'no-store'}).then(r => r.json()).catch(() => null);
+        if (!health) { down = true; continue; }
+        if (health.version === result.version || down || Date.now() - started > 20000) { location.reload(); return; }
+      }
+      step('Сервер не ответил. Закройте окно сервера и запустите доску снова.');
+    } catch (error) {
+      installing = false;
+      panel(`<h2>Обновление не удалось</h2><p>${escape(error.message)}</p><p><small>Ничего не изменилось, доской можно пользоваться. Попробуйте позже.</small></p>
+        <button type="button" data-update="close">Закрыть</button>`);
+    }
+  }
+
+  document.addEventListener('click', event => {
+    const button = event.target.closest('[data-update]');
+    if (!button) return;
+    event.preventDefault();
+    const action = button.dataset.update;
+    if (action === 'apply') { offered = false; install(); }
+    else if (action === 'later') { offered = false; post('/local/update/later').catch(() => {}); app.ui.closeModalWindow(); }
+    else if (action === 'close') app.ui.closeModalWindow();
+    else if (action === 'check') api('/local/update?fresh=1').then(status).catch(error => app.ui.notification(error.message, 'error'));
+    else if (action === 'menu') {
+      document.getElementById('menu_panel').classList.add('hidden');
+      document.getElementById('menu_panel_background_layer').hidden = true;
+      api('/local/update').then(status).catch(error => app.ui.notification(error.message, 'error'));
+    }
+  });
+
+  async function start() {
+    let info;
+    try { info = await api('/local/update'); } catch (e) { return; }
+    // The browser build has no update service; only the local server answers with a version.
+    if (!info || !info.current || !info.enabled) return;
+    const menu = document.getElementById('menu_panel');
+    if (menu && !menu.querySelector('[data-update="menu"]')) {
+      const item = document.createElement('div');
+      item.className = 'menu-item';
+      item.dataset.update = 'menu';
+      item.textContent = 'Обновления · версия ' + info.current;
+      menu.appendChild(item);
+    }
+    if (info.dismissed) return;
+    if (info.failed) failed(info);
+    else if (info.available) offer(info);
+  }
+  const init = app.layout._initApplication;
+  app.layout._initApplication = async function () {
+    const result = await init.apply(this, arguments);
+    start();
+    return result;
+  };
+})();

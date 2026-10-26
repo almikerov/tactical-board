@@ -1,0 +1,1907 @@
+[
+  {
+    "path": "public/static/css/styles.css",
+    "bytes": 62404,
+    "sha256": "062ddf31323e7acedd58e8686090a7e1f2372cf39150a0614e5164d1ac6b9d82"
+  },
+  {
+    "path": "public/static/css/ui.css",
+    "bytes": 76484,
+    "sha256": "faa23978d36545154bf26913cd1f29da7efc56d5f05b4ea83bfa46331f47a2d3"
+  },
+  {
+    "path": "public/static/fonts/comic-sans-ms.2be4a49a17700938dbc0..ttf",
+    "bytes": 126364,
+    "sha256": "b82c53776058f291382ff7e008d4675839d2dc21eb295c66391f6fb0655d8fc0"
+  },
+  {
+    "path": "public/static/fonts/roboto-regular.03523cf578d69fa92322..ttf",
+    "bytes": 171272,
+    "sha256": "017c0be9aaa6d0359737e1fa762ad304c0e0107927faff5a6c1f415c7f5244ed"
+  },
+  {
+    "path": "public/static/images/icons/icon.svg",
+    "bytes": 1782,
+    "sha256": "974e5162f738684cd0db123a1381881a1c68c8de4e9f31190b5ed513e06ecad6"
+  },
+  {
+    "path": "public/static/images/pencil.139c9b5245bb24a96ebd..png",
+    "bytes": 219,
+    "sha256": "f1e3cd4936f142ff07edb8cc61f56d42adc99ea65857a35ca3dbbf0272c34f7e"
+  },
+  {
+    "path": "public/static/images/svg/add-frame.ee8efbc822c903a2aec1..svg",
+    "bytes": 1569,
+    "sha256": "38adb8b95c6922ef8e45941ea2dd7f656de11eb06dbaafe4be3e6293112f7857"
+  },
+  {
+    "path": "public/static/images/svg/arrow-left.1ab5704cfb44f42cad21..svg",
+    "bytes": 130,
+    "sha256": "7b01917595a25f689cdb1bd710c89705ece30b6a89553eced16b55857fe54c3e"
+  },
+  {
+    "path": "public/static/images/svg/arrow-right.ea83f4e902c4b28a51b8..svg",
+    "bytes": 130,
+    "sha256": "45f2e000228537c4e6387f80fbf3abde03df94b0753274a7745e089fdda3a57d"
+  },
+  {
+    "path": "public/static/images/svg/back.95703c8a081189d425f8..svg",
+    "bytes": 242,
+    "sha256": "22ba38fc42d07cc16812ede5f75101c79c337a9dc84d5d0df70171cdfb543469"
+  },
+  {
+    "path": "public/static/images/svg/boards/american-football-half-active.1a2be1e3118deb7e5006..svg",
+    "bytes": 6226,
+    "sha256": "508e9034b4fdc09407ab1066620ed574e49e8fc7065fe3f30720450e4382f075"
+  },
+  {
+    "path": "public/static/images/svg/boards/american-football-half-inactive.3352a4c23545eef0eb05..svg",
+    "bytes": 6226,
+    "sha256": "b73925d8aac1fbe9d1a001e7a8adccd479d5932b64ad3a6e3b7e321f7ac94b35"
+  },
+  {
+    "path": "public/static/images/svg/boards/american-football-horizontal-active.13aeda7870e7cfa3b4b9..svg",
+    "bytes": 11432,
+    "sha256": "f87ff48673934b074cb7077762d4f928782f89629bdc33c0f71b8955c9e58b04"
+  },
+  {
+    "path": "public/static/images/svg/boards/american-football-horizontal-inactive.ecff9138967831294e48..svg",
+    "bytes": 11432,
+    "sha256": "470ca3be2aca149c17d4946f7ecc7a17df1bf51b543391df4dafe6cfd1e0c636"
+  },
+  {
+    "path": "public/static/images/svg/boards/american-football-vertical-active.7e5eaf5f82cc08504540..svg",
+    "bytes": 37667,
+    "sha256": "2da3e432704a02c2ca44b51767a5a46e44846699e0ac9b77fd8c08d68af8e1f4"
+  },
+  {
+    "path": "public/static/images/svg/boards/american-football-vertical-inactive.89250614cb81844dce7c..svg",
+    "bytes": 37667,
+    "sha256": "a5c5e40794cfb6cafb257138fca430f1b87c95864c7254af272f0d759991f319"
+  },
+  {
+    "path": "public/static/images/svg/boards/australian-football-half-active.011be2dd759d2fc717ce..svg",
+    "bytes": 1099,
+    "sha256": "e4d3a916183d56c5e0aaec11f9720573307670ec60c0ea2b677428f1ec29a438"
+  },
+  {
+    "path": "public/static/images/svg/boards/australian-football-half-inactive.b46c6a6e0c00f06d0248..svg",
+    "bytes": 1099,
+    "sha256": "5090c84350264f34818e11d446ce14c09e2c7813786fc26e861446ba75c994fe"
+  },
+  {
+    "path": "public/static/images/svg/boards/australian-football-horizontal-active.73a73611725a706d7b43..svg",
+    "bytes": 1720,
+    "sha256": "4e6e4824314cf176b441f48c54062af05dd26672b397d7f5a0c8bf658cd4ab7c"
+  },
+  {
+    "path": "public/static/images/svg/boards/australian-football-horizontal-inactive.e0122e2752a1e017a78a..svg",
+    "bytes": 1720,
+    "sha256": "362e806f2290e6d16b6b610b14a31418e98aea7e1fc71c037c3805139eb5b3c2"
+  },
+  {
+    "path": "public/static/images/svg/boards/australian-football-vertical-active.3e50cf5ebf72e826dbc2..svg",
+    "bytes": 1677,
+    "sha256": "a56674fab089125c654487a581fc74c24ff9d1afe4f68149c5c1f46590751c9f"
+  },
+  {
+    "path": "public/static/images/svg/boards/australian-football-vertical-inactive.8ee1a2b351f8fd837be7..svg",
+    "bytes": 1677,
+    "sha256": "4525fa123b839f13de318ca4e65e4cefc9bfb2983ff7178feb36492d8a650444"
+  },
+  {
+    "path": "public/static/images/svg/boards/badminton-half-2-active.b350d434bd2f14f2bae6..svg",
+    "bytes": 741,
+    "sha256": "41b77ad7b5fd9412c63a87c6990f642152f3741e09e2aa7706a4bc78178bde76"
+  },
+  {
+    "path": "public/static/images/svg/boards/badminton-half-2-inactive.a72856e4ad4f311a8b48..svg",
+    "bytes": 749,
+    "sha256": "f77316dabb25076a78c4be5aa8b453dcce23af9e6c1f03a8768a089a7ea31c7d"
+  },
+  {
+    "path": "public/static/images/svg/boards/badminton-half-active.33a2091dac6170b0dfb0..svg",
+    "bytes": 741,
+    "sha256": "380097b9401f21d09075ad135c50a14bfc93187cf192fa54fc187c86b4c04c34"
+  },
+  {
+    "path": "public/static/images/svg/boards/badminton-half-inactive.8ae53ce76ad11bb33e7b..svg",
+    "bytes": 749,
+    "sha256": "84f6683e0c58384ad2b2018e3972e49859733d3ecaee62aabc5e5bc74662694b"
+  },
+  {
+    "path": "public/static/images/svg/boards/badminton-horizontal-active.154d4362b910c17f0291..svg",
+    "bytes": 986,
+    "sha256": "c446d567d54c20a9170f68729de948acbb1e9939d3dd5ff7b2256c685c54e884"
+  },
+  {
+    "path": "public/static/images/svg/boards/badminton-horizontal-inactive.5e1cba910f576d89ebae..svg",
+    "bytes": 986,
+    "sha256": "76b93f16b94d782c5cad4776f7aa65f850e95fb7e73ab82ddef529e4d9e58a6a"
+  },
+  {
+    "path": "public/static/images/svg/boards/badminton-vertical-active.c80612da8270701a6b93..svg",
+    "bytes": 1227,
+    "sha256": "6363edd8e21d7bfab1365e1e6dcac052c890e3fd3953dc6b81f9578551beaf9b"
+  },
+  {
+    "path": "public/static/images/svg/boards/badminton-vertical-inactive.ada837a83a144a2dd2cc..svg",
+    "bytes": 1227,
+    "sha256": "2a1012f06e471c2308e36531308ac26b7f7cb7342dbd221dccc2dea19cbcf9de"
+  },
+  {
+    "path": "public/static/images/svg/boards/bandy-half-active.3fd7bdd8baf5d43fed82..svg",
+    "bytes": 1273,
+    "sha256": "86a1981218339470d9e9f25c8b8ee352ed20e6ea741ae6852bf15ff7614f9e40"
+  },
+  {
+    "path": "public/static/images/svg/boards/bandy-half-inactive.85100efd0aac6d12ca52..svg",
+    "bytes": 1273,
+    "sha256": "c75ee9471b754432e546dfac5ace61b26f1325c8bac356a666ad2c78c2bbee5d"
+  },
+  {
+    "path": "public/static/images/svg/boards/bandy-horizontal-active.165fb6a1d1014c358700..svg",
+    "bytes": 1333,
+    "sha256": "235bfd0433d74835d211de34a5ed840e970068f988750a8874dac1b1f2c13def"
+  },
+  {
+    "path": "public/static/images/svg/boards/bandy-horizontal-inactive.7ff1678efbeabedde1b4..svg",
+    "bytes": 1333,
+    "sha256": "6b4e4dd12fdbb19184a478833a74613a5ba9b2a312654b732b46c1c7cf6fcb6b"
+  },
+  {
+    "path": "public/static/images/svg/boards/bandy-vertical-active.a327a787c1330355a2a7..svg",
+    "bytes": 2349,
+    "sha256": "380533ca2f10f723211ac207b7e6094b1bd7deaecef6d7f412d5800183371844"
+  },
+  {
+    "path": "public/static/images/svg/boards/bandy-vertical-inactive.e56ebddfa22ced09157f..svg",
+    "bytes": 2349,
+    "sha256": "e7d1aedae0b6dd810f860a00ec9d1e979c84391b32c76e6dcbd48a286c9c2ee7"
+  },
+  {
+    "path": "public/static/images/svg/boards/baseball-custom-active.61de8becfbf17cb1a9ed..svg",
+    "bytes": 4525,
+    "sha256": "ade86f7f4fda4574ac7e217992357fb8efbf64574d216a8d1f6517ed0baf5823"
+  },
+  {
+    "path": "public/static/images/svg/boards/baseball-custom-inactive.61de8becfbf17cb1a9ed..svg",
+    "bytes": 4525,
+    "sha256": "ade86f7f4fda4574ac7e217992357fb8efbf64574d216a8d1f6517ed0baf5823"
+  },
+  {
+    "path": "public/static/images/svg/boards/baseball-half-active.f9cce320a2bb10def662..svg",
+    "bytes": 2171,
+    "sha256": "b324129ffac25d5a3c62f7db6b25b03e4e02d58e30e6b7302bd8240aa7d638ab"
+  },
+  {
+    "path": "public/static/images/svg/boards/baseball-half-inactive.f9cce320a2bb10def662..svg",
+    "bytes": 2171,
+    "sha256": "b324129ffac25d5a3c62f7db6b25b03e4e02d58e30e6b7302bd8240aa7d638ab"
+  },
+  {
+    "path": "public/static/images/svg/boards/baseball-horizontal-active.84db5d97ffd37853170a..svg",
+    "bytes": 2115,
+    "sha256": "43739134a79a2330214252ef68f63e764b7fe1b157da8e7780cf24a3693292a8"
+  },
+  {
+    "path": "public/static/images/svg/boards/baseball-horizontal-inactive.84db5d97ffd37853170a..svg",
+    "bytes": 2115,
+    "sha256": "43739134a79a2330214252ef68f63e764b7fe1b157da8e7780cf24a3693292a8"
+  },
+  {
+    "path": "public/static/images/svg/boards/baseball-vertical-active.cecfabeb202e8ec335b5..svg",
+    "bytes": 2327,
+    "sha256": "d45940846dc4c7a5c3288601c4f27451bf5f612972b6580279396a4d025f06f0"
+  },
+  {
+    "path": "public/static/images/svg/boards/baseball-vertical-inactive.cecfabeb202e8ec335b5..svg",
+    "bytes": 2327,
+    "sha256": "d45940846dc4c7a5c3288601c4f27451bf5f612972b6580279396a4d025f06f0"
+  },
+  {
+    "path": "public/static/images/svg/boards/basketball-half-active.84fb39f58ca55c1459b7..svg",
+    "bytes": 1657,
+    "sha256": "b47978118d574adf8161a01e3dafc4aa994f69be13f0b67de6ad809921e2cdb6"
+  },
+  {
+    "path": "public/static/images/svg/boards/basketball-half-inactive.4460c724d2741da2db21..svg",
+    "bytes": 1657,
+    "sha256": "2f8d053760a98af747510a2540347210bab82cac799c627e98a3cf550f59937e"
+  },
+  {
+    "path": "public/static/images/svg/boards/basketball-horizontal-active.e668dff35471b3a7175f..svg",
+    "bytes": 1524,
+    "sha256": "cc5d20dad0edf8341212183126a85cf846dd7f8c404a590bfd50a600fad43bbd"
+  },
+  {
+    "path": "public/static/images/svg/boards/basketball-horizontal-inactive.c1fc1c7840c3be13b834..svg",
+    "bytes": 1524,
+    "sha256": "d779b0768292165c8627f5c4b34e2a1d29042ba788a4e02912300badec7d127e"
+  },
+  {
+    "path": "public/static/images/svg/boards/basketball-new-half-active.fc595c2cf2eba1b3f1d0..svg",
+    "bytes": 1809,
+    "sha256": "200798b83fda8a50336972b311c76e22d35c77c6607a6fac04840d4e14f33ed1"
+  },
+  {
+    "path": "public/static/images/svg/boards/basketball-new-half-inactive.4d5699ed8b229d027525..svg",
+    "bytes": 1809,
+    "sha256": "28c47f4dcfa27676330ff558dc8595f1bb32dd21d26b665ff9cef7c5fc844e1c"
+  },
+  {
+    "path": "public/static/images/svg/boards/basketball-new-horizontal-active.81125efff9db22819e11..svg",
+    "bytes": 1457,
+    "sha256": "60cdb1e8d373b60f242d560aa793cbbb5a948e0e9db7a17a7403228a60408cb1"
+  },
+  {
+    "path": "public/static/images/svg/boards/basketball-new-horizontal-inactive.b6b8d7fab274f00fd681..svg",
+    "bytes": 1457,
+    "sha256": "18e0a1081409f2655d99e30cf6d5f257b5a75f8697c159f6fd2f4f2808e66148"
+  },
+  {
+    "path": "public/static/images/svg/boards/basketball-new-vertical-active.83f95c432abedb63ac31..svg",
+    "bytes": 3738,
+    "sha256": "1d0b8c4358b9e17fbf5f5d71125736d17a9256481a942846a442a072f344aa44"
+  },
+  {
+    "path": "public/static/images/svg/boards/basketball-new-vertical-inactive.2e1e215f9aa3ad568823..svg",
+    "bytes": 3738,
+    "sha256": "7270430da157e5a6bfc02acca364f41ff6081a50d5326364b00a0afe21ed1bbb"
+  },
+  {
+    "path": "public/static/images/svg/boards/basketball-vertical-active.9eeaeb99f963efa674c8..svg",
+    "bytes": 3034,
+    "sha256": "1006635103aba793703daa881622057a42686a22cdd9bd4bf53fd7b124e22bb0"
+  },
+  {
+    "path": "public/static/images/svg/boards/basketball-vertical-inactive.9987669fd895d7350ac1..svg",
+    "bytes": 3034,
+    "sha256": "2aa616f36e2d82a0e351bc6400677add7b9a51b0c09e8cc08b4e0885455a68fc"
+  },
+  {
+    "path": "public/static/images/svg/boards/beach-football-half-active.3c704ed4f21728c7cab9..svg",
+    "bytes": 621,
+    "sha256": "8e8fe41d8f5d1b9f23c6a49eaf830d91cca8694a3afba2574989a115b6e4b974"
+  },
+  {
+    "path": "public/static/images/svg/boards/beach-football-half-inactive.9dc21c0697d6fc4ac29d..svg",
+    "bytes": 615,
+    "sha256": "f791ac9d006a8c7de6ea9be7a879ea1a6021bef377c0234ac732e38d7af91598"
+  },
+  {
+    "path": "public/static/images/svg/boards/beach-football-horizontal-active.e1c8bb1a9b45e3ac05ed..svg",
+    "bytes": 758,
+    "sha256": "d58c3715e01ff04e9bd7aa994338d84f987b3872635c9c384583b9b9d27ec6af"
+  },
+  {
+    "path": "public/static/images/svg/boards/beach-football-horizontal-inactive.072b52746f5174bfa911..svg",
+    "bytes": 753,
+    "sha256": "84d102c35a2b75c61bfda4a3a87000b7718d59d3fd7e60ff4dad8266d07fb737"
+  },
+  {
+    "path": "public/static/images/svg/boards/beach-football-vertical-active.9c73d2512a9eb331a428..svg",
+    "bytes": 1449,
+    "sha256": "52b803eaed6fb56b6978e79598ddf7052d0d46b33bd277f546b83d789e9f3808"
+  },
+  {
+    "path": "public/static/images/svg/boards/beach-football-vertical-inactive.71f1fda92f1ed0c285b8..svg",
+    "bytes": 1449,
+    "sha256": "aa72e1809dde4f2575aa83af5ee5b6ce0949b7774b773845689d624e9f68a469"
+  },
+  {
+    "path": "public/static/images/svg/boards/beach-handball-half-2-active.7275356379283f198a29..svg",
+    "bytes": 424,
+    "sha256": "10e70db28278c4549f4b071f7340c069e8317ee89c300f837e046bf540bb10c3"
+  },
+  {
+    "path": "public/static/images/svg/boards/beach-handball-half-2-inactive.fd2682df09b9eefc0714..svg",
+    "bytes": 430,
+    "sha256": "1fce46c6c2ab51bcd4316125f6691eb01d60877484fbc7f648ff72f1a5b763ec"
+  },
+  {
+    "path": "public/static/images/svg/boards/beach-handball-half-active.074ef5ac6139a77ee860..svg",
+    "bytes": 423,
+    "sha256": "6edadf67fa30418904ed9ea7f99e16bbd08e312f64c2da3b5144e455e1e1aa61"
+  },
+  {
+    "path": "public/static/images/svg/boards/beach-handball-half-inactive.e1ba0574667d607d0927..svg",
+    "bytes": 427,
+    "sha256": "0520b8d721277ab489e44814953299919ceb1bdcc7fe8574f75d59b29978367c"
+  },
+  {
+    "path": "public/static/images/svg/boards/beach-handball-horizontal-active.642a4c81ac091e9cd118..svg",
+    "bytes": 577,
+    "sha256": "05e260c2497bfb4b1db0eba6df389184e5c09f872448a4870e3fa17e1e628034"
+  },
+  {
+    "path": "public/static/images/svg/boards/beach-handball-horizontal-inactive.4f2d5f02bf0d6564d9ec..svg",
+    "bytes": 584,
+    "sha256": "f1a8ff4fd213c10c1ab7a9438036965fbbf5eddd36af6290d1f3924049d049f7"
+  },
+  {
+    "path": "public/static/images/svg/boards/beach-handball-vertical-active.1118bbbd131023232fb9..svg",
+    "bytes": 1226,
+    "sha256": "a596afd35a3a8e148cdeaa3fb5f5b3e376caa5e0c566cc94638c5e18f008e3e9"
+  },
+  {
+    "path": "public/static/images/svg/boards/beach-handball-vertical-inactive.737fb1121683598c33b2..svg",
+    "bytes": 1226,
+    "sha256": "31d0d55b5ccf777d5004400a9eb501358a0ebbf8ecbce0dcb2850fc250275b39"
+  },
+  {
+    "path": "public/static/images/svg/boards/big-football-free.svg",
+    "bytes": 2358,
+    "sha256": "828893c6bd96f26d854ef444ff07c3c09f7026ee0f39424179e47dc99c6ced43"
+  },
+  {
+    "path": "public/static/images/svg/boards/big-football-half-2-active.6af35ff2ac79c4b59d2f..svg",
+    "bytes": 999,
+    "sha256": "0ad738d5675fc7725a63393993a64ceb3e10a3cd14c4e42e29774f8d5da14692"
+  },
+  {
+    "path": "public/static/images/svg/boards/big-football-half-2-inactive.60afaf6e920969af6946..svg",
+    "bytes": 999,
+    "sha256": "9c86152449a8a7c066139098306381e45c9995fbfc11a427ec6fe85254726c1c"
+  },
+  {
+    "path": "public/static/images/svg/boards/big-football-half-active.8b72674130c0bd1cabd9..svg",
+    "bytes": 948,
+    "sha256": "70cf265d2a18c4ea91559cfb0c8d0f1f9ee9317d49cd32586a5ea9c1d9eb53f9"
+  },
+  {
+    "path": "public/static/images/svg/boards/big-football-half-inactive.e07b7178c6bf26c802d7..svg",
+    "bytes": 942,
+    "sha256": "b6ce9f28faf21f3e053654ddea7c881adc9d7df1a17c353cfa7a85ef03ddf0d0"
+  },
+  {
+    "path": "public/static/images/svg/boards/big-football-horizontal-active.df151bfa699d526b102f..svg",
+    "bytes": 790,
+    "sha256": "ddd3a7a794fa8cbf82e8cfc7e6b718e88fa482f112d00892e9a5db64721466be"
+  },
+  {
+    "path": "public/static/images/svg/boards/big-football-horizontal-inactive.ea83754c36b706bd49fc..svg",
+    "bytes": 790,
+    "sha256": "4ea9a4de27ccabcfa6192deaaab82720997b38c040d475e166f011fd78080f81"
+  },
+  {
+    "path": "public/static/images/svg/boards/big-football-penalty.svg",
+    "bytes": 2125,
+    "sha256": "693e85236de584b80961f1df23f2e535d30b3ce734a30e5714b080d6f2dcc7b9"
+  },
+  {
+    "path": "public/static/images/svg/boards/big-football-vertical-2-active.1942cfdbaa0f7a605810..svg",
+    "bytes": 1211,
+    "sha256": "8f8f396a55d5f1c749a6e9a2745b547ddc860e445a47766f7e5ee7009222a49f"
+  },
+  {
+    "path": "public/static/images/svg/boards/big-football-vertical-2-inactive.ead4f8500b209828b24c..svg",
+    "bytes": 1224,
+    "sha256": "f49e6b1b4350186a715d69754658026d0222f8e792e9bc0e1c6933c36620a5e2"
+  },
+  {
+    "path": "public/static/images/svg/boards/big-football-vertical-active.2c58a06b90f92e50111a..svg",
+    "bytes": 1761,
+    "sha256": "03703d3d7979d386fc0510f0c42fc41b043573ab80eb3b0df228927596a1f026"
+  },
+  {
+    "path": "public/static/images/svg/boards/big-football-vertical-inactive.0fb9e9bac08163cce289..svg",
+    "bytes": 1757,
+    "sha256": "a146c86768a6d195f98f6b926b47c1ef768b90132a49142c79a76864a02129f1"
+  },
+  {
+    "path": "public/static/images/svg/boards/field-hockey-half-active.e48b9b65ad868688727b..svg",
+    "bytes": 1739,
+    "sha256": "f52f538b52bc1881ef4fc3848fc16e546f1f8e4a757bc34aceb8edb063a6cdde"
+  },
+  {
+    "path": "public/static/images/svg/boards/field-hockey-half-inactive.d1e2678ec27670b8f89c..svg",
+    "bytes": 1739,
+    "sha256": "bd01f00a510ed34bc79130836f3d52df4583b790efc018a7aa55835c449d2026"
+  },
+  {
+    "path": "public/static/images/svg/boards/field-hockey-horizontal-active.4c83aec4501b3a19f5dd..svg",
+    "bytes": 1124,
+    "sha256": "3c41d401f799e409b45ac1298943e49a7271069085607c37e451de5ff467fe3b"
+  },
+  {
+    "path": "public/static/images/svg/boards/field-hockey-horizontal-inactive.6e05df1ac11db756cf07..svg",
+    "bytes": 1124,
+    "sha256": "d706e92d09445d94dcc5f8800c9fb518a9c5cd89df5ca75b28c283d293c65956"
+  },
+  {
+    "path": "public/static/images/svg/boards/field-hockey-vertical-active.a3aced105ec23addaa39..svg",
+    "bytes": 3805,
+    "sha256": "07a7009cd85e064a53ca8e931d7451b6ae849aa8a9ba26d467f93e513cec2739"
+  },
+  {
+    "path": "public/static/images/svg/boards/field-hockey-vertical-inactive.f86f94f5d43c08d8b107..svg",
+    "bytes": 3805,
+    "sha256": "d763aeba9e25a5bdd14179278fe8b22cce187b4343ef370599789fa7df6ac9f1"
+  },
+  {
+    "path": "public/static/images/svg/boards/floorball-half-active.2e00bdd58eb82bf7c28f..svg",
+    "bytes": 1954,
+    "sha256": "10cc29182879b1a5a8222ed1540e2914185a8c8df7fdd1e79636f6e21d8742c1"
+  },
+  {
+    "path": "public/static/images/svg/boards/floorball-half-inactive.762d7f635cd892947401..svg",
+    "bytes": 1954,
+    "sha256": "b021b2052b247356f1f52848c0d9e818f4c8a75c63588886a03ff261b2441e00"
+  },
+  {
+    "path": "public/static/images/svg/boards/floorball-horizontal-active.5f478c17ac0d413f13b1..svg",
+    "bytes": 796,
+    "sha256": "62b6dd8207f05a4a790db754bbf88d964ecf3a978c1a6a38cce5686b0a2420a1"
+  },
+  {
+    "path": "public/static/images/svg/boards/floorball-horizontal-inactive.d425b0366f7f617343fc..svg",
+    "bytes": 796,
+    "sha256": "f6fe1feff2d73577c846027f65fc3c542e6b0ae22ba9399bbc92afe447ca22d3"
+  },
+  {
+    "path": "public/static/images/svg/boards/floorball-vertical-active.385e4aa3c6bdd7b9e8dc..svg",
+    "bytes": 2907,
+    "sha256": "c0055a334d18be24a22afe7f3aa7b330152bcab4e16065cf9a2644a032f38452"
+  },
+  {
+    "path": "public/static/images/svg/boards/floorball-vertical-inactive.a6fe58a55fd7fac3f34f..svg",
+    "bytes": 2907,
+    "sha256": "d6e4dc7cfca4a844e38270b835fd2c3a7be6044f1be803be8bc85f99066547a4"
+  },
+  {
+    "path": "public/static/images/svg/boards/gaelic-football-half-2-active.678c4212efb42104fd67..svg",
+    "bytes": 1874,
+    "sha256": "ef484ce4d08da91b734a4f649c52c8a091a286c9eddecf30da285b8c32323364"
+  },
+  {
+    "path": "public/static/images/svg/boards/gaelic-football-half-2-inactive.14fd7f98059cd5917b74..svg",
+    "bytes": 1891,
+    "sha256": "70ca6a5b8ad77ce7be288caf303cc4a5fe39c753c29937b933827de8ea96c42a"
+  },
+  {
+    "path": "public/static/images/svg/boards/gaelic-football-half-active.4be25e36e42535999bc5..svg",
+    "bytes": 1856,
+    "sha256": "2bd468e58f4891a28c97125162d3bea58c51cdff39346eea3388838d4d8d3f1f"
+  },
+  {
+    "path": "public/static/images/svg/boards/gaelic-football-half-inactive.ccb16a26f91bf5c96fdf..svg",
+    "bytes": 1873,
+    "sha256": "e73d2e94d47e37e09d489dda2c13f90bbb1870e6618a2c2fc93552c3109da2fc"
+  },
+  {
+    "path": "public/static/images/svg/boards/gaelic-football-horizontal-2-active.ae717885b3333a04f114..svg",
+    "bytes": 2829,
+    "sha256": "ebc9fca2a18d77f21db8f5909ab861861ceda40a758d5cb4c75a851aca7d265b"
+  },
+  {
+    "path": "public/static/images/svg/boards/gaelic-football-horizontal-2-inactive.1193776ed1c65658ff9c..svg",
+    "bytes": 2848,
+    "sha256": "a766fa23048c4d4d11684b553476c6c524790e69c2b95d069883799263e4bdf3"
+  },
+  {
+    "path": "public/static/images/svg/boards/gaelic-football-horizontal-active.c6e0b62a6d9edd012e62..svg",
+    "bytes": 2435,
+    "sha256": "86ba657434be874708b1cc7a3f871b79761ddf3eeb49962c1e7e73193d466fad"
+  },
+  {
+    "path": "public/static/images/svg/boards/gaelic-football-horizontal-inactive.28ae62f52d15dc8b8dd8..svg",
+    "bytes": 2459,
+    "sha256": "38ec932f1252828ceb22e8c54c44450fcff9a9fb977cca1cdd2377d09056d220"
+  },
+  {
+    "path": "public/static/images/svg/boards/gaelic-football-vertical-active.c30923ba64f36a8a1e15..svg",
+    "bytes": 2085,
+    "sha256": "19f268699d1f139447da490ba055f8529e43133b3e5740aed816e858722f4371"
+  },
+  {
+    "path": "public/static/images/svg/boards/gaelic-football-vertical-inactive.5f0c13525ae72094e1b2..svg",
+    "bytes": 2096,
+    "sha256": "53bf042602c3040d4e5fa230a7582e01a0dc91e2dad91c07dfa8766ad07510de"
+  },
+  {
+    "path": "public/static/images/svg/boards/handball-half-active.a842639f732beb4d98a3..svg",
+    "bytes": 967,
+    "sha256": "0ea878025e4d2214564658abd49fc8c819b21dc0088207dec4d14314c9b8b4a5"
+  },
+  {
+    "path": "public/static/images/svg/boards/handball-half-inactive.401ef0fbe9a25a57853e..svg",
+    "bytes": 967,
+    "sha256": "5fd508157721ea9d496579253683668dd3a8d8d0175cdd34bbc8b33a245e8cc8"
+  },
+  {
+    "path": "public/static/images/svg/boards/handball-horizontal-active.a206c0d3bb0a7f407100..svg",
+    "bytes": 851,
+    "sha256": "c15195b91e3e0919642fad7fbc4738bd05bb090daa0b138d071d5c2c4e9ad227"
+  },
+  {
+    "path": "public/static/images/svg/boards/handball-horizontal-inactive.91c108157cb86d66b9f8..svg",
+    "bytes": 851,
+    "sha256": "18748734f50d62c354df43f6116c8245f46403d28d29365cae78d50369047baa"
+  },
+  {
+    "path": "public/static/images/svg/boards/handball-vertical-active.fd66d35530de58df09e1..svg",
+    "bytes": 1457,
+    "sha256": "581ba1a58e540c71b63b89f2ffeedc9e5e0e5007d5ed779df4f2a974729c9677"
+  },
+  {
+    "path": "public/static/images/svg/boards/handball-vertical-inactive.d1eeb2751f22cda9dbf4..svg",
+    "bytes": 1457,
+    "sha256": "7322c4c3cdf68e609b4f2e89aa6cd3ac96d48541b77dc0c6f7060ed916b0d875"
+  },
+  {
+    "path": "public/static/images/svg/boards/hockey-half-active.4e5fbdf902f727c9f2fc..svg",
+    "bytes": 3852,
+    "sha256": "a39596fc5ee88ea47f2eecfdbbb6c18b71112a6f9bfce3098adfb0c4d19ced4e"
+  },
+  {
+    "path": "public/static/images/svg/boards/hockey-half-inactive.77577274004575178fc5..svg",
+    "bytes": 3852,
+    "sha256": "557119d94a01aa20ea8492cc7072dab4ba04feb0fe12e1a86f99de159d5d588a"
+  },
+  {
+    "path": "public/static/images/svg/boards/hockey-horizontal-active.0f852f59e190f2a6efd0..svg",
+    "bytes": 2504,
+    "sha256": "8d354a9749e40b6bbae4917287b16149ebdcde485c883938cc83b92d02e3fffa"
+  },
+  {
+    "path": "public/static/images/svg/boards/hockey-horizontal-inactive.b1f64f5857aa7771f199..svg",
+    "bytes": 2504,
+    "sha256": "ce636e3cb4157cc2dca06d8fffa6493f9ef6084804c9c1e380ad466b9c960da6"
+  },
+  {
+    "path": "public/static/images/svg/boards/hockey-vertical-active.d120c1cec9e985de5ed1..svg",
+    "bytes": 7505,
+    "sha256": "eade1445f1eead13dbbd2619c567f6dbc350f70eb5cd37d311e2ae61d2c5afd4"
+  },
+  {
+    "path": "public/static/images/svg/boards/hockey-vertical-inactive.696bb71f9f1b2147d0b1..svg",
+    "bytes": 7505,
+    "sha256": "8716d838fd56c9b598fdf30cd30cd6b364f781a0664d834f830d90434c0a5cd4"
+  },
+  {
+    "path": "public/static/images/svg/boards/indoor-hockey-half-2-active.072e6cc432f815ff5988..svg",
+    "bytes": 1159,
+    "sha256": "90525069b455e964de9c2186d1a95a4b8229e5fe67dcd7152d6329a66bf43708"
+  },
+  {
+    "path": "public/static/images/svg/boards/indoor-hockey-half-2-inactive.946d4c58f5a7ad98c37b..svg",
+    "bytes": 1159,
+    "sha256": "ee374ade31b4c301cd1c680bf2d6ac2f4c50cd84a53b5350fcc9998b9cd1de26"
+  },
+  {
+    "path": "public/static/images/svg/boards/indoor-hockey-half-active.54afe0e95d51abdb02c8..svg",
+    "bytes": 1139,
+    "sha256": "e6a700e0e3a906a363a28f3b62b6d3fa53a996ea20b68aed5c43e83450391f93"
+  },
+  {
+    "path": "public/static/images/svg/boards/indoor-hockey-half-inactive.98c4f89b494b7fd5e335..svg",
+    "bytes": 1139,
+    "sha256": "6a589cda34ceab1e54337611f22ac788f560d77b73d27212f954a28b41128c3e"
+  },
+  {
+    "path": "public/static/images/svg/boards/indoor-hockey-horizontal-active.2e2381069e73ae0cbf6e..svg",
+    "bytes": 1760,
+    "sha256": "4ffbfe4746d518bfd3e9ad2a69175d33cfb5f9d97eb4f57dfc52f2ce62094220"
+  },
+  {
+    "path": "public/static/images/svg/boards/indoor-hockey-horizontal-inactive.568ac0ac2a2a1289e5bd..svg",
+    "bytes": 1760,
+    "sha256": "b1b3e70c803804a66941c91c2a5d6d691fae5043e2fc8b7e2362f0e51d44dc5e"
+  },
+  {
+    "path": "public/static/images/svg/boards/indoor-hockey-vertical-active.ed76f327756d7bc2bdf2..svg",
+    "bytes": 2115,
+    "sha256": "1a03066193420155dcfa69b853a76f0e907b3f2147e38534df71d6e7637b0309"
+  },
+  {
+    "path": "public/static/images/svg/boards/indoor-hockey-vertical-inactive.16d333c85fc33525db0a..svg",
+    "bytes": 2115,
+    "sha256": "d4972db0a4d7daa3ae671e05f3d7045a5c172eb583926e688f581cb03e01a057"
+  },
+  {
+    "path": "public/static/images/svg/boards/korbball-half-2-active.1b90c5a77eb41cc6cf59..svg",
+    "bytes": 635,
+    "sha256": "56f1c35c33373ec13846043d9d62f18540a131949ff00de79e1c29c2ffd3f5e0"
+  },
+  {
+    "path": "public/static/images/svg/boards/korbball-half-2-inactive.a18c6bb52cdfbc147599..svg",
+    "bytes": 641,
+    "sha256": "d7350426d7c1c299978a1f71d349f47e644e00ba478da30a3cbf122e5c9d20a9"
+  },
+  {
+    "path": "public/static/images/svg/boards/korbball-half-active.7aba71200e05fbc92bc0..svg",
+    "bytes": 633,
+    "sha256": "f1fc2c8fe8358accbe8776f934e34a35d0e56d0c3d677b11dbe34f07e9b92d31"
+  },
+  {
+    "path": "public/static/images/svg/boards/korbball-half-inactive.1a25a7252627a2bce398..svg",
+    "bytes": 638,
+    "sha256": "f53e4970f35d8d90fd7c565dd2c37baf793431ead6957121800c33236cbcb9ef"
+  },
+  {
+    "path": "public/static/images/svg/boards/korbball-horizontal-active.36b4488a4e8a0d35de96..svg",
+    "bytes": 874,
+    "sha256": "25dff3230c8ff04f62e6b7f5b17b2b4bf05e085f8bb49998b693c14ab6b00c52"
+  },
+  {
+    "path": "public/static/images/svg/boards/korbball-horizontal-inactive.d7ca7c998b2681bd06fe..svg",
+    "bytes": 882,
+    "sha256": "5773ade26b331d7de1a420b8c895a2a3f29d0e5c4715f3b8acc187f36953ec7a"
+  },
+  {
+    "path": "public/static/images/svg/boards/korbball-vertical-active.43248f485faf0a4498b7..svg",
+    "bytes": 1061,
+    "sha256": "ecc25c82a12372dc6a732806a9b276f91e940f837cf5127be901774d544255c8"
+  },
+  {
+    "path": "public/static/images/svg/boards/korbball-vertical-inactive.698510f7733d2517e35b..svg",
+    "bytes": 1069,
+    "sha256": "36124e85e80ef66850f8d9f2bb8e6a6fa584c66394f1a21bfff12a31f00c4d40"
+  },
+  {
+    "path": "public/static/images/svg/boards/lacrosse-men-half-active.65014718061caddc6e41..svg",
+    "bytes": 1135,
+    "sha256": "caa6785a2c591527067d40193c00e16e7d2312d6888917e054677e6cb7862402"
+  },
+  {
+    "path": "public/static/images/svg/boards/lacrosse-men-half-inactive.a8d89a583f807a1c0b38..svg",
+    "bytes": 1135,
+    "sha256": "6c3b212d64d60b3041f802421c5e99eb4b9a9992f2d54f0a83e63c104a6b886d"
+  },
+  {
+    "path": "public/static/images/svg/boards/lacrosse-men-horizontal-active.082a2c82be5af58f84c6..svg",
+    "bytes": 1622,
+    "sha256": "45a5c5e4cb32656e633c2bd838506a69faba39b3ba0ece6f67e682d3ab8e0e0b"
+  },
+  {
+    "path": "public/static/images/svg/boards/lacrosse-men-horizontal-inactive.6384c9d0267818d56a2a..svg",
+    "bytes": 1622,
+    "sha256": "b51828528873b2d7f8d42d80b6ae85b9fc820c26d96ea16faf613777a08ecd1f"
+  },
+  {
+    "path": "public/static/images/svg/boards/lacrosse-men-vertical-active.4b8269a6afbc7bcd821b..svg",
+    "bytes": 1847,
+    "sha256": "9162ca9dbe7b058d019faf063f7886d9f56c7dbb588c15c27065d8a6120875db"
+  },
+  {
+    "path": "public/static/images/svg/boards/lacrosse-men-vertical-inactive.7e36520886ded33aa3a3..svg",
+    "bytes": 1847,
+    "sha256": "138ac72d1db2ce2de9b45c3853885d4577f09239e7e2799f50848a8a204d5570"
+  },
+  {
+    "path": "public/static/images/svg/boards/lacrosse-women-half-active.b00bf917737a08c6f714..svg",
+    "bytes": 1845,
+    "sha256": "acaf4ebcb2b75b92fddb7d1c95393a5429936f77ca011f9557702cd88b2dc7bb"
+  },
+  {
+    "path": "public/static/images/svg/boards/lacrosse-women-half-inactive.599d3ea099cca307d53d..svg",
+    "bytes": 1845,
+    "sha256": "0c682bea877b27fb36c1a2c80fd9818df1a449795c1438ae6e7f2fb622af4ede"
+  },
+  {
+    "path": "public/static/images/svg/boards/lacrosse-women-horizontal-active.b2a38017d1b13d6d5208..svg",
+    "bytes": 3352,
+    "sha256": "1813c8ab366a8ef0180676b9be5d4e0333c8979dda1ddb97cef3d3b6a5cbd430"
+  },
+  {
+    "path": "public/static/images/svg/boards/lacrosse-women-horizontal-inactive.3fb109419e3dfb3b8606..svg",
+    "bytes": 3352,
+    "sha256": "279e87a57664c9371b32d7fd074774697dd70934a416286055a7fda66e4cc154"
+  },
+  {
+    "path": "public/static/images/svg/boards/lacrosse-women-vertical-active.446f4eff6a7f6939846f..svg",
+    "bytes": 3653,
+    "sha256": "2d305fdbb869fe3692d6e1b6f74e7f6e892bdd0b69e4b69c779a69da2e41b060"
+  },
+  {
+    "path": "public/static/images/svg/boards/lacrosse-women-vertical-inactive.fd4eb2ff1928d9363a18..svg",
+    "bytes": 3653,
+    "sha256": "88c132098f662baf0b4d7ca66a34fe0d7702459cb5000c4f3a65229ae5a18224"
+  },
+  {
+    "path": "public/static/images/svg/boards/mini-football-half-2-active.006e3b451d98ec588fc7..svg",
+    "bytes": 1124,
+    "sha256": "db0f8880353bca9eb8990856e57d8025d157f71a882debb4b4b72a6ada21e438"
+  },
+  {
+    "path": "public/static/images/svg/boards/mini-football-half-2-inactive.87bc8ed7a6cba358fca2..svg",
+    "bytes": 1124,
+    "sha256": "16b3ffe83a57e77f97e9fc24e4becf99f9e16596639dec85963461d0f3957087"
+  },
+  {
+    "path": "public/static/images/svg/boards/mini-football-half-active.a2e44ac7fc2e67735442..svg",
+    "bytes": 853,
+    "sha256": "3d791d13bf72bee8ec6ce610faab0e5454786c6940fc0c97f90f983bea47dfe9"
+  },
+  {
+    "path": "public/static/images/svg/boards/mini-football-half-inactive.955124a22074f897c303..svg",
+    "bytes": 853,
+    "sha256": "0b911fe98d9cc559879fdf48d3582c2e83d25b2844892f92197e034d210423bf"
+  },
+  {
+    "path": "public/static/images/svg/boards/mini-football-horizontal-active.5ddd2dc21ad2b92ffb77..svg",
+    "bytes": 914,
+    "sha256": "5cf955c5e46641d0eac86193e59eb5bede58ca79c6920041fb2f0c2cd00410b7"
+  },
+  {
+    "path": "public/static/images/svg/boards/mini-football-horizontal-inactive.6844e2845c78a6b70104..svg",
+    "bytes": 914,
+    "sha256": "2ea862522ee6576be5bc100bde227118b888236a03b430a890571248011b8dd5"
+  },
+  {
+    "path": "public/static/images/svg/boards/mini-football-vertical-2-active.e87ff5ffc367402b0498..svg",
+    "bytes": 1308,
+    "sha256": "97f587b8351a2da187af646ecb4ca73b2a7a0a08b8807ca71c10e40b8620425b"
+  },
+  {
+    "path": "public/static/images/svg/boards/mini-football-vertical-2-inactive.79b591d96ada6f64206d..svg",
+    "bytes": 1324,
+    "sha256": "8564d63b3f90a691f88df475a2e7d9931670b5232419c6a6fb4adeb7a0fd9f57"
+  },
+  {
+    "path": "public/static/images/svg/boards/mini-football-vertical-active.cd3511b2c71bd4b4a4f3..svg",
+    "bytes": 1661,
+    "sha256": "f177e8b3bd37d41c64c68fd76129e55407a568a3640e06b72e417cf7f6b54ccc"
+  },
+  {
+    "path": "public/static/images/svg/boards/mini-football-vertical-inactive.e00c533d13be5992c9a2..svg",
+    "bytes": 1661,
+    "sha256": "5d63771e9a29da288bd97229e0954e02bf67e2a04c36e5161e892ca1a482351a"
+  },
+  {
+    "path": "public/static/images/svg/boards/netball-half-active.984e6bd46949d077daac..svg",
+    "bytes": 668,
+    "sha256": "302a8e62fb1752d45d1f6fbddcf53f9d5e9fd6edb6642374ebaf3b526f5b16f3"
+  },
+  {
+    "path": "public/static/images/svg/boards/netball-half-inactive.3563b6a1d2a6089a1ae7..svg",
+    "bytes": 668,
+    "sha256": "2d69b623e37a7bd339a940afe7ce5bf9874f66a18176d5234a0df82a75f4d9ea"
+  },
+  {
+    "path": "public/static/images/svg/boards/netball-horizontal-active.325b5b1e7f17cbd4c391..svg",
+    "bytes": 709,
+    "sha256": "be20c09c1a451af1caa12dde65e5440e33a67c5f3352fc50efbea2f95779ab2a"
+  },
+  {
+    "path": "public/static/images/svg/boards/netball-horizontal-inactive.17a6ee49c463bc481fa0..svg",
+    "bytes": 709,
+    "sha256": "effcddee2d0ab7f6337c91f7d64cf2c5ded5e010d12f027fab900c2ae0580546"
+  },
+  {
+    "path": "public/static/images/svg/boards/netball-vertical-active.951ffc936e2c67c19dd2..svg",
+    "bytes": 904,
+    "sha256": "c4e92bc7e5f1d0b5342170903c0851fb159249d7913b8893b7fc5b1d99e1b1a4"
+  },
+  {
+    "path": "public/static/images/svg/boards/netball-vertical-inactive.a10be1cf79254eda0152..svg",
+    "bytes": 913,
+    "sha256": "5d8f5b0d2e63f67d17b5c05d9326b178ddaf5542f840f2aa712b44ef8403460b"
+  },
+  {
+    "path": "public/static/images/svg/boards/rugby-half-active.d06e41ecdbbc2b02bb26..svg",
+    "bytes": 2488,
+    "sha256": "0ad722d235fbbf1ddcd31f38f3d3602917578b842a6629a48dfaf5e2814a3723"
+  },
+  {
+    "path": "public/static/images/svg/boards/rugby-half-inactive.cedd7a90a720abb1df51..svg",
+    "bytes": 2488,
+    "sha256": "29d92e69f2eb1e0ba029bac89841252da98917bf2eca8c75cb645ed9933ec4de"
+  },
+  {
+    "path": "public/static/images/svg/boards/rugby-horizontal-active.ba3238f0b70f46fd918c..svg",
+    "bytes": 958,
+    "sha256": "95c7779f487981bb21ce3244946d899922affd5795a302b68326df5053766c36"
+  },
+  {
+    "path": "public/static/images/svg/boards/rugby-horizontal-inactive.87cc7f69a56ce728052f..svg",
+    "bytes": 958,
+    "sha256": "2ab62b197e7a72a0e9b2ff562756d5854ba94b6448026c67a0060f233c25488d"
+  },
+  {
+    "path": "public/static/images/svg/boards/rugby-vertical-2-active.737414e692d0d9e1f639..svg",
+    "bytes": 3337,
+    "sha256": "4615b7bc4a2e998af8c92f69d1e98755defe52f52bca58fb21cb4b6ff505f79d"
+  },
+  {
+    "path": "public/static/images/svg/boards/rugby-vertical-2-inactive.1e89363149d2e77169c8..svg",
+    "bytes": 3385,
+    "sha256": "6522725adb8de614b0df858511b63fae8d7a3d2fa94da9121516dbb9643ebd90"
+  },
+  {
+    "path": "public/static/images/svg/boards/rugby-vertical-active.a4bb1388e6ccdfcb65fb..svg",
+    "bytes": 4033,
+    "sha256": "29c01a70193fb454cf664f5bc91a4da98f070a19879fd79d77502d160fcf2004"
+  },
+  {
+    "path": "public/static/images/svg/boards/rugby-vertical-inactive.cdacb215ea5d128637cb..svg",
+    "bytes": 4033,
+    "sha256": "aecd834b54ef109a85d047844c3bfe37f6182630cc49fe54c537decfb321fa8b"
+  },
+  {
+    "path": "public/static/images/svg/boards/soccer-seven-half-active.0a047b442d94bee15d3f..svg",
+    "bytes": 1002,
+    "sha256": "d8752161fd5e0a9b4232c7a43c27bf868a8009455b08270c4cae78f2ec38d8d9"
+  },
+  {
+    "path": "public/static/images/svg/boards/soccer-seven-half-inactive.22e94b4a03a08c04a2cc..svg",
+    "bytes": 1002,
+    "sha256": "a798358fb1af028c9e0b6bfbb02df20b2aa20392a97977b90a2210f98487a0a1"
+  },
+  {
+    "path": "public/static/images/svg/boards/soccer-seven-horizontal-active.2b66e5a53ddf8fca0943..svg",
+    "bytes": 1088,
+    "sha256": "1b066f26f3c182dd1bf23c47131f7848bc3a6713319de07ca0bba3aac88e1bde"
+  },
+  {
+    "path": "public/static/images/svg/boards/soccer-seven-horizontal-inactive.3b29c3fd7bf138cad948..svg",
+    "bytes": 1087,
+    "sha256": "905627f3da18e6cef201fb94877cd29c817a1bd8a2d25805b218ab6d20fee7d9"
+  },
+  {
+    "path": "public/static/images/svg/boards/soccer-seven-kids-half-2-active.bf1bc6103a420a51855b..svg",
+    "bytes": 684,
+    "sha256": "2aad164b531ab70b6a5e2d09eea1b50b44a21a518a33ccdfd959b9b572309542"
+  },
+  {
+    "path": "public/static/images/svg/boards/soccer-seven-kids-half-2-inactive.20ca07a022a9eb9623ec..svg",
+    "bytes": 684,
+    "sha256": "8354d970364c97abf28563ee6072654f99a93a952ee5779c14848b02e06ab03a"
+  },
+  {
+    "path": "public/static/images/svg/boards/soccer-seven-kids-half-active.b783de42ecac97ec4cb3..svg",
+    "bytes": 664,
+    "sha256": "03cbf6cb7e900252bf75659729e2cfd5aae50b02ad783466aaf4b5563b3730e4"
+  },
+  {
+    "path": "public/static/images/svg/boards/soccer-seven-kids-half-inactive.fdab711b3df403169533..svg",
+    "bytes": 664,
+    "sha256": "996d9c233e923b1d80c103c8cbed082016a88da3c9ee5b721d096303f5e8e623"
+  },
+  {
+    "path": "public/static/images/svg/boards/soccer-seven-kids-horizontal-active.baf574d0f1459e0c66ff..svg",
+    "bytes": 863,
+    "sha256": "8de409c75383b93f1bcd0863f4d6e5afe070caa6d6739323fa4d45f0b6403fbb"
+  },
+  {
+    "path": "public/static/images/svg/boards/soccer-seven-kids-horizontal-inactive.996c8bf740abcf6664f7..svg",
+    "bytes": 863,
+    "sha256": "29131bac5a677050fa5fcbdc96d9744f261e2ecf5bcbe3274999f2950212a369"
+  },
+  {
+    "path": "public/static/images/svg/boards/soccer-seven-kids-vertical-2-active.e155bad601f6e8367036..svg",
+    "bytes": 826,
+    "sha256": "ac649ff7b22689dd007a8a17b3613f990a28fba9788d36e8611d1fa639b8ecd2"
+  },
+  {
+    "path": "public/static/images/svg/boards/soccer-seven-kids-vertical-2-inactive.8588379435ed80fc66d5..svg",
+    "bytes": 837,
+    "sha256": "00eb8dbd9efc8d34cdd468e7b6f8731f8b2965f2dfae7b7cd53a94d6a164984c"
+  },
+  {
+    "path": "public/static/images/svg/boards/soccer-seven-kids-vertical-active.04290434ede514c5db12..svg",
+    "bytes": 1470,
+    "sha256": "f713eaffa4cd9da294b59aec2948ee35b0b5b1c13edea4fe7f49954ca367bd71"
+  },
+  {
+    "path": "public/static/images/svg/boards/soccer-seven-kids-vertical-inactive.1ec221bc7de0a9df5150..svg",
+    "bytes": 1470,
+    "sha256": "aac257dcd4bbc92aed3bb6dc71da740fc8a858ef1e5f17439516d424bb326a0d"
+  },
+  {
+    "path": "public/static/images/svg/boards/soccer-seven-vertical-active.9d726035e5c184849153..svg",
+    "bytes": 2268,
+    "sha256": "3bf45838e3e37830075b0a6ca0b9d6b4221e12c86376e0d36848fa13cf3567e3"
+  },
+  {
+    "path": "public/static/images/svg/boards/soccer-seven-vertical-inactive.5ba58af9d97c44bc6e86..svg",
+    "bytes": 2290,
+    "sha256": "a852be3fa9227d0a2c0505d96a9b63a9f7e31656803d84ff5ae0a8d4c07f5b01"
+  },
+  {
+    "path": "public/static/images/svg/boards/tennis-half-2-active.92ba1e2004397dc57196..svg",
+    "bytes": 738,
+    "sha256": "894bf4df10c50d1d8bf7de805c53ddfc34a1d00abda085fe6b6a3839bb5b2924"
+  },
+  {
+    "path": "public/static/images/svg/boards/tennis-half-2-inactive.540d5ec909f1c7c2c738..svg",
+    "bytes": 748,
+    "sha256": "eb667fe29bf4bf07bc494a8cfc93a606b711d849e65a08a18bef9f5a85e96b5e"
+  },
+  {
+    "path": "public/static/images/svg/boards/tennis-half-active.3f3a854f83e02e670d5d..svg",
+    "bytes": 737,
+    "sha256": "cad1ea9c61dcf8d5eb7ce84a41d47a7aa3b92be693295ccd53685b5ec903d21f"
+  },
+  {
+    "path": "public/static/images/svg/boards/tennis-half-inactive.b81b9c17bff65345b838..svg",
+    "bytes": 748,
+    "sha256": "93899531c1695d8c39fa4f1ee98963d145b108b09766a2d493974034a37c2b65"
+  },
+  {
+    "path": "public/static/images/svg/boards/tennis-horizontal-active.89ff19d1c867be84b776..svg",
+    "bytes": 891,
+    "sha256": "6bfbeba0baf97dd1d642000a5e138f2a17cb1bd448864183556ffb1ce225007e"
+  },
+  {
+    "path": "public/static/images/svg/boards/tennis-horizontal-inactive.8da274a0026e7f3b4e91..svg",
+    "bytes": 904,
+    "sha256": "6411a32ecd6a01b69c2aba47486d4021f8ba3e573b311ab09cd6b942a50a76de"
+  },
+  {
+    "path": "public/static/images/svg/boards/tennis-vertical-active.52ebe280b2b6f4f90d17..svg",
+    "bytes": 1207,
+    "sha256": "52fe4aedc110a175c30cd48232a1b76965eaa4d2488e9edd17d258c5d60a0c7d"
+  },
+  {
+    "path": "public/static/images/svg/boards/tennis-vertical-inactive.bf86597f8353027a4970..svg",
+    "bytes": 1207,
+    "sha256": "1e7a163845f2076aadb50db0b54d27cf793b1ea60ba3a61f662b17f900cfc600"
+  },
+  {
+    "path": "public/static/images/svg/boards/touch-rugby-half-active.e335b85da882e18d1740..svg",
+    "bytes": 847,
+    "sha256": "770f4d3b44fe63e2c0443893037d3707fbd494d45cac98284fa11c7730341cbe"
+  },
+  {
+    "path": "public/static/images/svg/boards/touch-rugby-half-inactive.4399e5b5a8cab9d4b1fc..svg",
+    "bytes": 847,
+    "sha256": "3500525f19029977f2d2ad34c3cfb63410da224aed575e8833b68123a46499ca"
+  },
+  {
+    "path": "public/static/images/svg/boards/touch-rugby-horizontal-active.6a7799808bf241adb5d5..svg",
+    "bytes": 1287,
+    "sha256": "a0ee31953acf1dc11589d6336a40bdd9f3cd07574053318197493984dfac7d6c"
+  },
+  {
+    "path": "public/static/images/svg/boards/touch-rugby-horizontal-inactive.e0b0df908b6d5b412189..svg",
+    "bytes": 1287,
+    "sha256": "8f689f84c0813305e51e54de6b4beaf3dfe792b9cd5d74f6a9b126e16f21795c"
+  },
+  {
+    "path": "public/static/images/svg/boards/touch-rugby-vertical-active.e597f6b0174765606365..svg",
+    "bytes": 962,
+    "sha256": "3f92a9b2de59031881cb8c0404c95fe61c8ad7267c5044a2cfbfa80dcffca3f2"
+  },
+  {
+    "path": "public/static/images/svg/boards/touch-rugby-vertical-inactive.faea6e9c4ea011599259..svg",
+    "bytes": 962,
+    "sha256": "475116c87666b928a583a8196e49ee2e43d40a9b9d468bcef4720eca99ef8a04"
+  },
+  {
+    "path": "public/static/images/svg/boards/volleyball-half-2-active.2ce9d7f1f7839ae43b47..svg",
+    "bytes": 633,
+    "sha256": "92a2dab89c05ec07f859ad25a53f2ed878359eea761809740486161f18342e2c"
+  },
+  {
+    "path": "public/static/images/svg/boards/volleyball-half-2-inactive.bcb6015963ff3f3c20bc..svg",
+    "bytes": 633,
+    "sha256": "e40988dc363a05fa70676d79f45318f3d66664c3c8f49e0e3a3258b54e2967ad"
+  },
+  {
+    "path": "public/static/images/svg/boards/volleyball-half-active.6981d6ddb826f358f2ae..svg",
+    "bytes": 582,
+    "sha256": "59d84efc12cd6c533f95bd45412d032569ca7d4951e779013304e59f96c08715"
+  },
+  {
+    "path": "public/static/images/svg/boards/volleyball-half-inactive.dcd0c46a0afd93317577..svg",
+    "bytes": 582,
+    "sha256": "a8501416359f1b9952db2410babb2c34066da52ca37a3052482d193b62fd256d"
+  },
+  {
+    "path": "public/static/images/svg/boards/volleyball-horizontal-active.5f96c128e8232993062c..svg",
+    "bytes": 284,
+    "sha256": "0e71aa519a7c03dc7338a923e3e2f42ab5fe9033340176661f6384e6031feaa5"
+  },
+  {
+    "path": "public/static/images/svg/boards/volleyball-horizontal-inactive.ece27f9d358f6aa36f72..svg",
+    "bytes": 284,
+    "sha256": "ab22e8cb66b657a3f0bfe34c1407b94df3d7834044b6de4f9eec42642ec7894f"
+  },
+  {
+    "path": "public/static/images/svg/boards/volleyball-vertical-active.747668046b5d6267a9dd..svg",
+    "bytes": 1071,
+    "sha256": "e72cd9b1c6b77c6b89ae6cb0e3465b09c5602a39c9a21c88013b5cc4e3ec2c16"
+  },
+  {
+    "path": "public/static/images/svg/boards/volleyball-vertical-inactive.2c8e64bac8f891ddbd45..svg",
+    "bytes": 1071,
+    "sha256": "ecedba06066948264e44e4cfa214d69a115b9fa01b2c548dad17301ae06efbed"
+  },
+  {
+    "path": "public/static/images/svg/boards/water-polo-half-active.f57004288992b1f72ac2..svg",
+    "bytes": 1297,
+    "sha256": "e6e9a0fc4f19116f8f1677dc9140ebf1c1976faccb15abdd2041a3c2e3ebb1eb"
+  },
+  {
+    "path": "public/static/images/svg/boards/water-polo-half-inactive.eb7b11018ad2639f24d5..svg",
+    "bytes": 1297,
+    "sha256": "fa7091ee369366c8012c9dc53d9472b031e85866e9edf6600b8a667e19616345"
+  },
+  {
+    "path": "public/static/images/svg/boards/water-polo-horizontal-active.5e6c1baae2ee95a7f615..svg",
+    "bytes": 2010,
+    "sha256": "dceb1f7eb90baeba7a3f9a2afc909f2337fa9e57bc182deea381d7868a18a96d"
+  },
+  {
+    "path": "public/static/images/svg/boards/water-polo-horizontal-inactive.92d2f341e68c3d7aae8b..svg",
+    "bytes": 2010,
+    "sha256": "cde8df346cdfc31e7e75aacba63c4456c6c30469c502f589b459c57158e5ce51"
+  },
+  {
+    "path": "public/static/images/svg/boards/water-polo-vertical-active.57fca2740e4a0b7b91dc..svg",
+    "bytes": 1600,
+    "sha256": "5a3a868b59a3193801795ceaacffa7b783d40568d1ff18edbe0005145bc24498"
+  },
+  {
+    "path": "public/static/images/svg/boards/water-polo-vertical-inactive.a80b6887e34f470be898..svg",
+    "bytes": 1600,
+    "sha256": "e760a0b10b18f601cc4c94b6e802bc6f17b5bf0e55a7f0dd0c674410ef0d78da"
+  },
+  {
+    "path": "public/static/images/svg/boards/wheelchair-rugby-half-2-active.3df0139d4b0ad279958e..svg",
+    "bytes": 525,
+    "sha256": "0e8badc7dc30907d691420db169b10f118cb3899e36e568de2863a208ee60ee1"
+  },
+  {
+    "path": "public/static/images/svg/boards/wheelchair-rugby-half-2-inactive.e4277acfb97323202b46..svg",
+    "bytes": 525,
+    "sha256": "3f5e7f0c50c7322a2afa33e4f1ebb7887c6ba0302d74f447158c8e980851d09a"
+  },
+  {
+    "path": "public/static/images/svg/boards/wheelchair-rugby-half-active.6d63da733097444740b6..svg",
+    "bytes": 498,
+    "sha256": "08f4c3c0fde4d214a975d5e757abf1fdf6abace0d91b30e0ed1233554b8eae2d"
+  },
+  {
+    "path": "public/static/images/svg/boards/wheelchair-rugby-half-inactive.950cd778ad45b8ca1ed5..svg",
+    "bytes": 498,
+    "sha256": "3bcc3e3b7e8e746ed4caf7030c3229fb781d67d911d98aa3e8ae429368699e2c"
+  },
+  {
+    "path": "public/static/images/svg/boards/wheelchair-rugby-horizontal-active.42e12e33a44f645a7560..svg",
+    "bytes": 618,
+    "sha256": "ab4c6a5d844a71f34afa332bb393100384c5f6cf671791575d1caabe4802c086"
+  },
+  {
+    "path": "public/static/images/svg/boards/wheelchair-rugby-horizontal-inactive.53bd37a288339f6b06e5..svg",
+    "bytes": 616,
+    "sha256": "0460b411f6dfde47150b81bd6dd3ae0b6d877a5138533f9044efdefb44d82b59"
+  },
+  {
+    "path": "public/static/images/svg/boards/wheelchair-rugby-vertical-active.dd6d86811a7f05be7928..svg",
+    "bytes": 655,
+    "sha256": "a06771a33fd96c4db9801d631319205044a9dbbc9b9748328308f9ee7aa72fff"
+  },
+  {
+    "path": "public/static/images/svg/boards/wheelchair-rugby-vertical-inactive.633c192788dfd7099b4d..svg",
+    "bytes": 655,
+    "sha256": "eff5e4bc385fa232c509aece54475432f3027a2f5770903dd8be6c57a540e23f"
+  },
+  {
+    "path": "public/static/images/svg/choose-field-colors.0e73d6f1eed93adc029c..svg",
+    "bytes": 926,
+    "sha256": "90e433a9e7e459a281c92e708a1d1e4a28a902e9e5e225e7e6a7d096c2b3290f"
+  },
+  {
+    "path": "public/static/images/svg/close-gray.c088b69a69686e13da65..svg",
+    "bytes": 237,
+    "sha256": "a9272b6a138b2de4b564f8b0afc55dc603481db30f01b01ebd956f06b9c70515"
+  },
+  {
+    "path": "public/static/images/svg/close-green.cbc61d8e1830ca082a66..svg",
+    "bytes": 237,
+    "sha256": "779d0f3271159b16d22cbab88422a3026c0df32b1a01c9a66cff0def04d63735"
+  },
+  {
+    "path": "public/static/images/svg/close-orange.af261ecbaf8bd9b123e3..svg",
+    "bytes": 237,
+    "sha256": "d2869fc8b091f11ed50a1b28e4d70e113bfe10b9b5855eddf16f1478fb2d1441"
+  },
+  {
+    "path": "public/static/images/svg/close-red.a1df0db230154f7fd541..svg",
+    "bytes": 237,
+    "sha256": "82a224abc6774b56b281790184317df6a92c95a2192c6c341ddea7e2dba9be5a"
+  },
+  {
+    "path": "public/static/images/svg/close.bb8032d92b03fbc84158..svg",
+    "bytes": 237,
+    "sha256": "8abc3ad865de687e641055c24e0b91e08e93e0bc24f3e1f5c43eba2e393a2940"
+  },
+  {
+    "path": "public/static/images/svg/collection.dd697fd894ada951499b..svg",
+    "bytes": 226,
+    "sha256": "e9ae93467a2ef40c663dd7d76cd3e7b2bf78e463c4b17b7ead06ecc354802151"
+  },
+  {
+    "path": "public/static/images/svg/conference.cba84334a57ac48c335f..svg",
+    "bytes": 766,
+    "sha256": "b2ada929103f72b2ddcf0fb20a292a9b47da82b95b79e0074af6cedf714586b0"
+  },
+  {
+    "path": "public/static/images/svg/copy.29f8ccf72ff565465c41..svg",
+    "bytes": 211,
+    "sha256": "c824f2568672372599cae1efa0830f3203f32e92b32fcfe8e28c25dfd742d4dd"
+  },
+  {
+    "path": "public/static/images/svg/crop.4572a9df00185cfc1862..svg",
+    "bytes": 238,
+    "sha256": "193ecfc340e0255c71a44847896124c162f4c5f07952bc999922776a03d436f5"
+  },
+  {
+    "path": "public/static/images/svg/donate.68d5f64ddc4617fa87af..svg",
+    "bytes": 225,
+    "sha256": "90df1ebe1462b7c9f8f5a6a785c6ab0af7af4d3ebf431e97ba0100acc3e28639"
+  },
+  {
+    "path": "public/static/images/svg/download.3d72440a5f6c8e2d0d16..svg",
+    "bytes": 283,
+    "sha256": "5b23311cc64995502a05b32670104bf1776dfa9d9330ac16ec18e58c835f35cb"
+  },
+  {
+    "path": "public/static/images/svg/edit-2.aeac26ba9bf887741d17..svg",
+    "bytes": 333,
+    "sha256": "0739ab9d0d3fd157f58365a72a6aa0aa2cf8132d02fada60ae6273f3725c85e2"
+  },
+  {
+    "path": "public/static/images/svg/edit.c6f5ae9aa1e287f52a16..svg",
+    "bytes": 333,
+    "sha256": "3a5045490fe34bd99856d87a01d31c69c5d1609bfc61bbc4b716334f441127a0"
+  },
+  {
+    "path": "public/static/images/svg/facebook-icon.8dad5b2e689e55fe69f3..svg",
+    "bytes": 483,
+    "sha256": "61e882bdafc1c012474d93e4e6d0d0d1a0508f0e56e5967acc3b9f76a1dee240"
+  },
+  {
+    "path": "public/static/images/svg/facebook.8fa17bb4bf4ee0062a0a..svg",
+    "bytes": 369,
+    "sha256": "ffaa98257f6f7a8a5e111ca7b738bc3a3939abbebcdbafa1710885dd8e415653"
+  },
+  {
+    "path": "public/static/images/svg/figures-views/camiseta-selected.559471b238d2ad77ee70..svg",
+    "bytes": 498,
+    "sha256": "377ff87a3550262810ebd459a3efb3b1716b873d5ed8ab3457d7f70381ea5492"
+  },
+  {
+    "path": "public/static/images/svg/figures-views/camiseta.ea67ab4ac91042d76e70..svg",
+    "bytes": 495,
+    "sha256": "8c8fec082c1bb8dfb88e179180f2e58a2ad52a0401b5ee6f5fdbd2a12f8baf56"
+  },
+  {
+    "path": "public/static/images/svg/figures-views/circle-selected.14781e56e7b827e1aff6..svg",
+    "bytes": 214,
+    "sha256": "c24c662c62699199768ef145fc84538c27673ac5af4b2163f4faeaddee649e9b"
+  },
+  {
+    "path": "public/static/images/svg/figures-views/circle.76a4ac5dc42254aa9486..svg",
+    "bytes": 211,
+    "sha256": "ade5c1a2b2a98d4769ac32806cff4016ce9b5691212fb28ab2faebd3f930597c"
+  },
+  {
+    "path": "public/static/images/svg/figures-views/rectangle-selected.48351ca1cc1cc2672757..svg",
+    "bytes": 252,
+    "sha256": "ddbc01e5be85ef4f794f2973bbf1f28c0fd9523774828e255339b20e66309889"
+  },
+  {
+    "path": "public/static/images/svg/figures-views/rectangle.f9c65880eabc593d648e..svg",
+    "bytes": 249,
+    "sha256": "ea16df2fb915becb8038df5073c95606510c155470c58b1e31a3de50074f2db5"
+  },
+  {
+    "path": "public/static/images/svg/figures-views/triangle-selected.e776ac5419d1997bb84e..svg",
+    "bytes": 252,
+    "sha256": "ba1430ab7cf4a46dbe5a8a2140a93e6965c681a5cc3e7068740c83c081138cb4"
+  },
+  {
+    "path": "public/static/images/svg/figures-views/triangle.5a563111340203b8feff..svg",
+    "bytes": 249,
+    "sha256": "501f5ac05eb326fbc185c23146a4951cce65f214d0bdc0c27d5181caf9b90e74"
+  },
+  {
+    "path": "public/static/images/svg/flags/ar.3ff871b662c529393934..svg",
+    "bytes": 25778,
+    "sha256": "c35af07e0aa3eee3852dc08630d38b3e130ea8bf430a1c3ca760a226c85d2b67"
+  },
+  {
+    "path": "public/static/images/svg/flags/bg.2288d3c422478b17499c..svg",
+    "bytes": 379,
+    "sha256": "bab53f0ebd2c0390183b5f20956545d76fdaa632bd90325d3283a7e91acbf883"
+  },
+  {
+    "path": "public/static/images/svg/flags/bn.79a01f505e1c760169ee..svg",
+    "bytes": 266,
+    "sha256": "b8a6484b92303c600a4a11a570ec3d73aa559f61c7ce8ecd0febd35bf539a7a7"
+  },
+  {
+    "path": "public/static/images/svg/flags/bs.2d38833b0cf6b28cb642..svg",
+    "bytes": 1328,
+    "sha256": "1538e209d4112b2fa51e701e69a4fe6e1f552724ca3f0a1ddb9d723805f67828"
+  },
+  {
+    "path": "public/static/images/svg/flags/cs.7e63622ba971964392a4..svg",
+    "bytes": 358,
+    "sha256": "c5a42f5cb5da6c3660846649a2ab3f93950308277569a23763269ddd506b4cd5"
+  },
+  {
+    "path": "public/static/images/svg/flags/da.125b9b0043f062c4b7a0..svg",
+    "bytes": 401,
+    "sha256": "d65b0a4915778e84f4191afc0d47ba9e7c6719829635544744ba8e9d731da180"
+  },
+  {
+    "path": "public/static/images/svg/flags/el.f31d230247040e5ad79b..svg",
+    "bytes": 734,
+    "sha256": "0c0d6e0565e3f69fa6d0ae6dc9a85b503ad5ace6faec238b22df5fd800c5a5e7"
+  },
+  {
+    "path": "public/static/images/svg/flags/et.fb290c538831e45de505..svg",
+    "bytes": 379,
+    "sha256": "8a47c031137d4c87161d52c8a71c8d276d563c0c13f748bb5cf2c519467f42fc"
+  },
+  {
+    "path": "public/static/images/svg/flags/fi.c0e63e6683084c4ea2c5..svg",
+    "bytes": 401,
+    "sha256": "02281e10557f61473a27129d16884fbd9d968345d1bbab11ae74b9a52ef6a53b"
+  },
+  {
+    "path": "public/static/images/svg/flags/fr.965ae2c922b44013ca20..svg",
+    "bytes": 362,
+    "sha256": "5d6c67e676db13a47c0ebc3e64afdd768d85c078ce15128940757d0a7d541831"
+  },
+  {
+    "path": "public/static/images/svg/flags/ge.d27ffda2ebb0ef275071..svg",
+    "bytes": 363,
+    "sha256": "547b96ba52ac187c905d3fb118cc479100776b9b7f9842cfe98a87cc68e31cf8"
+  },
+  {
+    "path": "public/static/images/svg/flags/hi.4c3c08660db3bff9f593..svg",
+    "bytes": 21631,
+    "sha256": "40e23ae4052a7436f57638846d267d1dfe84163982eb50d7125cae6c6818fd5d"
+  },
+  {
+    "path": "public/static/images/svg/flags/hr.eb188e1859b4550ac11c..svg",
+    "bytes": 9426,
+    "sha256": "00f1d215dfff4fbfe659d15183978413a518bd9f586edd4dd684eb52262b4041"
+  },
+  {
+    "path": "public/static/images/svg/flags/hu.3e36ec79f6fe028c19d2..svg",
+    "bytes": 379,
+    "sha256": "a70952e1276dca29e7a5a91f97afff4143a2c8d61f7dc70e5ebca4267745ebb8"
+  },
+  {
+    "path": "public/static/images/svg/flags/id.beea7adb7c78f8ffd031..svg",
+    "bytes": 303,
+    "sha256": "143675a9bee5f1a5481355f8b96381ecd5b56fd89de71312e9e135e3918f34f5"
+  },
+  {
+    "path": "public/static/images/svg/flags/is.7d79325da56f17e34ab1..svg",
+    "bytes": 585,
+    "sha256": "ed7e6dac8c98e431e433d4ec8bb404564de6fb19079d1e789c117aa8b181d2eb"
+  },
+  {
+    "path": "public/static/images/svg/flags/ja.ec0b4916d5fa4d528a94..svg",
+    "bytes": 266,
+    "sha256": "62c2dd660db66f30bba0b7f04549100af22f4000530a6d74aa689e97b9afb2fa"
+  },
+  {
+    "path": "public/static/images/svg/flags/ko.3e2c95ab9312cabc7630..svg",
+    "bytes": 2298,
+    "sha256": "dc2b91fc40df4e064d4eab0332d3f21415762699328bb88e71520c07967942ae"
+  },
+  {
+    "path": "public/static/images/svg/flags/lt.90d2ec5580654ad4ada6..svg",
+    "bytes": 379,
+    "sha256": "60bb918c1a5bc715a0ddaaf83a939a666d0da0b748b6ae01a965d457f53d9544"
+  },
+  {
+    "path": "public/static/images/svg/flags/lv.fa58e0a7631606879bc1..svg",
+    "bytes": 308,
+    "sha256": "02d765b7eb30ff9b251946fa4371bec132b10e073248f73c8d0e7025f42fe688"
+  },
+  {
+    "path": "public/static/images/svg/flags/me.6fd1d94a6d1d719e7035..svg",
+    "bytes": 27677,
+    "sha256": "62822a4493163f19f5ef02a5e6d5ea3d7531e9219e8703899e03ebf0f5195ecd"
+  },
+  {
+    "path": "public/static/images/svg/flags/mk.14636a1467848de77a98..svg",
+    "bytes": 652,
+    "sha256": "da98a6a5cdae9e0c1307599dd5038c723e8a2780fef94dc5ee20f07b33287152"
+  },
+  {
+    "path": "public/static/images/svg/flags/nl.38f6f92471acf5376f1f..svg",
+    "bytes": 379,
+    "sha256": "5460e7f9dc2fc1b5c26c7b073c76757e1de154e1b5f8adb7a98916e9f4e2e936"
+  },
+  {
+    "path": "public/static/images/svg/flags/no.dfeb5aaeff8a6087fd0e..svg",
+    "bytes": 585,
+    "sha256": "7cb84cb7c262d883fae7a597e4140c30b41645233bdf8be9d194f89e2661ed92"
+  },
+  {
+    "path": "public/static/images/svg/flags/pl.4ce18e8f2aeb0724a8f4..svg",
+    "bytes": 303,
+    "sha256": "019909132e003133a82d5261dc4f0eee731f7b3493ad85929fb193c85837914d"
+  },
+  {
+    "path": "public/static/images/svg/flags/pt.c157b41ca3f7e4b6aac7..svg",
+    "bytes": 28965,
+    "sha256": "7a4f7a18352451dab42388d5eba9a1f4990c7a7d30fb539595b3073750c21d83"
+  },
+  {
+    "path": "public/static/images/svg/flags/ro.01cc95119c58b2f1895a..svg",
+    "bytes": 362,
+    "sha256": "d94dcef7a2fedd470534b2a429e851bc4cb651c5fd8706c496e11380a2488224"
+  },
+  {
+    "path": "public/static/images/svg/flags/ru.bdfe96b6fc492b2c3f6f..svg",
+    "bytes": 379,
+    "sha256": "1f6f76c885f865a54639c3a68ec80aa0e21b8e86d8d100cfbf731b701cf22be5"
+  },
+  {
+    "path": "public/static/images/svg/flags/sk.59a4632edc1ed530ab81..svg",
+    "bytes": 9343,
+    "sha256": "a8dd24bac3b8f9975b529960850ddebe08bd284d038ac6baf65211c99641b5d9"
+  },
+  {
+    "path": "public/static/images/svg/flags/sl.1b2a1d337c2868b4b9d4..svg",
+    "bytes": 11295,
+    "sha256": "0793a189d4e5298961aa7980a81ecf0f204f0d08053b74f920fda22c42ada908"
+  },
+  {
+    "path": "public/static/images/svg/flags/sp.82b1e037ff7e8f35f7f6..svg",
+    "bytes": 363,
+    "sha256": "5769e4f0707e70642ef07c7fafebded997a2bcbd87cfd072a1dabadbd5cec695"
+  },
+  {
+    "path": "public/static/images/svg/flags/sq.0c0ed652eece8d6099fe..svg",
+    "bytes": 6559,
+    "sha256": "361d1adb67f5dc2cfe65ecabb5d3fdec23c1331ddf5c7479b48db72c6b6af6b2"
+  },
+  {
+    "path": "public/static/images/svg/flags/sr.b6d04270d811888a4cfa..svg",
+    "bytes": 28370,
+    "sha256": "c80471890dab41455029641607e690548f306dcb6ad167add08fbe525a631a4a"
+  },
+  {
+    "path": "public/static/images/svg/flags/sv.a1c0127a0ea0844112a4..svg",
+    "bytes": 401,
+    "sha256": "b58e393533d1bc01c370048585a7d096c4c293443a497502afcdfa03ca2a2510"
+  },
+  {
+    "path": "public/static/images/svg/flags/th.fe46ab92e44812800304..svg",
+    "bytes": 592,
+    "sha256": "532cebc4327b5bac0f6299e169d2881004749a9605add765f10f44f4977425e0"
+  },
+  {
+    "path": "public/static/images/svg/flags/tl.fdaaaf1191ce8ffafbb0..svg",
+    "bytes": 362,
+    "sha256": "47ed31bdb830e0969e5bf8e1effb6364e3a37e2ea4af7add30d31907828b915c"
+  },
+  {
+    "path": "public/static/images/svg/flags/tr.d989d24b55d28cd9ba31..svg",
+    "bytes": 694,
+    "sha256": "fd405823a7eb8b8440b1aa2b241f6b283f1959bda614380f9b939846cb74d9de"
+  },
+  {
+    "path": "public/static/images/svg/flags/uk.f892413e1b066888aa22..svg",
+    "bytes": 1077,
+    "sha256": "23e90d49f47b77300c8a1b383ac4c7174a8878c231cd11cadc8441181bd29e52"
+  },
+  {
+    "path": "public/static/images/svg/flags/ur.8f7812861ed451a63108..svg",
+    "bytes": 694,
+    "sha256": "e7fe7ce633310aa35b656eee700afdd084bf6c8f18acd2177c7d29f85b8a1f65"
+  },
+  {
+    "path": "public/static/images/svg/flags/vi.01fe39f25ab77f4a67c1..svg",
+    "bytes": 454,
+    "sha256": "8b1abc3d63f7c6a5fbe06658bdb66735eda912355bf026d92ca6dd80ada39864"
+  },
+  {
+    "path": "public/static/images/svg/flags/zh.730d9b0e0daf6c678001..svg",
+    "bytes": 1568,
+    "sha256": "98329f48a558c23ebacb91588b8e46ab7d6b7ad0f145e528dac865dd29d6375e"
+  },
+  {
+    "path": "public/static/images/svg/frame.0e8ce06235c9f7ac0928..svg",
+    "bytes": 1416,
+    "sha256": "8edb01da94445a47fa503446e27fe7dc587c3695091ce07947593c23927bf3ac"
+  },
+  {
+    "path": "public/static/images/svg/fullscreen-off.93a48157affd30061bf3..svg",
+    "bytes": 433,
+    "sha256": "dc6b9b2b2aa741488e8fcad77da85f01810b623eb258814e5e9560cd8d3ecf00"
+  },
+  {
+    "path": "public/static/images/svg/fullscreen-on.8468b7f8324446cd89de..svg",
+    "bytes": 447,
+    "sha256": "d0c372b37ffd8d3bfd4ee1b7b26393cf1e1ff9bb6218c78db1fb6c721f3583aa"
+  },
+  {
+    "path": "public/static/images/svg/google-icon.ef800c49e6cbf5b34761..svg",
+    "bytes": 553,
+    "sha256": "e99d010f096ccf8dba238b44eef654081c063badb479bd61589a510bdf58d8b4"
+  },
+  {
+    "path": "public/static/images/svg/key.e88538841daeb17257d6..svg",
+    "bytes": 331,
+    "sha256": "8359cf3f40e2adba46b691f0055f6aa980dacd8a27d15859fe61e6650b5063c8"
+  },
+  {
+    "path": "public/static/images/svg/layers.261fc1bfd70754b2970d..svg",
+    "bytes": 681,
+    "sha256": "2618b40085af7e0b23e9606e48b91b55e5a9613151b246ffb4b7e92b8b670b98"
+  },
+  {
+    "path": "public/static/images/svg/link.445ae5bcf2e688bc9b7f..svg",
+    "bytes": 350,
+    "sha256": "984a954907b0cbe4df95360bd95b7ba0fb9918892d31265eda315e0d586a2873"
+  },
+  {
+    "path": "public/static/images/svg/loading.17859872fecbc3e1b084..svg",
+    "bytes": 43708,
+    "sha256": "497d68289ed17dd06c379a3134367e3dc03d62908416ce73f6a569b8eae401b5"
+  },
+  {
+    "path": "public/static/images/svg/logout.62b0cf72060ca92abd14..svg",
+    "bytes": 252,
+    "sha256": "95499a5edd5afb6b22b02f32ea81994be64fb72ebf6f935b1103e2f6da885750"
+  },
+  {
+    "path": "public/static/images/svg/mail.d97292f9b98e32d57c80..svg",
+    "bytes": 338,
+    "sha256": "70c89eb4b7e894614cd36dfb0e3c9cecdd92475b789191af40afa4ce80bc46a1"
+  },
+  {
+    "path": "public/static/images/svg/menu.c588653e8a5b3f1ed090..svg",
+    "bytes": 282,
+    "sha256": "26c726e6e6fde877093e493a6147c9fdf067efa2aa0b6906658eedb04d29ae3c"
+  },
+  {
+    "path": "public/static/images/svg/minus.1664b5a7996a34e5288b..svg",
+    "bytes": 457,
+    "sha256": "a0f927ff77a3cedf0dac59592dd35edf719e08b0e4fe5233b093c83ebc86e4a8"
+  },
+  {
+    "path": "public/static/images/svg/pause.487c771e2174aa6dc2a5..svg",
+    "bytes": 295,
+    "sha256": "3968c5620062a3668083273ab6552ddb9a3225228b121af4ab7e22ac8b5f5d76"
+  },
+  {
+    "path": "public/static/images/svg/play-current-frame.80767fa81d057e769efe..svg",
+    "bytes": 1431,
+    "sha256": "27d055ecef1ecd21246641e9b5bcc8cb926a23baf4abcbd61aff464471d350ff"
+  },
+  {
+    "path": "public/static/images/svg/play.93fc48d56da1362ea2f6..svg",
+    "bytes": 221,
+    "sha256": "ca69b65e9d78360bdfd0b070c447eeea25ad41af66b856241028f67d24663d4f"
+  },
+  {
+    "path": "public/static/images/svg/plus.82566f586a7da6aabefa..svg",
+    "bytes": 607,
+    "sha256": "fa707aaf87986814041792aa45f2620fb85f8b054231a800446aca557a9cf26e"
+  },
+  {
+    "path": "public/static/images/svg/pro_account.937adf23137a0e0211c6..svg",
+    "bytes": 463,
+    "sha256": "82010c021e07056c4a61c5b2b971075671ba7cc1d27eddd7b8c9d47899dd7150"
+  },
+  {
+    "path": "public/static/images/svg/question.699832f493179b9dbbf1..svg",
+    "bytes": 417,
+    "sha256": "b66a30bf66c23f64b83fc94278735542ad8373dd60adaa4d64bf55f142fe73ae"
+  },
+  {
+    "path": "public/static/images/svg/recycle-bin.0a751e17f50355652638..svg",
+    "bytes": 208,
+    "sha256": "dfef76b95c59f4cf2cf215184641056b481e122dbd27b96346810efc2f53d11f"
+  },
+  {
+    "path": "public/static/images/svg/remove-all-shapes.e49457c242d650d96a73..svg",
+    "bytes": 690,
+    "sha256": "bf5afe386657fb82ee1ad284ece0c3d2cecbccf21bfb31feb8d055cb80806488"
+  },
+  {
+    "path": "public/static/images/svg/remove-last-shape.667888c117146657f294..svg",
+    "bytes": 265,
+    "sha256": "a7e3c7ac2b767fa17a8ef5a06f6977531b6062f089efb0a27b978db5390f65d4"
+  },
+  {
+    "path": "public/static/images/svg/repeat.b4ad3dd4569981fa6e0c..svg",
+    "bytes": 449,
+    "sha256": "4fdbe7644333642e65fbfce1ce59b9123ea0b73368819baa510347dc0f2d2c11"
+  },
+  {
+    "path": "public/static/images/svg/reset-animation.74234449cd3545441bc7..svg",
+    "bytes": 871,
+    "sha256": "0ec877c30aa8987708e2f39ac308c5b2c49191d33459e770155a9fa2984aea2d"
+  },
+  {
+    "path": "public/static/images/svg/reset.828b57601af5b35deaa4..svg",
+    "bytes": 310,
+    "sha256": "9a5f1ba17ecb4b719aa79aca9d1b1cd20b231ab2e040a057cee0cc61074700bc"
+  },
+  {
+    "path": "public/static/images/svg/shapes-manager/font-size-2xl.8e9c8e23a2d536a24a3e..svg",
+    "bytes": 364,
+    "sha256": "56005fee69c6c4d5bce51315a4a29848008fe20ae319beca94447c01a05b2747"
+  },
+  {
+    "path": "public/static/images/svg/shapes-manager/font-size-2xs.173c6761bc9d042c8b52..svg",
+    "bytes": 364,
+    "sha256": "5198756c6148e88fecde852d04962bf84ec6be6e9d0a0054b6af6aa5502badd5"
+  },
+  {
+    "path": "public/static/images/svg/shapes-manager/font-size-3xl.a597090475d37e913117..svg",
+    "bytes": 364,
+    "sha256": "1812d6f9d6444ee830979789124cf8b90a1aee7b078fa242879319045f1341fc"
+  },
+  {
+    "path": "public/static/images/svg/shapes-manager/font-size-3xs.ed3d3b10d00190bbd3f6..svg",
+    "bytes": 364,
+    "sha256": "fee13f8bb3754615b0235c703610c8d5676f81d14d4d94c0aa11ebf0a3ffc170"
+  },
+  {
+    "path": "public/static/images/svg/shapes-manager/font-size-4xl.a2875b664e62ddfcf115..svg",
+    "bytes": 364,
+    "sha256": "e2a3b20b58ac21dc9c4a91f81b2302c19dbffc2ddb726d1654a0735b21c9f892"
+  },
+  {
+    "path": "public/static/images/svg/shapes-manager/font-size-4xs.7ec0622c31e212413e49..svg",
+    "bytes": 364,
+    "sha256": "ccbb71301b078f01b54d2b4efe6e122930e578fbdac28dc49065ea6604f53ae1"
+  },
+  {
+    "path": "public/static/images/svg/shapes-manager/font-size-l.4024fbbcdb63c96381de..svg",
+    "bytes": 343,
+    "sha256": "a2636f0f38000dec3c4efe8662a9a538f4c3cd7e66b24350df299cdbbd40b61f"
+  },
+  {
+    "path": "public/static/images/svg/shapes-manager/font-size-m.ac1d4285fec5435b3d2b..svg",
+    "bytes": 343,
+    "sha256": "ef4231b48f778a187dc8f62687a440b1a004830eee5d567989b709afa7217089"
+  },
+  {
+    "path": "public/static/images/svg/shapes-manager/font-size-s.e69d922958f687a229ad..svg",
+    "bytes": 343,
+    "sha256": "e8d38b51379471f5bd9d161f91efa8a5732125e37511207ba68f65d58416c198"
+  },
+  {
+    "path": "public/static/images/svg/shapes-manager/font-size-xl.76a85e3dc8fc35266fdd..svg",
+    "bytes": 363,
+    "sha256": "1c164ed96f3a6fdcac4be792198bf686824e0c94dbe19771d6b9a425e0d590a2"
+  },
+  {
+    "path": "public/static/images/svg/shapes-manager/font-size-xs.a2775c52de542e04a011..svg",
+    "bytes": 363,
+    "sha256": "3d92ba5da8745c7a5082ae42596a3de5ecd1b515d2308e7d5b402b944b9774f3"
+  },
+  {
+    "path": "public/static/images/svg/shapes-manager/line-begin-arrow.abc2d874fc10e284471f..svg",
+    "bytes": 347,
+    "sha256": "72e683ca4480a8b6dc1b6767b944b5ae4aff6340d2cd3b2a1fded6f9a4e25c25"
+  },
+  {
+    "path": "public/static/images/svg/shapes-manager/line-begin-end-none.504cb897efc9fe3aaefc..svg",
+    "bytes": 235,
+    "sha256": "cb019f94290e19e53d4af6943717549491cc78ac50525ad7657e3f47d66e8bf9"
+  },
+  {
+    "path": "public/static/images/svg/shapes-manager/line-begin-screen.5ddd84fdf7877e7c60ea..svg",
+    "bytes": 261,
+    "sha256": "6679f8ce0b3c47a6d4a78b9caf2219ada9fe05e59386c3e5ed3256b5e8985ec2"
+  },
+  {
+    "path": "public/static/images/svg/shapes-manager/line-end-arrow.d76ca07f686d3b9f9fb7..svg",
+    "bytes": 348,
+    "sha256": "dbb36f6a978ebf79690950adbf64563457a01432b912d22910f2830791a50645"
+  },
+  {
+    "path": "public/static/images/svg/shapes-manager/line-end-screen.2b786cc04421df872418..svg",
+    "bytes": 266,
+    "sha256": "e44b22ec5a124f4ac0565fcbf5c21582116b62ba9f7fca445c040f24dcb8c736"
+  },
+  {
+    "path": "public/static/images/svg/shapes-manager/shape-area.27cc8220a2fb19747554..svg",
+    "bytes": 327,
+    "sha256": "6f79a28d5eded9f2a38086f986a49f6f2880881420c18fe439d3bee5ec675161"
+  },
+  {
+    "path": "public/static/images/svg/shapes-manager/shape-barrier-dark.9605575ddd61cdd6e9f5..svg",
+    "bytes": 299,
+    "sha256": "4c066c832fe3bde3a86b8089cc2a8f65b4a97dd59a2fe9b1a3fea7d96dd84cbb"
+  },
+  {
+    "path": "public/static/images/svg/shapes-manager/shape-barrier.f9ef331f099226ded364..svg",
+    "bytes": 299,
+    "sha256": "447972434736c5d075fdac70095de99c7cadc98e9d127a7288094a506059a13f"
+  },
+  {
+    "path": "public/static/images/svg/shapes-manager/shape-cone-dark.fefcfca55a00cf0106ba..svg",
+    "bytes": 363,
+    "sha256": "2d041667620755d6b6c58544bfb4b3d90e8a8081721bc6b26acc24bae593b369"
+  },
+  {
+    "path": "public/static/images/svg/shapes-manager/shape-cone-stick-dark.e68fe0e21cfc2a0fd353..svg",
+    "bytes": 442,
+    "sha256": "e8ee7c5085ab653a66701c11d38cc3cdd1096bcd488f804a991e92869062d0ac"
+  },
+  {
+    "path": "public/static/images/svg/shapes-manager/shape-cone-stick.ac7c47f2587f17a113a4..svg",
+    "bytes": 442,
+    "sha256": "56389dee7086099176e9520086c78ee0573a331c6a7ce1c25830f3eaf84fd0c9"
+  },
+  {
+    "path": "public/static/images/svg/shapes-manager/shape-cone.8f6f91b8245ab7410fe2..svg",
+    "bytes": 363,
+    "sha256": "ce778a95bbe778f52f2121514b21ecadaa3f7e9e3d7d7bd42b5311aeb87fedd3"
+  },
+  {
+    "path": "public/static/images/svg/shapes-manager/shape-cursor.b97eaa2629b0804328b3..svg",
+    "bytes": 458,
+    "sha256": "dec8f8d14f081e0e2af5ea95440e1f4360c54037f3cc30ddb98bb50ee7055cee"
+  },
+  {
+    "path": "public/static/images/svg/shapes-manager/shape-double-line.2a3afe9b354f95ff2443..svg",
+    "bytes": 337,
+    "sha256": "b13e74f7956f60160b450cd4420ce9593be14928e83328db2996a7be9a783726"
+  },
+  {
+    "path": "public/static/images/svg/shapes-manager/shape-ellipse.9a0ff8870bbf38bfa518..svg",
+    "bytes": 263,
+    "sha256": "c67014919bc55ca858e6f6689cb01863796115518e5e92b46c549eec06bbf804"
+  },
+  {
+    "path": "public/static/images/svg/shapes-manager/shape-goal-a-dark.6c83d3eb56711dda78b9..svg",
+    "bytes": 578,
+    "sha256": "a349fcced097d217bf73f2089bc44e30c4a26a2bb9aab5c9b1b1d67def9ec86d"
+  },
+  {
+    "path": "public/static/images/svg/shapes-manager/shape-goal-a.91fd4b69fd0bbf2a743d..svg",
+    "bytes": 577,
+    "sha256": "df06ca04fc1c7f0c6316338dfedd198ec1033ef54d868e29bed52183116f203e"
+  },
+  {
+    "path": "public/static/images/svg/shapes-manager/shape-goal-b-dark.63550bd36e94a6c1d17a..svg",
+    "bytes": 570,
+    "sha256": "e063a4be8bdc462b3d743c5b9fb8fbd73f9b33f5f55db4cfb21500bd6d907f5c"
+  },
+  {
+    "path": "public/static/images/svg/shapes-manager/shape-goal-b.8fe6815c58e320c53d00..svg",
+    "bytes": 570,
+    "sha256": "45a8963e7804d3e566dd88e25442f476edbdfbd4d68c7d325377a3886cd51af1"
+  },
+  {
+    "path": "public/static/images/svg/shapes-manager/shape-goal-c-dark.0ac0c6bde0f51e027d72..svg",
+    "bytes": 489,
+    "sha256": "6a136ab2e85cb7e027c8568b23f43166c9d099d998a607230c322c057db07a7b"
+  },
+  {
+    "path": "public/static/images/svg/shapes-manager/shape-goal-c.ae357b67cd12e8d97133..svg",
+    "bytes": 489,
+    "sha256": "15921fc5818e6471c7cc320b932cf5f7c09c8d23495f0bda9a13966b8e672a3e"
+  },
+  {
+    "path": "public/static/images/svg/shapes-manager/shape-goal-d-dark.17283bd53cf3ba4e2acc..svg",
+    "bytes": 567,
+    "sha256": "15c2f64c0364c522698c0c49d03d08259e7ce056d9a98578ef3a75898f902c13"
+  },
+  {
+    "path": "public/static/images/svg/shapes-manager/shape-goal-d.14b17f88ea24ea3322aa..svg",
+    "bytes": 567,
+    "sha256": "78649d4ca2eb7eb0c59404f409c3fcb3ed78a39ac6e943ad8feffbddbc6dc13e"
+  },
+  {
+    "path": "public/static/images/svg/shapes-manager/shape-hand.2ab71e4bc98a4fe333b7..svg",
+    "bytes": 629,
+    "sha256": "25bd521035e52fead95b681585d53df6b25195938b6e9c6142189e289c8039e1"
+  },
+  {
+    "path": "public/static/images/svg/shapes-manager/shape-line.5d1f92443956ad74e54a..svg",
+    "bytes": 237,
+    "sha256": "9bdd0a5cb5c3b9ead8f6a1dca6d63a2e826e1b968160b128e9357a4820514924"
+  },
+  {
+    "path": "public/static/images/svg/shapes-manager/shape-mannequin-dark.944a96863aa9c2f3f86c..svg",
+    "bytes": 619,
+    "sha256": "27597fe1babb07e656438d7ffb6b03e993fa0816fc41563bd59892dd878f23af"
+  },
+  {
+    "path": "public/static/images/svg/shapes-manager/shape-mannequin.ee0d3ab02b4fe4d03cf3..svg",
+    "bytes": 619,
+    "sha256": "603b5bafc7322139a0b607371334adce5b71ace072bb50e0a410dd8a0b8ba7fe"
+  },
+  {
+    "path": "public/static/images/svg/shapes-manager/shape-mark-dark.64e9f5f5dd6427574f98..svg",
+    "bytes": 254,
+    "sha256": "056a95fc1a413a77f126f8994a6c8da4c2a88621c8271bc4c3f7328b6d85a7e1"
+  },
+  {
+    "path": "public/static/images/svg/shapes-manager/shape-mark.1c9539aaea9383325f4d..svg",
+    "bytes": 254,
+    "sha256": "2d2d01a86a0cc3b502eb50a3a638a62892b53a56a701ce06e263dbebdb2daf3d"
+  },
+  {
+    "path": "public/static/images/svg/shapes-manager/shape-objects.4742678bb67ad29b530e..svg",
+    "bytes": 512,
+    "sha256": "ce3bbc37d9c6737bc3f302d869004a35c98e8f42875f72cc1bad266fe411813b"
+  },
+  {
+    "path": "public/static/images/svg/shapes-manager/shape-pencil.c6f5ae9aa1e287f52a16..svg",
+    "bytes": 333,
+    "sha256": "3a5045490fe34bd99856d87a01d31c69c5d1609bfc61bbc4b716334f441127a0"
+  },
+  {
+    "path": "public/static/images/svg/shapes-manager/shape-plate-dark.6088ee07a7f1f937a791..svg",
+    "bytes": 263,
+    "sha256": "9601256ca37f736095f3c8a7ea65902a4a1a939b505141157379cd2910137a0f"
+  },
+  {
+    "path": "public/static/images/svg/shapes-manager/shape-plate.4895507a08a6f67557d9..svg",
+    "bytes": 263,
+    "sha256": "96176fdb113ad34a8baedf6ff75073bacbb53b35b773102fc832b42d6fcd3f79"
+  },
+  {
+    "path": "public/static/images/svg/shapes-manager/shape-polygon.cfdb20fa8701cdd766ae..svg",
+    "bytes": 3327,
+    "sha256": "f31de64ee8ec3d4943b5fed145bc08395634f439f230296f51a5dd6b071a6c04"
+  },
+  {
+    "path": "public/static/images/svg/shapes-manager/shape-polyline.9c9704f4199eb27a8400..svg",
+    "bytes": 594,
+    "sha256": "60637480aa9874f53d5d5bba5ece9c5ff001ccc771263a2f49e6de0d01054e04"
+  },
+  {
+    "path": "public/static/images/svg/shapes-manager/shape-rectangle.641a39e09256e8ccfaee..svg",
+    "bytes": 266,
+    "sha256": "83fa12e6fca32dd529dcb3e55fe1e4fb4533ae652efe4852cce02cba4a726473"
+  },
+  {
+    "path": "public/static/images/svg/shapes-manager/shape-ring-dark.cbb1435bdfe7636e817a..svg",
+    "bytes": 258,
+    "sha256": "9022bd727117644dcf9e51841c6e87c71dd562b928feb9f604bb666f4d9f2c73"
+  },
+  {
+    "path": "public/static/images/svg/shapes-manager/shape-ring.2f86ea4aaa8c6e41e259..svg",
+    "bytes": 257,
+    "sha256": "081b4cef4e743948e70a9365394676ae86141ce8ef3eb265b3e732838c9adbd1"
+  },
+  {
+    "path": "public/static/images/svg/shapes-manager/shape-stairs-dark.55f860f8f99d52e3e7f8..svg",
+    "bytes": 586,
+    "sha256": "ece37faa30c33b6b83cbbc6325c4e9ce93f8d13555fd48ddc440835e42a18d87"
+  },
+  {
+    "path": "public/static/images/svg/shapes-manager/shape-stairs.611abd65c08773f01ab0..svg",
+    "bytes": 586,
+    "sha256": "9b5068087ef668890ff88405b0bca5690db0cbc3c59923d1e75d687a08f6ac3e"
+  },
+  {
+    "path": "public/static/images/svg/shapes-manager/shape-text.50727d29714d81a891bc..svg",
+    "bytes": 323,
+    "sha256": "6898cea2af522d2699b60a7731820351bb404c1afcc6ca1a6366e762e1c0b73e"
+  },
+  {
+    "path": "public/static/images/svg/shapes-manager/shape-wavy-line.87f1bef74281b907a7dc..svg",
+    "bytes": 23646,
+    "sha256": "60ab813b25bf761fe306b2ffe01dc79b9dc87284d6da0cfac6ec074e2b823b42"
+  },
+  {
+    "path": "public/static/images/svg/shapes-manager/stroke-style-dashed.526a4dfdbc6384ef350a..svg",
+    "bytes": 262,
+    "sha256": "6f749c603e8ec8744490afb85ce498733b69e8860fe3b81877aa3b3c2bfc4343"
+  },
+  {
+    "path": "public/static/images/svg/shapes-manager/stroke-style-solid.504cb897efc9fe3aaefc..svg",
+    "bytes": 235,
+    "sha256": "cb019f94290e19e53d4af6943717549491cc78ac50525ad7657e3f47d66e8bf9"
+  },
+  {
+    "path": "public/static/images/svg/snapshot.3ce8d53dd797fb2a3eb0..svg",
+    "bytes": 912,
+    "sha256": "93fdc3b2f9c455c54572b53cb149123007018251ee6e7a8f37149a6b036ba878"
+  },
+  {
+    "path": "public/static/images/svg/stop-conference.3ac67ad6a90c0a54513e..svg",
+    "bytes": 938,
+    "sha256": "a00089b8c05ecd621c5ce6c897058b055895d2a98f01f78a24231680645bccac"
+  },
+  {
+    "path": "public/static/images/svg/stop.d23b69ed6025f07dbef1..svg",
+    "bytes": 179,
+    "sha256": "69a858b85ad76c037fa28984b2b9c8b8ae992e58aa429b23e11a87f4efb450c7"
+  },
+  {
+    "path": "public/static/images/svg/toggle-markup.2c2ecdaf2f8234b30776..svg",
+    "bytes": 347,
+    "sha256": "5087acc9c02fd74a24605e162426c4c44624a3591d987867a44851c5dab6ef1f"
+  },
+  {
+    "path": "public/static/images/svg/user-account.3c0dca37f46de51b7941..svg",
+    "bytes": 297,
+    "sha256": "fc069b9f041cabe27c8fd7157e78cdc586dedc4e2b8aa761ebfc436313b625cd"
+  },
+  {
+    "path": "public/static/images/svg/video-camera.2729a95de6d2f1992d13..svg",
+    "bytes": 513,
+    "sha256": "83f4de4e9f8ab32d02a24d11fb44de7da44bb2140776ada3da5329746f94c2c9"
+  },
+  {
+    "path": "public/static/images/svg/vk.2bf1c3740120fde74fd5..svg",
+    "bytes": 2046,
+    "sha256": "338bb7c7862f1bcfb4742e23d4ed2ab46aa07b833e50480bb65cc9abebd1cd16"
+  },
+  {
+    "path": "public/static/images/svg/warning.48fd33aecb633e661a72..svg",
+    "bytes": 561,
+    "sha256": "4238a206e474b015d3485e90a96f0dc9b841721642dd91835a5c3dd5c529687e"
+  },
+  {
+    "path": "public/static/images/svg/youtube.15c3d6eda0a7922beeb5..svg",
+    "bytes": 267,
+    "sha256": "b757e14661ae53075310f1cc1b809fbd65b08ed8ed36a629221852309a4790cf"
+  },
+  {
+    "path": "public/static/js/1.js",
+    "bytes": 1018777,
+    "sha256": "e313ac7806558add6e6950fb72f2ef243ed9de8c8015a508ad4bcc05a8081fbb"
+  },
+  {
+    "path": "public/static/js/board-markup-bf.js",
+    "bytes": 3050,
+    "sha256": "961c73bc687b3b3e39c048e9176092b2111ae8f1277d401979ba77d182ad9fae"
+  },
+  {
+    "path": "public/static/js/board-markup-sb.js",
+    "bytes": 3296,
+    "sha256": "ebdc8a843dd056be591c94dbc01acd254aa9b32a002209bdab73945688c9313a"
+  },
+  {
+    "path": "public/static/js/board-markup-sf.js",
+    "bytes": 5795,
+    "sha256": "d60ee3864e1babc0b8cefdb98d4c7aee9863795a8c68dc96cd8f6c8e51d2672c"
+  },
+  {
+    "path": "public/static/js/board-markup-sh.js",
+    "bytes": 2786,
+    "sha256": "cb2ddd3a03d56417e875530743a92476366e98d6f1321cf5f807bf45dbb4f3dd"
+  },
+  {
+    "path": "public/static/js/board-markup-sj.js",
+    "bytes": 2869,
+    "sha256": "c2d6b24841ff46f102f2cd9362ce9f5848ed4563bd86a6b1bbbbfc0a6afceaa8"
+  },
+  {
+    "path": "public/static/js/board-markup-sp.js",
+    "bytes": 2729,
+    "sha256": "632584d899a58bd6df524c4a2af089582b52da3d5fc6bbb988e18017cce6f29c"
+  },
+  {
+    "path": "public/static/js/board-markup-sv.js",
+    "bytes": 5022,
+    "sha256": "35b0bee82dc248b5ed4b36bbc690dcc99fe4e12e99db6f80fefeae8b02a1622a"
+  }
+]

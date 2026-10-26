@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1548 920">
+	<g stroke="#3f82a3" fill="none">
+		<path d="M101.85 126.31 H1446.14 V 793.68 H101.85 V126.31" stroke-width="6"></path>
+		<path d="M101.85 115.27 H1446.14 V 126.31 H101.85 V115.27 M101.85 804.72 H1446.14 V 793.68 H101.85 V115.27 Z" stroke-width="6"></path>
+		<path d="M101.85 115.27 H1446.14 V 126.31 H101.85 V115.27 M101.85 804.72 H1446.14 V 793.68 H101.85 V115.27 Z" fill="#3f82a3" fill-opacity=".35" stroke-width="6"></path>
+		<path d="M207.74 126.31 A 302.47 302.47 0 0 1 404.80 410.22 M404.80 410.22 V 509.77 M207.74 793.68 A 302.47 302.47 0 0 0 404.80 509.77 M1340.25 126.31 A 302.47 302.47 0 0 0 1143.19 410.22 M1143.19 410.22 V 509.77 M1340.25 793.68 A 302.47 302.47 0 0 1 1143.19 509.77 M774 126.31 V 793.68 Z" fill="none" stroke-width="6"></path>
+		<path d="M85.29 408.94 H101.85 V511.06 H85.29 V 408.94 M1462.70 408.94 H1446.14 V511.06 H1462.70 V 408.94" fill="#3f82a3" fill-opacity=".35" stroke-width="6"></path>
+		<path d="M337.15 126.31 A 487.77 487.77 0 0 1 337.15 793.68 M1210.84 126.31 A 487.77 487.77 0 0 0 1210.84 793.68 M774 460 Z" fill="none" stroke-dasharray="20px, 90px" stroke-width="6"></path>
+		<circle cx="341.48" cy="460" r="3.87" stroke="none"></circle>
+		<circle cx="1206.51" cy="460" r="3.87" stroke="none"></circle>
+		<line x1="101.85" y1="207.73" x2="112.53" y2="207.73" stroke-width="6" fill="none"></line>
+		<line x1="101.85" y1="712.26" x2="112.53" y2="712.26" stroke-width="6" fill="none"></line>
+		<line x1="1446.14" y1="207.73" x2="1435.46" y2="207.73" stroke-width="6" fill="none"></line>
+		<line x1="1446.14" y1="712.26" x2="1435.46" y2="712.26" stroke-width="6" fill="none"></line>
+	</g>
+</svg>

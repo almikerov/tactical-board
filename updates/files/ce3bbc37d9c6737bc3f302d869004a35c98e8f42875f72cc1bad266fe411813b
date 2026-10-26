@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 800 800">	
+	<g stroke-width="16" stroke="blue" stroke-linejoin="round" fill="blue"  preserveAspectRatio="none">
+		<polygon points="264 610, 264 621,506 710,514 710,757 621,756 610, 510 528" />
+		<polygon points="390 610, 479 110,541 110,630 610" />
+	</g>	
+	<g stroke="red" fill="red">
+		<ellipse cx="250" cy="460" rx="200" ry="100" />
+		<ellipse cx="250" cy="405" rx="50" ry="20" fill="#000" />
+	</g>
+</svg>

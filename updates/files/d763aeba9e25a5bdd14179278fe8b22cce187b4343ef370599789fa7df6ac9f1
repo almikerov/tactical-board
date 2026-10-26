@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1205 810">
+<g stroke="#888888" fill="#888888">
+<path d="M471 87 A 119 51 0 0 0 575 142 M575 142 H629 M733 87 A 119 51 0 0 1 629 142 M352 722 A 229 192 0 0 1 575 557 M575 557 H629 M852 722 A 229 192 0 0 0 629 557" fill="none" opacity=".9" stroke-linecap="square" stroke-width="6"></path>
+<path d="M428 87 A 174 71 0 1 0 776 87" fill="none" opacity=".9" stroke-linecap="square" stroke-width="6" stroke-dasharray="10, 20"></path>
+<path d="M269 722 A 346 300 0 0 1 935 722" fill="none" opacity=".9" stroke-linecap="square" stroke-width="6" stroke-dasharray="10, 40"></path>
+<ellipse cx="602.5" cy="111" rx="3" ry="1" stroke="none"></ellipse>
+<ellipse cx="602.5" cy="639" rx="5" ry="3" stroke="none"></ellipse>
+<line x1="343" y1="181" x2="861" y2="181" fill="none" stroke-width="6"></line>
+<line x1="302" y1="304" x2="902" y2="304" fill="none" stroke-width="6"></line>
+<line x1="247" y1="472" x2="957" y2="472" fill="none" stroke-width="6"></line>
+<line opacity=".9" x1="362" y1="105" x2="367" y2="105" fill="none" stroke-linecap="square" stroke-width="6"></line>
+<line opacity=".9" x1="349" y1="141" x2="355" y2="141" fill="none" stroke-linecap="square" stroke-width="6"></line>
+<line opacity=".9" x1="842" y1="105" x2="837" y2="105" fill="none" stroke-linecap="square" stroke-width="6"></line>
+<line opacity=".9" x1="855" y1="141" x2="849" y2="141" fill="none" stroke-linecap="square" stroke-width="6"></line>
+<line opacity=".9" x1="208" y1="558" x2="217" y2="558" fill="none" stroke-linecap="square" stroke-width="6"></line>
+<line opacity=".9" x1="174" y1="658" x2="184" y2="658" fill="none" stroke-linecap="square" stroke-width="6"></line>
+<line opacity=".9" x1="996" y1="558" x2="987" y2="558" fill="none" stroke-linecap="square" stroke-width="6"></line>
+<line opacity=".9" x1="1030" y1="658" x2="1020" y2="658" fill="none" stroke-linecap="square" stroke-width="6"></line>
+<line opacity=".9" x1="423" y1="722" x2="421" y2="733" fill="none" stroke-linecap="square" stroke-width="6"></line>
+<line opacity=".9" x1="499" y1="722" x2="498" y2="733" fill="none" stroke-linecap="square" stroke-width="6"></line>
+<line opacity=".9" x1="781" y1="722" x2="783" y2="733" fill="none" stroke-linecap="square" stroke-width="6"></line>
+<line opacity=".9" x1="705" y1="722" x2="706" y2="733" fill="none" stroke-linecap="square" stroke-width="6"></line>
+<line opacity=".9" x1="508" y1="87" x2="508" y2="84" fill="none" stroke-linecap="square" stroke-width="6"></line>
+<line opacity=".9" x1="548" y1="87" x2="548" y2="84" fill="none" stroke-linecap="square" stroke-width="6"></line>
+<line opacity=".9" x1="696" y1="87" x2="696" y2="84" fill="none" stroke-linecap="square" stroke-width="6"></line>
+<line opacity=".9" x1="656" y1="87" x2="656" y2="84" fill="none" stroke-linecap="square" stroke-width="6"></line>
+<polygon points="374 87, 830 87, 1040 722, 164 722" fill="none" stroke-linecap="square" stroke-width="6"></polygon>
+<polygon points="573 735, 573 707, 631 707, 631 735" fill-opacity=".35" stroke-linecap="square" stroke-width="6"></polygon>
+<polygon points="573 707, 575 693, 575 722, 573 735" fill-opacity=".35" stroke-linecap="square" stroke-width="6"></polygon>
+<polygon points="631 707, 629 693, 629 722, 631 735" fill-opacity=".35" stroke-linecap="square" stroke-width="6"></polygon>
+<polygon points="573 707, 575 693, 629 693, 631 707" fill-opacity=".35" stroke-linecap="square" stroke-width="6"></polygon>
+<polyline stroke-opacity=".75" points="587 87, 587 71, 617 71, 617 87" fill-opacity=".35" stroke-linecap="square" stroke-width="6"></polyline>
+<polyline points="575 722, 575 693, 629 693, 629 722" fill="none" stroke-linecap="square" stroke-width="4"></polyline></g> </svg>

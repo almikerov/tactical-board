@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1320 792">
+	<g stroke="#3f82a3" fill="#3f82a3">
+		<polygon points="141.37 705.27,141.37 86.72,1178.62 86.72,1178.62 705.27" stroke-width="6" fill="none"></polygon>
+		<path d="M283.40 162.43 A 246.44 246.44 0 0 1 283.40 629.56 M1036.59 162.43 A 246.44 246.44 0 0 0 1036.59 629.56" stroke-width="6" fill="none"></path>
+		<path d="M283.40 303.09 A 101.24 101.24 0 0 1 283.40 488.90 M1036.59 303.09 A 101.24 101.24 0 0 0 1036.59 488.90" stroke-width="6" fill="none"></path>
+		<path d="M141.37 346.26 H120.11 V445.73 H141.37 M1178.62 346.26 H1199.88 V445.73 H1178.62" stroke-width="6" fill-opacity=".35"></path>
+		<line x1="244.72" y1="705.27" x2="244.72" y2="86.72" stroke-width="6"  fill="none"></line>
+		<line x1="283.40" y1="705.27" x2="283.40" y2="86.72" stroke-width="6"  fill="none"></line>
+		<line x1="505.82" y1="705.27" x2="505.82" y2="86.72" stroke-width="6"  fill="none"></line>
+		<line x1="633.46" y1="705.27" x2="633.46" y2="86.72" stroke-width="6"  fill="none"></line>
+		<line x1="660" y1="705.27" x2="660" y2="396" stroke-width="6" stroke-dasharray="34.84px, 34.84px"></line>
+		<line x1="660" y1="86.72" x2="660" y2="396" stroke-width="6" stroke-dasharray="34.84px, 34.84px"></line>
+		<line x1="141.37" y1="346.26" x2="71.41" y2="346.26" stroke-width="6" ></line>
+		<line x1="141.37" y1="445.73" x2="71.41" y2="445.73" stroke-width="6" ></line>
+		<line x1="1178.62" y1="346.26" x2="1248.58" y2="346.26" stroke-width="6" ></line>
+		<line x1="1178.62" y1="445.73" x2="1248.58" y2="445.73" stroke-width="6" ></line>
+		<line x1="686.53" y1="705.27" x2="686.53" y2="86.72" stroke-width="6" ></line>
+		<line x1="814.17" y1="705.27" x2="814.17" y2="86.72" stroke-width="6" ></line>
+		<line x1="1036.59" y1="705.27" x2="1036.59" y2="86.72" stroke-width="6" ></line>
+		<line x1="1075.27" y1="705.27" x2="1075.27" y2="86.72" stroke-width="6" ></line>
+		<polygon points="141.37 330.42,141.37 461.57,186.51 461.57,186.51 330.42" stroke-width="6" fill="none"></polygon>
+		<polygon points="141.37 310.62,141.37 481.37,244.72 481.37,244.72 310.62" stroke-width="6" fill="none"></polygon>
+		<polygon points="1178.62 310.62,1178.62 481.37,1075.27 481.37,1075.27 310.62" stroke-width="6" fill="none"></polygon>
+		<polygon points="1178.62 330.42,1178.62 461.57,1133.48 461.57,1133.48 330.42" stroke-width="6" fill="none"></polygon>
+	</g></svg>

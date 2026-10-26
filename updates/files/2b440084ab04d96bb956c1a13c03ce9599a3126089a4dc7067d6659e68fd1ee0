@@ -1,0 +1,60 @@
+import {test} from 'node:test';
+import assert from 'node:assert/strict';
+import {readFile} from 'node:fs/promises';
+import vm from 'node:vm';
+const source=await readFile(new URL('../public/defaults.js',import.meta.url),'utf8');
+function memory(data=new Map()){return {data,getItem:key=>data.has(key)?data.get(key):null,setItem:(key,value)=>data.set(key,String(value)),removeItem:key=>data.delete(key)};}
+function tab({board='big-football',page='main',link='',local=memory(),session=memory()}={}){
+  const state={resets:0,resizes:0,background:null};
+  const app={
+    context:{inputParams:{board_key:board,link_token:link,conference_link_token:'',site_url:'//127.0.0.1:8877'},boardConfig:{strokeColor:'#ffffff'},texts:{}},
+    pages:{currentPage:page,reset(){state.resets++;}},
+    layout:{resize(){state.resizes++;},async _initApplication(){}},
+    ui:{notification(){}},
+  };
+  const context=vm.createContext({TacticalLocal:app,localStorage:local,sessionStorage:session,location:{href:''},document:{addEventListener(){}},
+    TacticalBackground:{current:()=>state.background,set(value){state.background=value||null;}}});
+  context.window=context;
+  vm.runInContext(source,context);
+  return {app,state,context,local,session,defaults:context.TacticalDefaults};
+}
+test('out of the box the board is white with black markings',async()=>{
+  const board=tab();await board.app.layout._initApplication();
+  assert.deepEqual({...board.defaults.get()},{view:'big-football',board:'#ffffff',field:'#ffffff',markings:'#000000'});
+  assert.equal(board.app.context.boardConfig.customSportBgColor,'#ffffff');assert.equal(board.app.context.boardConfig.customMarkingsColor,'#000000');
+});
+test('a new field opens in the default view, cleared and in the default colors',async()=>{
+  const local=memory(),session=memory();
+  const first=tab({board:'big-football',page:'animation',local,session});
+  first.defaults.set({view:'big-football-penalty',board:'#000055',field:'#004400',markings:'url(x)'});
+  assert.deepEqual({...first.defaults.get()},{view:'big-football-penalty',board:'#000055',field:'#004400',markings:'#000000'});
+  first.app.pages.reset();
+  assert.equal(first.state.resets,1);
+  assert.equal(first.context.location.href,'//127.0.0.1:8877/ru/big-football-penalty/animation');
+  const arrived=tab({board:'big-football-penalty',page:'animation',local,session});
+  arrived.state.background='#663300';
+  await arrived.app.layout._initApplication();
+  assert.equal(arrived.state.resets,1);assert.equal(session.getItem('tactical-board.new-field-pending'),null);
+  assert.equal(arrived.app.context.boardConfig.customSportBgColor,'#004400');assert.equal(arrived.state.background,null);
+  // A later reload of that view keeps what was drawn since.
+  const reloaded=tab({board:'big-football-penalty',page:'animation',local,session});
+  await reloaded.app.layout._initApplication();
+  assert.equal(reloaded.state.resets,0);
+  reloaded.app.context.boardConfig.customSportBgColor='#bb0000';
+  reloaded.app.pages.reset();
+  assert.equal(reloaded.context.location.href,'');assert.equal(reloaded.app.context.boardConfig.customSportBgColor,'#004400');
+});
+test('saved schemes keep their own colors, and clearing one starts a new field',async()=>{
+  const local=memory();
+  tab({local}).defaults.set({view:'big-football',field:'#004400'});
+  const scheme=tab({link:'61dc2c59',local});
+  await scheme.app.layout._initApplication();
+  assert.equal(scheme.app.context.boardConfig.customSportBgColor,undefined);
+  scheme.app.pages.reset();
+  assert.equal(scheme.context.location.href,'//127.0.0.1:8877/ru/big-football');
+});
+test('defaults from version 1.4 are carried over',()=>{
+  const local=memory();
+  local.setItem('tactical-board.new-field-defaults.v1',JSON.stringify({view:'big-football-half',background:'#004400',markings:null}));
+  assert.deepEqual({...tab({local}).defaults.get()},{view:'big-football-half',board:'#ffffff',field:'#004400',markings:'#000000'});
+});

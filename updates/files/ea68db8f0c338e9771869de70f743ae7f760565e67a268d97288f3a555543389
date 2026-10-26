@@ -1,0 +1,73 @@
+import {createHash,randomUUID} from 'node:crypto';
+
+// WebSocket protocol reconstructed from the public client's conference manager.
+export function attachConferences(server){
+  const rooms=new Map();
+  function send(socket,obj){
+    if(socket.destroyed)return;
+    const payload=Buffer.from(JSON.stringify(obj));
+    let header;
+    if(payload.length<126){header=Buffer.from([129,payload.length]);}
+    else if(payload.length<65536){header=Buffer.alloc(4);header[0]=129;header[1]=126;header.writeUInt16BE(payload.length,2);}
+    else{header=Buffer.alloc(10);header[0]=129;header[1]=127;header.writeBigUInt64BE(BigInt(payload.length),2);}
+    socket.write(Buffer.concat([header,payload]));
+  }
+  function broadcast(room,obj,except){for(const c of room.clients)if(c!==except)send(c.socket,obj);}
+  function receive(client,msg){
+    if(msg.action==='connected'&&!client.room){
+      if(!/^[\w-]{1,100}$/.test(msg.token||''))return client.socket.end();
+      let room=rooms.get(msg.token);if(!room){room={clients:new Set(),state:null};rooms.set(msg.token,room);}
+      client.room=room;client.token=msg.token;client.name=String(msg.user_name||'Гость').slice(0,80);
+      send(client.socket,{action:'you_connected',user_id:client.id});
+      send(client.socket,{action:'users_list',users:[...room.clients].map(c=>({user_id:c.id,user_name:c.name,show_notification:false}))});
+      broadcast(room,{action:'user_connected',user_id:client.id,user_name:client.name});room.clients.add(client);return;
+    }
+    const room=client.room;if(!room)return;
+    if(msg.action==='pong')return;
+    if(msg.action==='get_board_info'){
+      if(room.state)send(client.socket,{action:'board_info',board_info:JSON.stringify(room.state)});
+      else broadcast(room,{action:'get_board_info'},client);
+      return;
+    }
+    if(msg.action==='board_info'){
+      try{room.state=JSON.parse(msg.info);}catch{return;}
+      broadcast(room,{action:'board_info',board_info:msg.info},client);return;
+    }
+    room.state ||= {players:{},balls:{},shapes:[]};
+    const s=room.state;
+    if(msg.action==='board_element' && ['player','ball'].includes(msg.type)){
+      const key=msg.type==='player'?'players':'balls';s[key]||={};s[key][msg.info.index]=msg.info.info;
+    }else if(msg.action==='board_shapes'){s.shapes=msg.info;}
+    else if(msg.action==='hide_board_markup'){s.hideBoardMarkup=msg.info;}
+    else if(msg.action==='remove_board_element'){delete s.players?.[msg.index];delete s.balls?.[msg.index];}
+    else if(msg.action==='reset_board'){room.state={players:{},balls:{},shapes:[]};}
+    else return;
+    broadcast(room,{action:msg.action,type:msg.type,index:msg.index,data:msg.info,user_id:client.id},client);
+  }
+  server.on('upgrade',(req,socket)=>{
+    if(req.url!=='/conference-ws'||req.headers.origin!=='http://'+req.headers.host||!req.headers['sec-websocket-key'])return socket.destroy();
+    const accept=createHash('sha1').update(req.headers['sec-websocket-key']+'258EAFA5-E914-47DA-95CA-C5AB0DC85B11').digest('base64');
+    socket.write('HTTP/1.1 101 Switching Protocols\r\nUpgrade: websocket\r\nConnection: Upgrade\r\nSec-WebSocket-Accept: '+accept+'\r\n\r\n');
+    const client={socket,id:randomUUID(),buffer:Buffer.alloc(0)};
+    const timer=setInterval(()=>send(socket,{action:'ping'}),1800);
+    socket.on('data',chunk=>{
+      client.buffer=Buffer.concat([client.buffer,chunk]);
+      try{
+        while(client.buffer.length>=2){
+          const b=client.buffer,opcode=b[0]&15,masked=!!(b[1]&128);let size=b[1]&127,offset=2;
+          if(size===126){if(b.length<4)return;size=b.readUInt16BE(2);offset=4;}
+          else if(size===127){if(b.length<10)return;const big=b.readBigUInt64BE(2);if(big>BigInt(12*1024*1024))return socket.destroy();size=Number(big);offset=10;}
+          if(!masked||size>12*1024*1024)return socket.destroy();
+          if(b.length<offset+4+size)return;
+          const mask=b.subarray(offset,offset+4);offset+=4;
+          const payload=Buffer.from(b.subarray(offset,offset+size));for(let i=0;i<size;i++)payload[i]^=mask[i%4];
+          client.buffer=b.subarray(offset+size);
+          if(opcode===8){socket.end(Buffer.from([136,0]));return;}
+          if(opcode===1)receive(client,JSON.parse(payload.toString()));
+        }
+      }catch{socket.destroy();}
+    });
+    socket.on('error',()=>{});
+    socket.on('close',()=>{clearInterval(timer);if(client.room){client.room.clients.delete(client);broadcast(client.room,{action:'user_disconnected',user_id:client.id});if(!client.room.clients.size)rooms.delete(client.token);}});
+  });
+}

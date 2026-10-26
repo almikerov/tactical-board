@@ -1,0 +1,19 @@
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 400 400">
+		<path d="
+				M24 190 
+				V 140
+				A60 60 0 0 1 80 80
+				H380
+				M320 24
+				L384 80
+				L320 136
+				
+				M376 210 
+				V260
+				A60 60 0 0 1 320 320
+				H20
+				M80 376
+				L16 320
+				L80 264
+			" fill="none" stroke="#48413B" stroke-linecap="round" stroke-linejoin="round" stroke-width="24" />
+</svg>

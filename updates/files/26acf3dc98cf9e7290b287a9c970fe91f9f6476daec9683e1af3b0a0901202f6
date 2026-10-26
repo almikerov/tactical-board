@@ -1,0 +1,99 @@
+import {readFile,writeFile,mkdir,rename,rm,copyFile} from 'node:fs/promises';
+import {createHash} from 'node:crypto';
+import path from 'node:path';
+
+// Files an update may replace. The collection (data/library.json), launchers and the bundled Node runtime are never touched.
+export function updatable(file){
+  if(typeof file!=='string'||file.split('/').some(part=>part===''||part==='.'||part==='..'))return false;
+  return /^(server\.mjs|conference\.mjs|updater\.mjs|package\.json|asset-manifest\.json|README\.txt|CHANGES\.txt|VERIFICATION\.txt|data\/texts-ru\.json|(public|templates|test)\/[\w.@+-]+(\/[\w.@+-]+)*)$/.test(file);
+}
+export function newer(a,b){
+  const x=String(a).split('.').map(Number),y=String(b).split('.').map(Number);
+  for(let i=0;i<3;i++){if((x[i]||0)!==(y[i]||0))return (x[i]||0)>(y[i]||0);}
+  return false;
+}
+const sha=bytes=>createHash('sha256').update(bytes).digest('hex');
+const readJson=async(file,fallback)=>{try{return JSON.parse(await readFile(file,'utf8'));}catch{return fallback;}};
+
+export function createUpdater({root,url,version,fetch=globalThis.fetch}){
+  const work=path.join(root,'.update'),stage=path.join(work,'stage'),backup=path.join(work,'backup');
+  const state={latest:null,error:null,checked:0,pending:null,dismissed:false};
+
+  async function manifest(){
+    // The query string skips the Pages CDN cache, so a fresh upload is seen at once.
+    const response=await fetch(url+(url.includes('?')?'&':'?')+'t='+Date.now(),{signal:AbortSignal.timeout(10000)});
+    if(!response.ok)throw Error('Сервер обновлений ответил '+response.status);
+    const value=await response.json();
+    if(!/^\d+\.\d+\.\d+$/.test(value?.version||'')||!Array.isArray(value.files)||!value.files.length)throw Error('Неверный файл обновления');
+    for(const file of value.files)if(!updatable(file.path)||!/^[\da-f]{64}$/.test(file.sha256||'')||!Number.isInteger(file.bytes))throw Error('Недопустимый файл в обновлении: '+file.path);
+    return {version:value.version,date:String(value.date||''),notes:(Array.isArray(value.notes)?value.notes:[]).map(String).slice(0,30),files:value.files};
+  }
+  function check(){
+    if(!url)return Promise.resolve();
+    state.pending??=manifest().then(value=>{state.latest=newer(value.version,version)?value:null;state.error=null;})
+      .catch(error=>{state.error=error.message;}).finally(()=>{state.checked=Date.now();state.pending=null;});
+    return state.pending;
+  }
+  async function info({fresh=false}={}){
+    if(fresh||Date.now()-state.checked>6*3600000)await Promise.race([check(),new Promise(resolve=>setTimeout(resolve,8000))]);
+    const {latest}=state;
+    return {current:version,enabled:!!url,available:!!latest,latest:latest&&{version:latest.version,date:latest.date,notes:latest.notes},error:state.error,dismissed:state.dismissed,failed:process.env.TB_UPDATE_FAILED||null};
+  }
+
+  let applying=null;
+  async function install(){
+    const next=await manifest();
+    if(!newer(next.version,version))throw Error('Установлена последняя версия');
+    await rm(stage,{recursive:true,force:true});await mkdir(stage,{recursive:true});
+    // Everything is downloaded and verified before the first file is replaced.
+    const changes=[],queue=[...next.files];
+    async function download(){
+      for(let file;(file=queue.shift());){
+        const current=await readFile(path.join(root,file.path)).then(sha,()=>null);
+        if(current===file.sha256)continue;
+        const response=await fetch(new URL('files/'+file.sha256,url),{signal:AbortSignal.timeout(60000)});
+        if(!response.ok)throw Error('Не удалось скачать '+file.path+' ('+response.status+')');
+        const bytes=Buffer.from(await response.arrayBuffer());
+        if(bytes.length!==file.bytes||sha(bytes)!==file.sha256)throw Error('Файл повреждён при скачивании: '+file.path);
+        await writeFile(path.join(stage,file.sha256),bytes);changes.push(file);
+      }
+    }
+    await Promise.all(Array.from({length:6},download));
+    const listed=new Set(next.files.map(file=>file.path));
+    const removed=(await readJson(path.join(work,'installed.json'),[])).filter(file=>updatable(file)&&!listed.has(file));
+    // A copy of every replaced file lets the previous version come back if the new one does not start.
+    await rm(backup,{recursive:true,force:true});await mkdir(backup,{recursive:true});
+    const journal={from:version,to:next.version,replaced:[],created:[],removed:[]};
+    for(const file of [...changes.map(change=>change.path),...removed]){
+      try{await mkdir(path.dirname(path.join(backup,file)),{recursive:true});await copyFile(path.join(root,file),path.join(backup,file));(listed.has(file)?journal.replaced:journal.removed).push(file);}
+      catch(error){if(error.code!=='ENOENT')throw error;if(listed.has(file))journal.created.push(file);}
+    }
+    await copyFile(path.join(work,'installed.json'),path.join(backup,'installed.json')).catch(()=>{});
+    await writeFile(path.join(backup,'journal.json'),JSON.stringify(journal,null,2));
+    try{
+      for(const file of changes){
+        const target=path.join(root,file.path);
+        await mkdir(path.dirname(target),{recursive:true});
+        await copyFile(path.join(stage,file.sha256),target+'.tb-new');await rename(target+'.tb-new',target);
+      }
+      for(const file of journal.removed)await rm(path.join(root,file),{force:true});
+      await writeFile(path.join(work,'installed.json'),JSON.stringify([...listed]));
+    }catch(error){await rollback();throw error;}
+    await rm(stage,{recursive:true,force:true});
+    return {version:next.version,files:changes.length};
+  }
+  async function rollback(){
+    const journal=await readJson(path.join(backup,'journal.json'),null);
+    if(!journal)return null;
+    for(const file of [...journal.replaced,...journal.removed])await copyFile(path.join(backup,file),path.join(root,file));
+    for(const file of journal.created)await rm(path.join(root,file),{force:true});
+    await copyFile(path.join(backup,'installed.json'),path.join(work,'installed.json')).catch(()=>rm(path.join(work,'installed.json'),{force:true}));
+    await rm(backup,{recursive:true,force:true});
+    return journal.to;
+  }
+  return {
+    check,info,rollback,
+    dismiss(){state.dismissed=true;},
+    apply(){applying??=install().finally(()=>{applying=null;});return applying;},
+  };
+}

@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 225"><defs><pattern id="grid_4" width="3" height="3" patternUnits="userSpaceOnUse"><path d="M3 0H0V3" fill="none" stroke="#888" stroke-width=".5"/></pattern></defs><line data-allow-custom-colors="true" /><path index="10" d="M12 29.25 H288 V211.5 H12 Z" fill="transparent" stroke="none"/><path index="20" d="M12 29.25 H288 V49.544117647058826 H12 Z" fill="transparent" stroke="none"/><path index="20" d="M12 69.83823529411765 H288 V90.13235294117648 H12 Z" fill="transparent" stroke="none"/><path index="20" d="M12 110.4264705882353 H288 V130.72058823529412 H12 Z" fill="transparent" stroke="none"/><path index="20" d="M12 151.01470588235296 H288 V171.30882352941177 H12 Z" fill="transparent" stroke="none"/><path index="20" d="M12 191.6029411764706 H288 V211.5 H12 Z" fill="transparent" stroke="none"/><polyline points="12,211.5 12,29.25 288,29.25 288,211.5" fill="none" stroke="#888" stroke-width="2"/><g data-role="board-markup">
+      <path d="M68.17411764705882 29.25 V96.22058823529412 H231.82588235294116 V29.25
+        M112.82117647058823 29.25 V51.5735294117647 H187.17882352941177 V29.25"
+        fill="none" stroke="#888" stroke-width="2"/>
+      <path d="M120.31989630470738 96.22058823529412 A37.13823529411765 37.13823529411765 0 0 0 179.68010369529262 96.22058823529412"
+        fill="none" stroke="#888" stroke-width="2"/>
+      <path d="M135.14470588235295 29.25 V21.13235294117647 H164.85529411764705 V29.25"
+        fill="url(#grid_4)" stroke="#888" stroke-width="2"/>
+      <circle cx="150" cy="73.8970588235294" r="2" fill="#888" stroke="none"/>
+      <path data-penalty-part="corner-arcs" d="M16.058823529411764 29.25 A4.0588235294117645 4.0588235294117645 0 0 1 12 33.30882352941177
+        M283.94117647058823 29.25 A4.0588235294117645 4.0588235294117645 0 0 0 288 33.30882352941177"
+        fill="none" stroke="#888" stroke-width="2"/>
+      <path data-penalty-part="center-circle-edge" d="M129.30575527578057 211.5 A37.13823529411765 37.13823529411765 0 0 1 170.69424472421943 211.5" fill="none" stroke="#888" stroke-width="2"/>
+    </g></svg>

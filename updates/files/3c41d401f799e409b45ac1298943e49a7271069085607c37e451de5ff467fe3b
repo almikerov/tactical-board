@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1237 810">
+<g stroke="#3f82a3" fill="#3f82a3">
+<path d="M85 87 H1151 V722 H85 V87 Z" fill="none" stroke-width="6"></path>
+<path d="M85 384 H68 V425 H85 M1151 384 H1168 V425 H1151 M143 87 V79 M248 87 V79 M1093 87 V79 M988 87 V79 M143 722 V730 M248 722 V730 M1093 722 V730 M988 722 V730 M85 329 H77 M85 274 H77 M85 480 H77 M85 535 H77 M1151 329 H1159 M1151 274 H1159 M1151 480 H1159 M1151 535 H1159" fill-opacity=".35" opacity=".9" stroke-width="6"></path>
+<path d="M85 223 A 162 162 0 0 1 250 385 M250 385 V 424 M85 586 A 162 162 0 0 0 250 424 M354 87 V722 M618.5 87 V722 M882 87 V722 M1151 223 A 162 162 0 0 0 986 385 M986 385 V 424 M1151 586 A 162 162 0 0 1 986 424" fill="none" opacity=".9" stroke-width="6"></path>
+<path d="M85 163 A 214 231 0 0 1 85 646 M1151 163 A 214 231 0 0 0 1151 646" fill="none" opacity=".9" stroke-dasharray="6px, 24px" stroke-width="6"></path>
+<circle opacity=".9" cx="162" cy="405" r="3" stroke="none"></circle>
+<circle opacity=".9" cx="1074" cy="405" r="3" stroke="none"></circle></g></svg>

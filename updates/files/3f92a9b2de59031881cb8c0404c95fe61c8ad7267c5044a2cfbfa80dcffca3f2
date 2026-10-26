@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1256 810">
+<g stroke="#3f82a3" fill="#3f82a3">
+<line x1="373" y1="135" x2="882" y2="135" fill="none" stroke-width="6" stroke-dasharray="6px, 6px"></line>
+<line x1="336" y1="238" x2="919" y2="238" fill="none" stroke-width="6" stroke-dasharray="7px, 7px"></line>
+<line x1="314" y1="304" x2="941" y2="304" fill="none" stroke-width="6"></line>
+<line x1="286" y1="382" x2="969" y2="382" fill="none" stroke-width="6" stroke-dasharray="12, 12"></line>
+<line x1="217" y1="578" x2="1038" y2="578" fill="none" stroke-width="6" stroke-dasharray="12, 12"></line>
+<polygon points="381 112, 874 112, 1061 644, 194 644" fill="none" stroke-width="6"></polygon>
+<polyline points="381 112, 388 90, 867 90, 874 112" fill-opacity=".2" stroke-width="6"></polyline>
+<polyline points="194 644, 168 718, 1087 718, 1061 644" fill-opacity=".2" stroke-width="6"></polyline></g> </svg>
