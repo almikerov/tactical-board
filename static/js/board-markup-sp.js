@@ -34,9 +34,6 @@ var BoardMarkup = {
       <path data-penalty-part="corner-arcs" d="M${left + scale} ${goalY} A${scale} ${scale} 0 0 1 ${left} ${y(1)}
         M${right - scale} ${goalY} A${scale} ${scale} 0 0 0 ${right} ${y(1)}"
         fill="none" stroke="${color}" stroke-width="${line}"/>
-      <path data-penalty-part="corner-flags" d="M${left} ${goalY} V${y(-1.6)} L${left + .8 * scale} ${y(-1.3)} L${left} ${y(-1)}
-        M${right} ${goalY} V${y(-1.6)} L${right - .8 * scale} ${y(-1.3)} L${right} ${y(-1)}"
-        fill="${color}" stroke="${color}" stroke-width="${line}"/>
       ${centerCircleEdge}
     </g>`;
     return svg;
