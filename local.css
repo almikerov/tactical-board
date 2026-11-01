@@ -65,5 +65,31 @@ div.select-board-view>div:last-child>a.board-view-big-football-free>div:last-chi
 .update-panel ul{margin:.3rem 0 .8rem;padding-left:1.4rem}
 .update-panel li{margin:.2rem 0}
 /* /local-updates */
+/* local-drawing */
+[data-role=ui-button][data-icon^="stroke-width-"]{background-size:75%}
+[data-role=ui-button][data-icon="stroke-width-0-5"]{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cpath d='M26 50H74' stroke='%2348413B' stroke-width='6' stroke-linecap='round'/%3E%3C/svg%3E")}
+[data-role=ui-button][data-icon="stroke-width-1"]{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cpath d='M26 50H74' stroke='%2348413B' stroke-width='12' stroke-linecap='round'/%3E%3C/svg%3E")}
+[data-role=ui-button][data-icon="stroke-width-1-5"]{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cpath d='M26 50H74' stroke='%2348413B' stroke-width='18' stroke-linecap='round'/%3E%3C/svg%3E")}
+[data-role=ui-button][data-icon="stroke-width-2"]{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cpath d='M26 50H74' stroke='%2348413B' stroke-width='24' stroke-linecap='round'/%3E%3C/svg%3E")}
+[data-role=ui-button][data-icon="stroke-width-3"]{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cpath d='M26 50H74' stroke='%2348413B' stroke-width='34' stroke-linecap='round'/%3E%3C/svg%3E")}
+[data-role=ui-button][data-icon="stroke-width-4"]{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cpath d='M26 50H74' stroke='%2348413B' stroke-width='44' stroke-linecap='round'/%3E%3C/svg%3E")}
+.stroke-width-picker{min-height:1.5rem;display:flex;align-items:center;gap:.15rem;padding:.2rem;background:#fff;border:1px solid #d8e2e5 !important}
+.stroke-width-picker>div{flex:1;height:1.2rem;display:flex;align-items:center;justify-content:center;border-radius:.2rem;cursor:pointer}
+.stroke-width-picker>div:hover{background:#eee}
+.stroke-width-picker>div.selected{background:#ccc}
+.stroke-width-picker>div>i{display:block;width:70%;background:#48413b;border-radius:1rem}
+.player-view-picker>div.emoji{font:1rem/1.2rem Apple Color Emoji,Segoe UI Emoji,Noto Color Emoji,sans-serif;text-align:center;border-radius:50%;filter:grayscale(1);opacity:.6}
+.player-view-picker>div.emoji:hover{filter:none;opacity:1}
+.player-view-picker>div.emoji.selected{filter:none;opacity:1;box-shadow:0 0 0 2px #48413b}
+.emoji-window{padding:.8rem 1rem;color:#ededb4;max-width:min(34rem,92vw)}
+.emoji-window .emoji-title{font-size:1.4rem;text-align:center;margin-bottom:.6rem}
+.emoji-window input{box-sizing:border-box;width:100%;padding:.3rem .6rem;background:#171c13;border:1px solid #88915c;color:#ffffd0;font:1.6rem Apple Color Emoji,Segoe UI Emoji,Noto Color Emoji,sans-serif;user-select:text}
+.emoji-window .emoji-hint{margin:.4rem 0 .6rem;font-size:.8rem;opacity:.8}
+.emoji-window h3{font-size:1rem;font-weight:normal;margin:.6rem 0 .3rem;border-bottom:1px solid #697149;padding-bottom:.2rem}
+.emoji-window .emoji-list{display:flex;flex-wrap:wrap;gap:.2rem}
+.emoji-window .emoji-list>button{width:2.4rem;height:2.4rem;padding:0;background:transparent;border:1px solid transparent;border-radius:.4rem;cursor:pointer;font:1.5rem/1 Apple Color Emoji,Segoe UI Emoji,Noto Color Emoji,sans-serif}
+.emoji-window .emoji-list>button:hover{background:hsla(0,0%,100%,.12);border-color:#88915c}
+.emoji-window .emoji-list>button.emoji-current{border-color:#3f82a3;box-shadow:#3f82a3 0 0 0 1px inset}
+/* /local-drawing */
 
 #collection_list>.collection-local-footer{flex-wrap:wrap}

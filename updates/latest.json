@@ -1,33 +1,34 @@
 {
-  "version": "1.6.0",
-  "date": "26.10.2026",
+  "version": "1.7.0",
+  "date": "01.11.2026",
   "notes": [
-    "Все цвета в одном окне под значком палитры: фон доски, газон и разметка этого поля.",
-    "Там же значения по умолчанию: три цвета и вид, с которыми начинается новое поле.",
-    "Стандартные цвета — белый фон, белое поле и чёрная разметка, экономно для печати.",
-    "Пункты цветов убраны из бокового меню.",
-    "Сайт: открытые вкладки со старой версией перезагружаются сами после обновления."
+    "Толщина линий: кнопка на панели рисования рядом с «Концом линии», шесть вариантов.",
+    "У нарисованной линии или фигуры толщина меняется в её меню (правая кнопка мыши).",
+    "Стрелки, заслоны, волны и двойные линии растут вместе с линией; ворота и другие объекты не меняются.",
+    "Любой эмодзи вместо значка игрока: в меню игрока рядом с кружком, футболкой, треугольником и квадратом.",
+    "Номер игрока — в маленьком кружке цвета команды; если номер стереть, останется только эмодзи.",
+    "Толщина и эмодзи сохраняются в схемах, анимациях, коллекции, JSON и PNG."
   ],
   "files": [
     {
       "path": "CHANGES.txt",
-      "sha256": "ab717bf6e0b6d84c6be621ab71d389e716d388254b89b89a975b49ac121d4a1c",
-      "bytes": 4147
+      "sha256": "2f5ac937c3c4d3316227844de518fe66e3fb94a5c8194b1ec8c57bae83636b74",
+      "bytes": 5153
     },
     {
       "path": "README.txt",
-      "sha256": "e733c3fb87f7d9c65f5795a0c8b0ce6a3b4c5d2606b9c57c01e79b9a09fed8f2",
-      "bytes": 13138
+      "sha256": "613be48f54d9bb25e2928c5e211b320e5976fd9dbe262e817e4311dae6036ef3",
+      "bytes": 15214
     },
     {
       "path": "VERIFICATION.txt",
-      "sha256": "d2dc7bf28f8480fd797cbdd0b3372667eadfe56ce21effed3be62daf5d404a42",
-      "bytes": 5518
+      "sha256": "6ec7547c08f052b666f969f2cafc53f48f1a265977d763d3b80fa10352875e7b",
+      "bytes": 7267
     },
     {
       "path": "asset-manifest.json",
-      "sha256": "b1277bab8ec700c5976c28a3b22c3916318a3a2ba71859e53cec83deb9121274",
-      "bytes": 78387
+      "sha256": "90fea3ee73b9212a73d7069df5a0a4820269bd2207c4e7e139fefac3a0898971",
+      "bytes": 76481
     },
     {
       "path": "conference.mjs",
@@ -41,7 +42,7 @@
     },
     {
       "path": "package.json",
-      "sha256": "0916f25cc2a1104984ec753db27469fe2aea8d824c92c5eae4543e21c6d71480",
+      "sha256": "96972a09dac96ad2a10958035dc9651b42acecabfe9cc9c2643928a6f8281b8e",
       "bytes": 534
     },
     {
@@ -55,14 +56,19 @@
       "bytes": 8528
     },
     {
+      "path": "public/drawing.js",
+      "sha256": "5c553588e355399dbe54fe94895acadb63f9ac6d8de5c549c40d8eba389fe8c8",
+      "bytes": 12452
+    },
+    {
       "path": "public/free-field.js",
       "sha256": "70236f4e13a76dee2288de83e83b4166f9a8e39bc59d58488bbec343fd6cc36b",
       "bytes": 6648
     },
     {
       "path": "public/local.css",
-      "sha256": "25387a945f0f04115829abde8ce7d2561833ff02922de35f1125315435a537a5",
-      "bytes": 6616
+      "sha256": "1aab2cda95d5626653f35403aa0c17266cec6bc24cc235b064f6634b486e0b04",
+      "bytes": 10168
     },
     {
       "path": "public/local.js",
@@ -1936,8 +1942,8 @@
     },
     {
       "path": "public/static/js/1.js",
-      "sha256": "e313ac7806558add6e6950fb72f2ef243ed9de8c8015a508ad4bcc05a8081fbb",
-      "bytes": 1018777
+      "sha256": "2fb31bdb17a6674df4fa01b2cd366d63c1a775a8386b801d29a5d46e94659431",
+      "bytes": 1019588
     },
     {
       "path": "public/static/js/board-markup-bf.js",
@@ -1981,43 +1987,43 @@
     },
     {
       "path": "server.mjs",
-      "sha256": "5a4c3539b86a3e103a1a02ecaf5d9eda99af4e2ea6eb56ed787a280b3c707efd",
-      "bytes": 11975
+      "sha256": "ab7dd248dc1aa066bb97bb39ab6ad1aa96ad4aa070a1991c242d96a187fe7b92",
+      "bytes": 11989
     },
     {
       "path": "templates/big-football-free.html",
-      "sha256": "ef4f2de3751c105695b89554c1b9cf9a8ebe7c04b48f17f9d9e950d509776caa",
-      "bytes": 83835
+      "sha256": "dd7f356551ee468458e2eb171d1466c67d3051fc8de7315a2df107587be12616",
+      "bytes": 83876
     },
     {
       "path": "templates/big-football-half-2.html",
-      "sha256": "13640c94a8a4b2de163ac5894882a2929dc7e7e2cf34809cec317ae343de851d",
-      "bytes": 83904
+      "sha256": "2e6a283f17dc0eeafd7be50cfd0f1e3376c54a81c037b192c212aa5563229acc",
+      "bytes": 83945
     },
     {
       "path": "templates/big-football-half.html",
-      "sha256": "58e0800b6f9278d4ad49d3709aafa0babc0537ad41a27849a4195700135ea32d",
-      "bytes": 83908
+      "sha256": "5f6db87d440255ddd815791b2b2c46219792f3a63c48fde86f37ebfc3920eee2",
+      "bytes": 83949
     },
     {
       "path": "templates/big-football-penalty.html",
-      "sha256": "925107f031d2569a4e2e18afe89f74a67d58a8ba1c43e127c3978ec1b1f712be",
-      "bytes": 83846
+      "sha256": "f7c909cbe6e9fee5974625f383358053c2a56769c98f693fdd8bb16db6605c54",
+      "bytes": 83887
     },
     {
       "path": "templates/big-football-vertical-2.html",
-      "sha256": "98292d587a435c75202d723c7e2655d026895754a1e1660304396cc6bf33ace8",
-      "bytes": 83852
+      "sha256": "1304a335167fb486a9e636eb56e5d04d06f35f1ce1e6277413bd64085b80eaa0",
+      "bytes": 83893
     },
     {
       "path": "templates/big-football-vertical.html",
-      "sha256": "4db8e6cdd01b59203ea7334fe031eecfc80acace9f86b81ebfac45dc280dfb1c",
-      "bytes": 83832
+      "sha256": "a045053146aff2dba7ec79d2372a2b0269fecda69b496a07074383154509f521",
+      "bytes": 83873
     },
     {
       "path": "templates/big-football.html",
-      "sha256": "02ec9dc46beee9e79d4acb2a116cb1d7f94567321713ce370dce12f5252ab48b",
-      "bytes": 83878
+      "sha256": "160b27d7512428b86b72e2345fc53d74f255c0a7d4e45a8fbb974e35dc7fd58c",
+      "bytes": 83919
     },
     {
       "path": "test/background.test.mjs",
@@ -2035,6 +2041,11 @@
       "bytes": 4010
     },
     {
+      "path": "test/drawing.test.mjs",
+      "sha256": "904f1a6ed9483b8a422c49c4c64d3542f003c96969273d4282f304ba343bd4cf",
+      "bytes": 10971
+    },
+    {
       "path": "test/free-field.test.mjs",
       "sha256": "9c5ebac686c75e089cb6c43e1899784d7cd6a50bc33cb9715e05d7327371e01d",
       "bytes": 1835
@@ -2046,8 +2057,8 @@
     },
     {
       "path": "test/server.test.mjs",
-      "sha256": "0ede46390cd719afe03814be78a927625b644507049779e2d7f7e10d5b2f7436",
-      "bytes": 12144
+      "sha256": "244d5b9d6d0fd227a4dd22d0251b4ca75c7a334a2819094fcd23afae022d87be",
+      "bytes": 12489
     },
     {
       "path": "test/update.test.mjs",

@@ -1,0 +1,128 @@
+import {test} from 'node:test';
+import assert from 'node:assert/strict';
+import {readFile} from 'node:fs/promises';
+import vm from 'node:vm';
+const source=await readFile(new URL('../public/drawing.js',import.meta.url),'utf8');
+function memory(data=new Map()){return {data,getItem:key=>data.has(key)?data.get(key):null,setItem:(key,value)=>data.set(key,String(value)),removeItem:key=>data.delete(key)};}
+function element(tag='div'){
+  const classes=new Set();
+  return {tagName:tag,children:[],dataset:{},attributes:{},listeners:{},style:{},textContent:'',title:'',innerHTML:'',
+    get className(){return [...classes].join(' ');},set className(value){classes.clear();for(const name of String(value).split(' ').filter(Boolean))classes.add(name);},
+    classList:{add:name=>classes.add(name),remove:name=>classes.delete(name),contains:name=>classes.has(name),toggle:(name,on)=>on?classes.add(name):classes.delete(name)},
+    setAttribute(key,value){this.attributes[key]=String(value);},getAttribute(key){return key in this.attributes?this.attributes[key]:null;},
+    hasAttribute(key){return key in this.attributes;},toggleAttribute(key,on){if(on)this.attributes[key]='';else delete this.attributes[key];return on;},
+    addEventListener(type,listener){(this.listeners[type]||=[]).push(listener);},appendChild(child){this.children.push(child);return child;},querySelectorAll(){return [];}};
+}
+function tab({local=memory()}={}){
+  const calls={menus:[],dropdowns:[],settings:[],notifications:[],hidden:0,modal:null,picker:null};
+  const nodes=new Map(),observers=[],modalInput={value:''};
+  for(const page of ['main','animation']){const lineEnd=element();lineEnd.after=node=>nodes.set(node.id,node);nodes.set(page+'_shapes_manager_line_end_style',lineEnd);}
+  // The original picker: one item per view, the default one selected.
+  function Picker(options){
+    calls.picker=options;
+    const container=element();
+    for(const view of options.options){const item=element();item.className=view===options.defaultValue?view+' selected':view;container.appendChild(item);}
+    container.querySelectorAll=selector=>selector==='.selected'?container.children.filter(item=>item.classList.contains('selected')):[];
+    Object.defineProperty(this,'elementContainer',{get:()=>container});
+  }
+  const manager=page=>({set:value=>calls.settings.push([page,value])});
+  const app={
+    pages:{_pages:{main:{_shapesManager:manager('main')},animation:{_shapesManager:manager('animation')}}},
+    layout:{async _initApplication(){return 'started';}},
+    ui:{showContextMenu(options){calls.menus.push(options);},PlayerViewPicker:Picker,
+      DropdownButtons:function(target,options){calls.dropdowns.push({target,options});target.UIDropdownButtonsObject=this;},
+      showModalWindow(options){calls.modal=options;},closeModalWindow(){},hideContextMenu(){calls.hidden++;},notification(text,type){calls.notifications.push(type);}},
+  };
+  const document={createElement:tag=>element(tag),createElementNS:(ns,tag)=>element(tag),getElementById:id=>nodes.get(id)||null,
+    querySelector:selector=>selector.includes('emoji-input')?modalInput:null,isTouchable:false};
+  const context=vm.createContext({TacticalLocal:app,document,localStorage:local,MutationObserver:class{constructor(callback){observers.push(callback);}observe(){}}});
+  context.window=context;
+  vm.runInContext(source,context);
+  return {app,calls,nodes,observers,modalInput,local,drawing:context.TacticalDrawing};
+}
+
+test('the bundle hands line thickness and emoji players to this script',async()=>{
+  const bundle=await readFile(new URL('../public/static/js/1.js',import.meta.url),'utf8');
+  for(const hook of ['/* local-stroke-width */','TacticalDrawing.strokeWidthFor(this._settings.shape,this._settings.strokeWidth)','TacticalDrawing.emojiFigure(e,x,A)/* local-emoji-player */||new b(A)',
+    'case"element":A.element&&e.appendChild(A.element)','fontSizeCoeff:e.fs,textContent:e.tc,rotationAngle:e.ra,strokeWidth:e.sw,','rotationAngle:t.storeInfo.ra,strokeWidth:t.storeInfo.sw,'])
+    assert.equal(bundle.split(hook).length,2,hook);
+});
+test('any emoji in a text becomes a player icon, letters and digits do not',()=>{
+  const {drawing}=tab();
+  for(const [text,emoji] of [['⚽','⚽'],['игрок ⚽ номер 10','⚽'],['☀','☀️'],['❤️','❤️'],['🏃‍♀️','🏃‍♀️'],['👍🏽','👍🏽'],['1️⃣','1️⃣'],['🇷🇺','🇷🇺'],['🏴󠁧󠁢󠁳󠁣󠁴󠁿','🏴󠁧󠁢󠁳󠁣󠁴󠁿'],['👨‍👩‍👧‍👦','👨‍👩‍👧‍👦']])
+    assert.equal(drawing.cleanEmoji(text),emoji,text);
+  for(const text of ['7','#','abc','',null,undefined,Array(12).fill('👨').join('‍')])assert.equal(drawing.cleanEmoji(text),null,String(text));
+  assert.equal(drawing.emojiOf('emoji:⚽'),'⚽');assert.equal(drawing.emojiOf('emoji:☀'),'☀️');
+  for(const view of ['circle','camiseta','emoji:','emoji:abc',undefined,42])assert.equal(drawing.emojiOf(view),null,String(view));
+});
+test('the toolbar thickness is offered on both pages and reaches only lines and figures',async()=>{
+  const {app,calls,nodes,drawing}=tab();
+  assert.equal(await app.layout._initApplication(),'started');
+  for(const page of ['main','animation'])assert.equal(nodes.get(page+'_shapes_manager_stroke_width').dataset.elementPage,page);
+  assert.equal(calls.dropdowns.length,2);
+  const {options}=calls.dropdowns[0];
+  assert.equal(options.icon,'stroke-width-1');assert.equal(options.title,'Толщина линии');
+  assert.equal(options.items.map(item=>item.value+':'+item.icon).join(),'0.5:stroke-width-0-5,1:stroke-width-1,1.5:stroke-width-1-5,2:stroke-width-2,3:stroke-width-3,4:stroke-width-4');
+  nodes.get('animation_shapes_manager_stroke_width').listeners.select[0]({detail:{value:'1.5'}});
+  assert.equal(calls.settings[0][0],'animation');assert.equal(calls.settings[0][1].strokeWidth,1.5);
+  await app.layout._initApplication();assert.equal(calls.dropdowns.length,2);
+  assert.equal(drawing.strokeWidthFor('line',2),2);assert.equal(drawing.strokeWidthFor('pencil',.5),.5);
+  for(const shape of ['goal-a-m','cone','text',undefined])assert.equal(drawing.strokeWidthFor(shape,3),undefined);
+});
+test('a drawn line changes its thickness from its menu; players and objects keep their menus',()=>{
+  const {app,calls}=tab();
+  const counts={refresh:0,halo:0,changed:0};
+  const line={_shapeKey:'line',_parameters:{strokeWidth:2},refresh(){counts.refresh++;},_addShadowContainer(){counts.halo++;},_events:{shapeChanged(){counts.changed++;}}};
+  app.ui.showContextMenu({position:'mouse',event:{currentTarget:{ShapeObject:line}},items:[{role:'button',text:'Удалить'}]});
+  const menu=calls.menus.at(-1);
+  assert.equal(menu.position,'mouse');assert.equal(menu.items.length,2);assert.equal(menu.items[0].role,'element');assert.equal(menu.items[1].text,'Удалить');
+  const picker=menu.items[0].element;
+  assert.match(picker.innerHTML,/<div data-width="2" title="Толстая" class="selected">/);
+  picker.listeners.click[0]({target:{closest:()=>({dataset:{width:'4'}})}});
+  assert.equal(line._parameters.strokeWidth,4);assert.deepEqual({...counts},{refresh:1,halo:1,changed:1});
+  for(const currentTarget of [{ShapeObject:{_shapeKey:'goal-a-m',_parameters:{}}},{ElementObject:{}}]){
+    app.ui.showContextMenu({event:{currentTarget},items:[{role:'button'}]});assert.equal(calls.menus.at(-1).items.length,1);
+  }
+});
+test('an emoji player keeps its number on a small badge in the team color',()=>{
+  const {drawing,observers}=tab();
+  class Figure{
+    constructor(options){this._elementContainerID=options.elementContainerID;this._elementContainers=options.elementContainers;this._elementParts=['selection','shape','name','number','border'];}
+    get size(){return 28;}get figureView(){return this._figureView;}get elementParts(){return [...this._elementParts];}
+  }
+  assert.equal(drawing.emojiFigure('circle',Figure,{}),null);assert.equal(drawing.emojiFigure(undefined,Figure,{}),null);
+  const parts={},figure=drawing.emojiFigure('emoji:⚽',Figure,{elementContainerID:'main_player_1_1',elementContainers:parts});
+  assert.ok(figure instanceof Figure);assert.equal(figure.figureView,'emoji:⚽');
+  assert.equal(figure.elementParts.join(),'selection,emoji,shape,name,number,border');
+  const emoji=figure.getEmojiContainer();
+  assert.equal(emoji.textContent,'⚽');assert.equal(emoji.id,'main_player_1_1_emoji');assert.match(emoji.style.fontFamily,/Segoe UI Emoji/);
+  Object.assign(parts,{emoji,shape:element('circle'),border:element('circle'),number:element('text')});
+  figure._setSize();
+  assert.equal(emoji.getAttribute('font-size'),'34');
+  assert.equal(parts.shape.getAttribute('cx'),String(28*.4));assert.equal(parts.number.getAttribute('x'),String(28*.4));
+  // Without a number the emoji stands alone; the badge comes back with it.
+  assert.ok(parts.shape.hasAttribute('hidden'));assert.ok(parts.border.hasAttribute('hidden'));
+  parts.number.textContent='7';observers.forEach(callback=>callback());
+  assert.ok(!parts.shape.hasAttribute('hidden'));assert.ok(!parts.border.hasAttribute('hidden'));
+  parts.border.setAttribute('stroke-width','3');figure._setColor('#ff0000');assert.equal(parts.border.getAttribute('stroke-width'),'1');
+  figure._processRotate(45);assert.equal(emoji.getAttribute('transform'),'rotate(45)');
+  figure._cancelRotation();assert.equal(emoji.getAttribute('transform'),'rotate(0)');
+});
+test('the view menu offers an emoji, applies a typed one and remembers it',()=>{
+  const {app,calls,modalInput,local}=tab();
+  const chosen=[];
+  const picker=new app.ui.PlayerViewPicker({options:['circle','camiseta','triangle','rectangle'],defaultValue:'emoji:⚽',onSelect:view=>chosen.push(view)});
+  // The original picker never sees a view it cannot draw.
+  assert.equal(calls.picker.defaultValue,'circle');
+  const items=picker.elementContainer.children,button=items.at(-1);
+  assert.ok(!items[0].classList.contains('selected'));assert.equal(button.className,'emoji selected');assert.equal(button.textContent,'⚽');
+  button.listeners.click[0]();
+  assert.equal(calls.hidden,1);assert.match(calls.modal.content,/data-emoji="⚽" data-not-submit-by-enter-key="1" class="emoji-current"/);
+  modalInput.value='мяч 🥅';calls.modal.onOk();
+  assert.equal(chosen.join(),'emoji:🥅');assert.equal(local.getItem('tactical-board.recent-emoji'),'["🥅"]');
+  modalInput.value='без эмодзи';calls.modal.onOk();
+  assert.equal(chosen.length,1);assert.equal(calls.notifications.join(),'warning');
+  const plain=new app.ui.PlayerViewPicker({options:['circle','camiseta'],defaultValue:'triangle',onSelect(){}}),add=plain.elementContainer.children.at(-1);
+  assert.equal(calls.picker.defaultValue,'triangle');assert.equal(add.className,'emoji');assert.equal(add.textContent,'🙂');
+  add.listeners.click[0]();assert.match(calls.modal.content,/<h3>Недавние<\/h3><div class="emoji-list"><button type="button" data-emoji="🥅"/);
+});

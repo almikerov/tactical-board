@@ -107,7 +107,7 @@ const server=http.createServer(async(req,res)=>{
       const item={id,name:input.name.trim().slice(0,200),description:String(input.description||'').slice(0,2000),categories:categories(input.categories),board:input.board,page:input.page,data:input.data,created:new Date().toISOString()};
       library.items.unshift(item);library.links[id]={data:item.data,board:item.board,page:item.page,created:item.created};await persist();return json(res,item,201);
     }
-    if(route.startsWith('/static/')||['/local.js','/background.js','/local.css','/free-field.js','/defaults.js','/updates.js'].includes(route)){
+    if(route.startsWith('/static/')||['/local.js','/background.js','/local.css','/free-field.js','/defaults.js','/updates.js','/drawing.js'].includes(route)){
       const file=path.resolve(root,'public','.'+route);
       if(!file.startsWith(path.join(root,'public')+path.sep))return json(res,{error:'Invalid path'},400);
       const bytes=await readFile(file);res.writeHead(200,{'content-type':mime[path.extname(file)]||'application/octet-stream'});res.end(bytes);return;

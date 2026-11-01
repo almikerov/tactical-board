@@ -25,9 +25,13 @@ test('all seven pitch layouts render localized parameters and scripts',async()=>
     assert.ok(!html.includes('src="https://www.googletagmanager'));assert.ok(!html.includes('src="//pagead2'));
     for(const removed of ['data-action="login"','data-action="user-account-details"','data-action="page-get-link"','data-action="get-scheme-conference-link"','data-action="show-boards-list"','id="first_visit_user_message"','user-guide/ru.html','Добро пожаловать'])assert.ok(!html.includes(removed),key+': '+removed);
     assert.ok(html.includes('data-action="choose-board-background-color"'));
-    assert.ok(html.includes('src="/background.js"'));
+    assert.ok(html.includes('src="/background.js"'));assert.ok(html.includes('src="/drawing.js"'));
     assert.ok(html.includes('vertical-2|penalty|free"'));
   }
+});
+test('line thickness and emoji players come with their own script',async()=>{
+  const r=await fetch(base+'/drawing.js');assert.equal(r.status,200);assert.equal(r.headers.get('content-type'),'text/javascript; charset=utf-8');
+  assert.ok((await r.text()).includes('window.TacticalDrawing'));
 });
 test('penalty view survives collection save, JSON reimport, animation and native link storage',async()=>{
   assert.equal((await (await fetch(base+'/health')).json()).views,7);
