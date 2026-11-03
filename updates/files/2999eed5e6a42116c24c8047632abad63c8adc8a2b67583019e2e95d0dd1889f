@@ -1866,8 +1866,8 @@
   },
   {
     "path": "public/static/js/1.js",
-    "bytes": 1019588,
-    "sha256": "2fb31bdb17a6674df4fa01b2cd366d63c1a775a8386b801d29a5d46e94659431"
+    "bytes": 1019590,
+    "sha256": "15c12bd10cc3a160f03c1f055a8d65aad235bc2db385129989f2c814e1f20edf"
   },
   {
     "path": "public/static/js/board-markup-bf.js",

@@ -81,13 +81,14 @@ div.select-board-view>div:last-child>a.board-view-big-football-free>div:last-chi
 .player-view-picker>div.emoji{font:1rem/1.2rem Apple Color Emoji,Segoe UI Emoji,Noto Color Emoji,sans-serif;text-align:center;border-radius:50%;filter:grayscale(1);opacity:.6}
 .player-view-picker>div.emoji:hover{filter:none;opacity:1}
 .player-view-picker>div.emoji.selected{filter:none;opacity:1;box-shadow:0 0 0 2px #48413b}
+.player-view-picker>div.emoji.symbol,.emoji-window .emoji-list>button.emoji-symbol{font-family:"Segoe UI Symbol","Apple Symbols","Noto Sans Symbols 2","Noto Sans Math","DejaVu Sans",sans-serif;font-variant-emoji:text}
 .emoji-window{padding:.8rem 1rem;color:#ededb4;max-width:min(34rem,92vw)}
 .emoji-window .emoji-title{font-size:1.4rem;text-align:center;margin-bottom:.6rem}
 .emoji-window input{box-sizing:border-box;width:100%;padding:.3rem .6rem;background:#171c13;border:1px solid #88915c;color:#ffffd0;font:1.6rem Apple Color Emoji,Segoe UI Emoji,Noto Color Emoji,sans-serif;user-select:text}
 .emoji-window .emoji-hint{margin:.4rem 0 .6rem;font-size:.8rem;opacity:.8}
 .emoji-window h3{font-size:1rem;font-weight:normal;margin:.6rem 0 .3rem;border-bottom:1px solid #697149;padding-bottom:.2rem}
 .emoji-window .emoji-list{display:flex;flex-wrap:wrap;gap:.2rem}
-.emoji-window .emoji-list>button{width:2.4rem;height:2.4rem;padding:0;background:transparent;border:1px solid transparent;border-radius:.4rem;cursor:pointer;font:1.5rem/1 Apple Color Emoji,Segoe UI Emoji,Noto Color Emoji,sans-serif}
+.emoji-window .emoji-list>button{width:2.4rem;height:2.4rem;padding:0;background:transparent;border:1px solid transparent;border-radius:.4rem;cursor:pointer;color:#ffffd0;font:1.5rem/1 Apple Color Emoji,Segoe UI Emoji,Noto Color Emoji,sans-serif}
 .emoji-window .emoji-list>button:hover{background:hsla(0,0%,100%,.12);border-color:#88915c}
 .emoji-window .emoji-list>button.emoji-current{border-color:#3f82a3;box-shadow:#3f82a3 0 0 0 1px inset}
 /* /local-drawing */

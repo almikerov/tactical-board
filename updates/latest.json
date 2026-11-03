@@ -1,33 +1,30 @@
 {
-  "version": "1.7.0",
-  "date": "01.11.2026",
+  "version": "1.7.1",
+  "date": "03.11.2026",
   "notes": [
-    "Толщина линий: кнопка на панели рисования рядом с «Концом линии», шесть вариантов.",
-    "У нарисованной линии или фигуры толщина меняется в её меню (правая кнопка мыши).",
-    "Стрелки, заслоны, волны и двойные линии растут вместе с линией; ворота и другие объекты не меняются.",
-    "Любой эмодзи вместо значка игрока: в меню игрока рядом с кружком, футболкой, треугольником и квадратом.",
-    "Номер игрока — в маленьком кружке цвета команды; если номер стереть, останется только эмодзи.",
-    "Толщина и эмодзи сохраняются в схемах, анимациях, коллекции, JSON и PNG."
+    "Символы ✘ ⚽︎ ◉ ⍙ ● • ◎ ○ — первая группа в окне эмодзи игрока, выше недавних.",
+    "Символы рисуются цветом команды; подходит и любой другой вставленный символ.",
+    "Свёрнутое или скрытое окно больше не сбивает расстановку: игроки, мяч и линии остаются на местах."
   ],
   "files": [
     {
       "path": "CHANGES.txt",
-      "sha256": "2f5ac937c3c4d3316227844de518fe66e3fb94a5c8194b1ec8c57bae83636b74",
-      "bytes": 5153
+      "sha256": "23688f305f0e6197bf50f5bd91047268285b5ddfdedfb5a93ae57a4858e7f220",
+      "bytes": 5652
     },
     {
       "path": "README.txt",
-      "sha256": "613be48f54d9bb25e2928c5e211b320e5976fd9dbe262e817e4311dae6036ef3",
-      "bytes": 15214
+      "sha256": "9f670d8e51b3a0b8ad6412c1ea0b8eb4baac8b1c92899dae9cfdf49d9ff0c9ed",
+      "bytes": 15722
     },
     {
       "path": "VERIFICATION.txt",
-      "sha256": "6ec7547c08f052b666f969f2cafc53f48f1a265977d763d3b80fa10352875e7b",
-      "bytes": 7267
+      "sha256": "952be1a1f3db85fedadf6ebbba9e3b5037302291bedf1f760fe2dc5cc26643b0",
+      "bytes": 8859
     },
     {
       "path": "asset-manifest.json",
-      "sha256": "90fea3ee73b9212a73d7069df5a0a4820269bd2207c4e7e139fefac3a0898971",
+      "sha256": "2999eed5e6a42116c24c8047632abad63c8adc8a2b67583019e2e95d0dd1889f",
       "bytes": 76481
     },
     {
@@ -42,7 +39,7 @@
     },
     {
       "path": "package.json",
-      "sha256": "96972a09dac96ad2a10958035dc9651b42acecabfe9cc9c2643928a6f8281b8e",
+      "sha256": "b9db7bd81d061b9cdfdc040a9f81de216a9f5cdb43bca0b30f1f62316567d0b1",
       "bytes": 534
     },
     {
@@ -57,8 +54,8 @@
     },
     {
       "path": "public/drawing.js",
-      "sha256": "5c553588e355399dbe54fe94895acadb63f9ac6d8de5c549c40d8eba389fe8c8",
-      "bytes": 12452
+      "sha256": "fcb3038fa69f89422956350572bbdebcbcdf746d62fc862fb07cc185d159d336",
+      "bytes": 13812
     },
     {
       "path": "public/free-field.js",
@@ -67,8 +64,8 @@
     },
     {
       "path": "public/local.css",
-      "sha256": "1aab2cda95d5626653f35403aa0c17266cec6bc24cc235b064f6634b486e0b04",
-      "bytes": 10168
+      "sha256": "ada92d919994d2d4ffafb35a0e178af4fc7f990e1abd6a99e81025b5d13610fc",
+      "bytes": 10401
     },
     {
       "path": "public/local.js",
@@ -1942,8 +1939,8 @@
     },
     {
       "path": "public/static/js/1.js",
-      "sha256": "2fb31bdb17a6674df4fa01b2cd366d63c1a775a8386b801d29a5d46e94659431",
-      "bytes": 1019588
+      "sha256": "15c12bd10cc3a160f03c1f055a8d65aad235bc2db385129989f2c814e1f20edf",
+      "bytes": 1019590
     },
     {
       "path": "public/static/js/board-markup-bf.js",
@@ -2031,6 +2028,11 @@
       "bytes": 1365
     },
     {
+      "path": "test/board-size.test.mjs",
+      "sha256": "2501d7abbaf407b194029aa3f7dd50870005bf3981e439ec4fe376793c32bb4e",
+      "bytes": 1840
+    },
+    {
       "path": "test/browser-storage.test.mjs",
       "sha256": "6631e73a3be7b35262465c34a6259f5e3df30eb75e41776b98db917396128534",
       "bytes": 3645
@@ -2042,8 +2044,8 @@
     },
     {
       "path": "test/drawing.test.mjs",
-      "sha256": "904f1a6ed9483b8a422c49c4c64d3542f003c96969273d4282f304ba343bd4cf",
-      "bytes": 10971
+      "sha256": "cb210df53bb3bc9382357db84469e7962a49a1d60c35a416e0847827d1c3835a",
+      "bytes": 12960
     },
     {
       "path": "test/free-field.test.mjs",

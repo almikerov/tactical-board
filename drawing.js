@@ -73,17 +73,21 @@
     return showContextMenu.call(this, options);
   };
 
-  // Flags, keycaps, and pictographs with skin tones, tags and joined parts such as 🏃‍♀️.
-  const emojiPattern = /(?:\p{Regional_Indicator}{2}|[#*0-9]️?⃣|\p{Extended_Pictographic}[︎️]?\p{Emoji_Modifier}?[\u{E0020}-\u{E007F}]*(?:‍\p{Extended_Pictographic}[︎️]?\p{Emoji_Modifier}?)*)/u;
-  // The first emoji in a text; a symbol such as ☀ that is drawn as a letter by default is asked for in color.
+  // Flags, keycaps, and pictographs with skin tones, tags and joined parts such as 🏃‍♀️;
+  // or a plain symbol such as ✘, ◉ or •.
+  const emojiPattern = /(?:\p{Regional_Indicator}{2}|[#*0-9]\uFE0F?\u20E3|\p{Extended_Pictographic}[\uFE0E\uFE0F]?\p{Emoji_Modifier}?[\u{E0020}-\u{E007F}]*(?:\u200D\p{Extended_Pictographic}[\uFE0E\uFE0F]?\p{Emoji_Modifier}?)*|(?![\x00-\x7F])[\p{So}\p{Sm}\u2022]\uFE0E?)/u;
+  // The first emoji in a text; a pictograph such as ☀ that is drawn as a letter by default is asked for in color.
   function cleanEmoji(text) {
     const match = String(text || '').match(emojiPattern);
     if (!match || match[0].length > 32) return null;
     const emoji = match[0];
-    return [...emoji].length === 1 && !/\p{Emoji_Presentation}/u.test(emoji) ? emoji + '️' : emoji;
+    return [...emoji].length === 1 && /\p{Extended_Pictographic}/u.test(emoji) && !/\p{Emoji_Presentation}/u.test(emoji) ? emoji + '\uFE0F' : emoji;
   }
   const emojiOf = view => typeof view === 'string' && view.startsWith('emoji:') ? cleanEmoji(view.slice(6)) : null;
+  // A symbol, or an emoji asked for as a letter such as ⚽︎, is drawn in the team color.
+  const isSymbol = emoji => emoji.includes('\uFE0E') || !/\p{Extended_Pictographic}|\p{Regional_Indicator}|\u20E3/u.test(emoji);
   const emojiFont = 'Apple Color Emoji, Segoe UI Emoji, Noto Color Emoji, sans-serif';
+  const symbolFont = '"Segoe UI Symbol", "Apple Symbols", "Noto Sans Symbols 2", "Noto Sans Math", "DejaVu Sans", sans-serif';
 
   // A player view "emoji:⚽" draws the emoji; the number sits on a small badge in the team color.
   function figureClass(Figure) {
@@ -93,6 +97,7 @@
         this._figureView = view;
         this._figureShapeType = 'circle';
         this._emoji = emoji;
+        this._symbol = isSymbol(emoji);
         this._numberFontsizeToButtonWidthCoeff = .36;
         this._nameFontsizeToButtonWidthCoeff = .536;
         this._namePositionCoefficientY = .82;
@@ -109,7 +114,8 @@
         text.setAttribute('x', 0);
         text.setAttribute('y', 0);
         // Inline, because a saved picture keeps no classes.
-        text.style.fontFamily = emojiFont;
+        text.style.fontFamily = this._symbol ? symbolFont : emojiFont;
+        if (this._symbol) text.style.setProperty('font-variant-emoji', 'text');
         text.textContent = this._emoji;
         return text;
       }
@@ -125,8 +131,11 @@
         this._setBorderWidth();
         this._watchNumber();
       }
-      // The player gives the border the width of a whole circle's; the badge is small.
-      _setColor() { this._setBorderWidth(); }
+      // The player gives the border the width of a whole circle's; the badge is small. A symbol takes the team color.
+      _setColor(color) {
+        if (color && this._symbol && this._elementContainers.emoji) this._elementContainers.emoji.setAttribute('fill', color);
+        this._setBorderWidth();
+      }
       _setBorderWidth() { this._elementContainers.border.setAttribute('stroke-width', Math.max(1, Math.round(this.size / 25))); }
       // Without a number the emoji stands alone; the badge comes back with the number.
       _watchNumber() {
@@ -152,6 +161,8 @@
   }
 
   const recentKey = 'tactical-board.recent-emoji';
+  // Plain symbols in the team color come first, even before the recent ones.
+  const symbols = ['Символы', '✘ ⚽\uFE0E ◉ ⍙ ● • ◎ ○'];
   const groups = [
     ['Футбол', '⚽ 🥅 🏃 🏃‍♀️ 🧍 🤾 ⛹️ 🤸 🧤 👟 🎽 🏆 🥇 🎯 🚩 🏁'],
     ['Люди', '🙂 😎 🤩 😤 😡 🥶 🤕 😴 🧑 👦 👧 🧔 👮 🧑‍🏫 🦸 🥷'],
@@ -170,15 +181,17 @@
   const escape = text => String(text).replace(/[&<>"]/g, char => ({'&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;'})[char]);
   function chooseEmoji(current, onChoose) {
     const pick = emoji => { remember(emoji); onChoose(emoji); };
+    const kind = emoji => [isSymbol(emoji) && 'emoji-symbol', emoji === current && 'emoji-current'].filter(Boolean).join(' ');
     const list = (title, items) => `<h3>${title}</h3><div class="emoji-list">${items.map(emoji =>
-      `<button type="button" data-emoji="${escape(emoji)}" data-not-submit-by-enter-key="1"${emoji === current ? ' class="emoji-current"' : ''}>${escape(emoji)}</button>`).join('')}</div>`;
+      `<button type="button" data-emoji="${escape(emoji)}" data-not-submit-by-enter-key="1"${kind(emoji) ? ` class="${kind(emoji)}"` : ''}>${escape(emoji)}</button>`).join('')}</div>`;
     const recent = recentEmoji();
     app.ui.showModalWindow({content: `
       <div class="emoji-window">
         <div class="emoji-title">Эмодзи вместо значка игрока</div>
-        <input type="text" data-role="emoji-input" value="${escape(current || '')}" placeholder="Вставьте или наберите эмодзи" autocomplete="off" spellcheck="false">
-        <p class="emoji-hint">Подойдёт любой эмодзи. Все эмодзи открываются клавишами Win + . (точка) на Windows и Ctrl + Cmd + Пробел на Mac.
-          Номер игрока показывается в кружке цвета команды; если номер стереть, останется только эмодзи.</p>
+        <input type="text" data-role="emoji-input" value="${escape(current || '')}" placeholder="Вставьте или наберите эмодзи или символ" autocomplete="off" spellcheck="false">
+        <p class="emoji-hint">Подойдёт любой эмодзи или символ. Все эмодзи открываются клавишами Win + . (точка) на Windows и Ctrl + Cmd + Пробел на Mac.
+          Символы вроде ✘ и ● рисуются цветом команды. Номер игрока показывается в кружке цвета команды; если номер стереть, останется только эмодзи.</p>
+        ${list(symbols[0], symbols[1].split(' '))}
         ${recent.length ? list('Недавние', recent) : ''}
         ${groups.map(([title, items]) => list(title, items.split(' '))).join('')}
       </div>`, top: '2rem', btnOkLabel: 'Готово',
@@ -187,7 +200,7 @@
       if (!text) return;
       const emoji = cleanEmoji(text);
       if (emoji) pick(emoji);
-      else app.ui.notification('В этом тексте нет эмодзи. Выберите его из списка или вставьте.', 'warning');
+      else app.ui.notification('В этом тексте нет эмодзи или символа. Выберите его из списка или вставьте.', 'warning');
     },
     onOpen: () => {
       const box = document.querySelector('#modal_window .emoji-window');
@@ -211,7 +224,7 @@
     const picker = this.elementContainer;
     if (current) for (const item of picker.querySelectorAll('.selected')) { item.classList.remove('selected'); delete item.dataset.selected; }
     const button = document.createElement('div');
-    button.className = current ? 'emoji selected' : 'emoji';
+    button.className = current ? (isSymbol(current) ? 'emoji symbol selected' : 'emoji selected') : 'emoji';
     button.dataset.role = 'player-view-picker-emoji';
     button.title = current ? 'Другой эмодзи' : 'Эмодзи вместо значка';
     button.textContent = current || '🙂';

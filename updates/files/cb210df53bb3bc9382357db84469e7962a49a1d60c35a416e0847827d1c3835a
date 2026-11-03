@@ -6,7 +6,7 @@ const source=await readFile(new URL('../public/drawing.js',import.meta.url),'utf
 function memory(data=new Map()){return {data,getItem:key=>data.has(key)?data.get(key):null,setItem:(key,value)=>data.set(key,String(value)),removeItem:key=>data.delete(key)};}
 function element(tag='div'){
   const classes=new Set();
-  return {tagName:tag,children:[],dataset:{},attributes:{},listeners:{},style:{},textContent:'',title:'',innerHTML:'',
+  return {tagName:tag,children:[],dataset:{},attributes:{},listeners:{},style:{setProperty(key,value){this[key]=value;}},textContent:'',title:'',innerHTML:'',
     get className(){return [...classes].join(' ');},set className(value){classes.clear();for(const name of String(value).split(' ').filter(Boolean))classes.add(name);},
     classList:{add:name=>classes.add(name),remove:name=>classes.delete(name),contains:name=>classes.has(name),toggle:(name,on)=>on?classes.add(name):classes.delete(name)},
     setAttribute(key,value){this.attributes[key]=String(value);},getAttribute(key){return key in this.attributes?this.attributes[key]:null;},
@@ -51,7 +51,10 @@ test('any emoji in a text becomes a player icon, letters and digits do not',()=>
   const {drawing}=tab();
   for(const [text,emoji] of [['⚽','⚽'],['игрок ⚽ номер 10','⚽'],['☀','☀️'],['❤️','❤️'],['🏃‍♀️','🏃‍♀️'],['👍🏽','👍🏽'],['1️⃣','1️⃣'],['🇷🇺','🇷🇺'],['🏴󠁧󠁢󠁳󠁣󠁴󠁿','🏴󠁧󠁢󠁳󠁣󠁴󠁿'],['👨‍👩‍👧‍👦','👨‍👩‍👧‍👦']])
     assert.equal(drawing.cleanEmoji(text),emoji,text);
-  for(const text of ['7','#','abc','',null,undefined,Array(12).fill('👨').join('‍')])assert.equal(drawing.cleanEmoji(text),null,String(text));
+  // Plain symbols stay letters: no emoji selector is added to them.
+  for(const [text,symbol] of [['✘','✘'],['⚽︎','⚽︎'],['◉','◉'],['⍙','⍙'],['●','●'],['•','•'],['◎ ○','◎'],['счёт ×','×']])
+    assert.equal(drawing.cleanEmoji(text),symbol,text);
+  for(const text of ['7','#','+','<','abc','',null,undefined,Array(12).fill('👨').join('‍')])assert.equal(drawing.cleanEmoji(text),null,String(text));
   assert.equal(drawing.emojiOf('emoji:⚽'),'⚽');assert.equal(drawing.emojiOf('emoji:☀'),'☀️');
   for(const view of ['circle','camiseta','emoji:','emoji:abc',undefined,42])assert.equal(drawing.emojiOf(view),null,String(view));
 });
@@ -107,6 +110,18 @@ test('an emoji player keeps its number on a small badge in the team color',()=>{
   parts.border.setAttribute('stroke-width','3');figure._setColor('#ff0000');assert.equal(parts.border.getAttribute('stroke-width'),'1');
   figure._processRotate(45);assert.equal(emoji.getAttribute('transform'),'rotate(45)');
   figure._cancelRotation();assert.equal(emoji.getAttribute('transform'),'rotate(0)');
+  assert.equal(emoji.getAttribute('fill'),null);
+});
+test('a symbol player is drawn as a letter in the team color',()=>{
+  const {drawing}=tab();
+  class Figure{constructor(options){this._elementContainerID=options.elementContainerID;this._elementContainers=options.elementContainers;}get size(){return 28;}}
+  for(const view of ['emoji:✘','emoji:⚽︎','emoji:•']){
+    const parts={border:element('circle')},figure=drawing.emojiFigure(view,Figure,{elementContainerID:'main_player_2_1',elementContainers:parts});
+    const text=parts.emoji=figure.getEmojiContainer();
+    assert.equal(text.textContent,view.slice(6));assert.match(text.style.fontFamily,/^"Segoe UI Symbol", "Apple Symbols", "Noto Sans Symbols 2"/);
+    figure._setColor('#1565c0');assert.equal(text.getAttribute('fill'),'#1565c0',view);
+    figure._setColor();assert.equal(text.getAttribute('fill'),'#1565c0',view);
+  }
 });
 test('the view menu offers an emoji, applies a typed one and remembers it',()=>{
   const {app,calls,modalInput,local}=tab();
@@ -125,4 +140,10 @@ test('the view menu offers an emoji, applies a typed one and remembers it',()=>{
   const plain=new app.ui.PlayerViewPicker({options:['circle','camiseta'],defaultValue:'triangle',onSelect(){}}),add=plain.elementContainer.children.at(-1);
   assert.equal(calls.picker.defaultValue,'triangle');assert.equal(add.className,'emoji');assert.equal(add.textContent,'🙂');
   add.listeners.click[0]();assert.match(calls.modal.content,/<h3>Недавние<\/h3><div class="emoji-list"><button type="button" data-emoji="🥅"/);
+  // The symbols come first, even before the recent ones; ✘ leads them.
+  assert.deepEqual([...calls.modal.content.matchAll(/<h3>([^<]+)<\/h3>/g)].map(match=>match[1]),['Символы','Недавние','Футбол','Люди','Животные','Знаки']);
+  assert.match(calls.modal.content,/<h3>Символы<\/h3><div class="emoji-list"><button type="button" data-emoji="✘" data-not-submit-by-enter-key="1" class="emoji-symbol">/);
+  modalInput.value='✘';calls.modal.onOk();assert.equal(local.getItem('tactical-board.recent-emoji'),'["✘","🥅"]');
+  const cross=new app.ui.PlayerViewPicker({options:['circle'],defaultValue:'emoji:✘',onSelect(){}});
+  assert.equal(cross.elementContainer.children.at(-1).className,'emoji symbol selected');
 });

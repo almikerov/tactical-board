@@ -1,0 +1,27 @@
+import {test} from 'node:test';
+import assert from 'node:assert/strict';
+import {readFile} from 'node:fs/promises';
+import vm from 'node:vm';
+const bundle=await readFile(new URL('../public/static/js/1.js',import.meta.url),'utf8');
+const limit='n=Math.max(n,300)/* local-min-board-size */,';
+// The board's own size code, taken from the bundle as it is.
+function layout(source=bundle){
+  const start=source.indexOf('_initBoardContainer(){'),end=source.indexOf('},_initBoardCropper',start);
+  assert.ok(start>0&&end>start,'board size code not found');
+  const board={style:{},offsetTop:0},window={innerWidth:0,innerHeight:0,pageYOffset:0,scrollTo(){}};
+  const context=vm.createContext({t:{boardConfig:{heightToWidthCoeff:.6568}},document:{getElementById:()=>board,querySelectorAll:()=>[]},window,setTimeout(){},clearTimeout(){},setInterval(){},clearInterval(){}});
+  const object=vm.runInContext('({'+source.slice(start,end+1)+'})',context);
+  return (width,height)=>{window.innerWidth=width;window.innerHeight=height;object._initBoardContainer();return {...context.t.boardConfig.size};};
+}
+
+test('a hidden or tiny window keeps a board the players keep their places on',()=>{
+  assert.equal(bundle.split(limit).length,2);
+  const size=layout();
+  // Players, balls and lines are stored relative to the board: a board of 1×0 turned them into Infinity, saved as null.
+  for(const [width,height] of [[0,0],[0,800],[1,1],[50,40],[200,900]])assert.deepEqual(size(width,height),{width:300,height:197},width+'×'+height);
+});
+test('ordinary windows get the board size of the original editor',()=>{
+  const size=layout(),original=layout(bundle.replace(limit,''));
+  for(const [width,height] of [[1920,1080],[1280,800],[712,786],[390,844],[320,568],[1024,300]])
+    assert.deepEqual(size(width,height),original(width,height),width+'×'+height);
+});

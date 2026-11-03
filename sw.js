@@ -1,6 +1,6 @@
 importScripts('browser-storage.js');
 const store=self.TacticalBrowserStorage;
-const version='browser-0c2b1170fe1b8723';
+const version='browser-dbe8ec8e6cdedd45';
 // The site may live in a subfolder (GitHub Pages); every route below is relative to it.
 const base=new URL(self.registration.scope).pathname;
 const local=pathname=>'/'+(pathname.startsWith(base)?pathname.slice(base.length):pathname.replace(/^\//,''));
